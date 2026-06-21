@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# dependencies
+node_modules/
+
+# build output
+dist/
+.wrangler/
+.tanstack/
+
+# personal workspace (not tracked)
+_my/

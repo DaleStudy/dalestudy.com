@@ -1,0 +1,27 @@
+# 달레 스터디 (DaleStudy)
+
+> 오픈소스 프로젝트와 그룹 스터디를 통해 개발자들이 실무처럼 협업하며 성장하도록 돕는 비영리 개발자 커뮤니티. 슬로건: "평범한 개발자들이 함께 만드는 특별한 프로젝트" / "Ordinary developers building extraordinary projects".
+
+주요 활동: 리트코드 스터디(기수제 알고리즘 스터디, GitHub PR 코드 리뷰), 인공지능 스터디, 블로그 스터디, 달레UI 디자인 시스템(npm 패키지 daleui). 네트워킹: 커피챗(봇 자동 매칭), 모각코, 밋업.
+
+## 페이지
+
+- [소개](https://dalestudy.com/about): 미션, 비전, 핵심가치(자율과 존중, 소통과 협업, 기여와 공유), 운영진 역할
+- [프로그램](https://dalestudy.com/programs): 진행 중인 스터디와 오픈소스 프로젝트 전체 목록
+- [리트코드 스터디](https://dalestudy.com/programs/leetcode): 기수제 알고리즘 스터디 (전용 사이트: https://leetcode.dalestudy.com)
+- [인공지능 스터디](https://dalestudy.com/programs/ai): AI 논문·도구 탐구와 프로젝트
+- [블로그 스터디](https://dalestudy.com/programs/blog): 기술 글쓰기와 상호 피드백
+- [달레UI](https://dalestudy.com/programs/daleui): 오픈소스 React 디자인 시스템 (전용 사이트: https://www.daleui.com)
+- [커뮤니티 활동](https://dalestudy.com/community): 커피챗, 모각코, 밋업
+- [후원](https://dalestudy.com/sponsor): GitHub Sponsors 후원 안내
+
+## 채널
+
+- GitHub: https://github.com/DaleStudy
+- Discord: https://dales.link/discord
+- LinkedIn: https://linkedin.com/company/dalestudy
+- 후원: https://github.com/sponsors/DaleStudy · https://opencollective.com/dalestudy
+
+## English
+
+English versions of all pages are available under https://dalestudy.com/en

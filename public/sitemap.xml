@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://dalestudy.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/about"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/programs</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/programs/leetcode</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/leetcode"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/leetcode"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/programs/ai</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/ai"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/programs/blog</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/blog"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/programs/daleui</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/daleui"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/daleui"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/community</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/community"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/community"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/sponsor</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/sponsor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/sponsor"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/about"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/programs</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/programs/leetcode</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/leetcode"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/leetcode"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/programs/ai</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/ai"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/programs/blog</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/blog"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/programs/daleui</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/daleui"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/daleui"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/community</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/community"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/community"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/sponsor</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/sponsor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/sponsor"/>
+  </url>
+</urlset>
