@@ -1,4 +1,4 @@
-import { getMessages, localePath } from "../i18n";
+import { getMessages } from "../i18n";
 import type { Locale } from "../i18n/types";
 import {
   CHAT_SITE_URL,
@@ -8,10 +8,10 @@ import {
   LEADERBOARD_URL,
   LEETCODE_SITE_URL,
   LINKEDIN_URL,
+  OPENCOLLECTIVE_URL,
   SCHEDULE_SITE_URL,
   SPONSORS_URL,
 } from "../links";
-import { AppLink } from "./AppLink";
 
 export function Footer({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -61,7 +61,9 @@ export function Footer({ locale }: { locale: Locale }) {
           <a href={SPONSORS_URL} target="_blank" rel="noopener noreferrer">
             GitHub Sponsors
           </a>
-          <AppLink to={localePath(locale, "/sponsor")}>{t.footer.sponsorPage}</AppLink>
+          <a href={OPENCOLLECTIVE_URL} target="_blank" rel="noopener noreferrer">
+            OpenCollective
+          </a>
         </div>
       </div>
       <div className="container footer-bottom">

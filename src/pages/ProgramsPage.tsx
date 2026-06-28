@@ -1,4 +1,5 @@
 import { Icon, Tag } from "daleui";
+import { SiteIcon } from "../components/SiteIcon";
 import { AppLink } from "../components/AppLink";
 import { getMessages, localePath } from "../i18n";
 import type { Locale } from "../i18n/types";
@@ -24,7 +25,7 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
               <div className="program-card program-card-lg">
                 <div className="program-card-head">
                   <span className="icon-tile" style={{ width: 52, height: 52 }}>
-                    <Icon name={p.icon} tone="brand" size="md" />
+                    <SiteIcon name={p.icon} tone="brand" size="md" />
                   </span>
                   <Tag tone={p.tagTone}>{p.tag}</Tag>
                 </div>

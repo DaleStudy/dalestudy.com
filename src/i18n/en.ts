@@ -18,19 +18,20 @@ export const en: Messages = {
     missionSummary:
       "DaleStudy helps developers grow through hands-on collaboration on open-source projects. No skill threshold: if you want to contribute, you belong here.",
     moreAbout: "Learn more about us",
-    programsTitle: "Four programs",
+    programsTitle: "Featured programs",
     programsSub: "From algorithms to design systems, start collaborating where your interests are.",
     communityTitle: "Community life",
     communitySub: "Connection continues beyond the study groups.",
     moreCommunity: "See all community activities",
     sponsorBannerTitle: "Help the community grow",
-    sponsorBannerSub: "Your sponsorship covers servers and community operations.",
+    sponsorBannerSub:
+      "Your sponsorship keeps this community, free of ads and paid membership, sustainable.",
     sponsorBannerCta: "Sponsor us",
     stats: [
-      { value: "1,400+", label: "Discord members" },
+      { value: "1,500+", label: "Discord members" },
+      { value: "400+", label: "GitHub members" },
       { value: "1,000+", label: "LinkedIn followers" },
-      { value: "154", label: "leetcode-study stars" },
-      { value: "109", label: "daleui stars" },
+      { value: "300+", label: "GitHub stars" },
     ],
     activities: [
       {
@@ -78,47 +79,32 @@ export const en: Messages = {
         desc: "Pay forward the help you received. Small contributions compound into a virtuous cycle.",
       },
     ],
-    teamTitle: "Team roles",
-    roles: [
-      {
-        icon: "users",
-        title: "Community Manager",
-        desc: "Sets community direction and helps onboard new members.",
-      },
-      {
-        icon: "codeXml",
-        title: "Project / Study Lead",
-        desc: "Leads each program's curriculum and collaboration process.",
-      },
-      {
-        icon: "check",
-        title: "Moderator",
-        desc: "Keeps the space safe and respectful, guided by the code of conduct.",
-      },
-      {
-        icon: "messageCircleMore",
-        title: "Content Lead",
-        desc: "Shares the community's activities and outcomes with the world.",
-      },
+    teamTitle: "Team",
+    members: [
+      { login: "DaleSeo", name: "DaleSeo", role: "Community Manager" },
+      { login: "SamTheKorean", name: "Sam", role: "LeetCode Study Lead" },
+      { login: "yolophg", name: "Helena", role: "Design System Lead" },
+      { login: "sounmind", name: "Evan", role: "AI Study Lead" },
+      { login: "lms0806", name: "lms0806", role: "Blog Study Lead" },
     ],
     teamCtaText:
-      "DaleStudy is run by volunteer organizers. If you want to help run the community, raise your hand on Discord.",
+      "DaleStudy is run by volunteer organizers. If you'd like to help run the community, you are always welcome.",
     teamCtaBtn: "Apply to the team",
   },
   programs: {
     hubTitle: "Programs",
     hubSub:
-      "Active study groups and projects. All study groups run in cohorts, and everything happens in the open on Discord and GitHub.",
+      "Active study groups and projects. Study groups run in cohorts so we can keep improving the participant experience, and every project is open source. Everything happens in the open on Discord and GitHub.",
     otherTitle: "Other projects",
     other: [
       {
         title: "Leaderboard",
-        desc: "Progress dashboard for the LeetCode study",
+        desc: "Certificates and motivation for the LeetCode study",
         url: "https://leaderboard.dalestudy.com",
       },
       {
         title: "Chatbot",
-        desc: "Discord automation bot for community ops",
+        desc: "A chat UI that answers questions about the community",
         url: "https://chat.dalestudy.com",
       },
       {
@@ -135,72 +121,69 @@ export const en: Messages = {
     cards: [
       {
         slug: "leetcode",
-        icon: "codeXml",
+        icon: "puzzle",
         title: "LeetCode Study",
-        desc: "A weekly algorithm study with PR-driven code reviews.",
+        desc: "A study group solving the Blind 75 for coding interviews, with PR-driven code reviews.",
         fullDesc:
-          "Solve algorithm problems weekly, review each other via GitHub PRs, and track progress on the leaderboard.",
+          "Prepare for coding interviews by solving the Blind 75 together over 15 weeks. Submit solutions as GitHub PRs, review each other, and stay motivated with the leaderboard, earning a certificate on completion.",
         tag: "Cohort 8",
         tagTone: "brand",
       },
       {
-        slug: "ai",
-        icon: "star",
-        title: "AI Study",
-        desc: "Explore AI papers and tools together, and build projects.",
+        slug: "daleui",
+        icon: "palette",
+        title: "daleui Design System",
+        desc: "An open-source design system specialized for Korean, built by the community.",
         fullDesc:
-          "Read AI papers and experiment with tools together, turning learnings into shared projects.",
+          "An open-source React design system specialized for the Korean user experience. Designers and developers experience a real-world collaboration process, from issue triage to releases.",
+        tag: "Join anytime",
+        tagTone: "success",
+      },
+      {
+        slug: "ai",
+        icon: "brain",
+        title: "AI Study",
+        desc: "A hands-on study on applying AI to everyday development, experimenting with LLMs and the latest tools.",
+        fullDesc:
+          "A practical AI study open to any developer, not just AI engineers. Experiment with LLMs and modern tools together, and apply what you learn to everyday development work.",
         tag: "Cohort 4",
         tagTone: "brand",
       },
       {
         slug: "blog",
-        icon: "messageCircleMore",
+        icon: "penLine",
         title: "Blog Study",
-        desc: "Build a consistent technical writing habit with peer feedback.",
+        desc: "Write one blog post a week for ten weeks, together.",
         fullDesc:
-          "A study group for consistent technical writing. Write regularly and exchange feedback.",
+          "Publish one post a week on your own blog for ten weeks. Writing alongside peers builds the consistency that is hard to sustain alone.",
         tag: "Cohort 1",
         tagTone: "brand",
-      },
-      {
-        slug: "daleui",
-        icon: "codeXml",
-        title: "daleui",
-        desc: "An open-source React design system built by the community.",
-        fullDesc:
-          "An open-source React + Panda CSS design system built by the community. From issue triage to releases, it is a real-world collaboration process.",
-        tag: "Join anytime",
-        tagTone: "success",
       },
     ],
   },
   programDetail: {
     backToHub: "All programs",
     howItWorks: "How it works",
-    outcomes: "Outcomes",
     join: "How to join",
     details: {
       leetcode: {
-        icon: "codeXml",
+        icon: "puzzle",
         title: "LeetCode Study",
-        subtitle: "leetcode.dalestudy.com",
+        subtitleLinks: [{ label: "leetcode.dalestudy.com", url: "https://leetcode.dalestudy.com" }],
         overview:
-          "An algorithm study where we solve problems together. Polish your solutions through GitHub PR code reviews and cheer each other on via the leaderboard.",
-        tags: ["Weekly problems", "GitHub PR reviews", "Leaderboard"],
+          "A study group preparing for coding interviews. Over 15 weeks we solve five Blind 75 problems a week, submit solutions as GitHub PRs like an open-source project, and review each other's code, cheering each other on via the leaderboard.",
+        tags: ["Blind 75", "5 problems a week", "GitHub PR reviews", "Leaderboard"],
         steps: [
           { title: "Register for a cohort", desc: "Sign up on Discord during recruitment." },
-          { title: "Solve weekly problems", desc: "Submit your solutions as PRs to the repo." },
+          {
+            title: "Solve weekly problems",
+            desc: "Solve the week's five Blind 75 problems and submit them as PRs.",
+          },
           { title: "Review code", desc: "Review peers' solutions and get feedback on yours." },
           {
             title: "Retrospect & graduate",
             desc: "Wrap up with a retrospective, then on to the next cohort.",
           },
-        ],
-        outcomes: [
-          { value: "154", label: "GitHub stars" },
-          { value: "8th", label: "Current cohort" },
-          { value: "100s", label: "Code reviews" },
         ],
         joinDesc: "See the full curriculum and cohort schedule on the dedicated site.",
         ctaLabel: "Visit leetcode.dalestudy.com",
@@ -209,21 +192,16 @@ export const en: Messages = {
         cta2Url: "https://github.com/DaleStudy/leetcode-study",
       },
       ai: {
-        icon: "star",
+        icon: "brain",
         title: "AI Study",
-        subtitle: "Discord #ai",
+        subtitleLinks: [{ label: "Discord #ai", url: "https://dales.link/discord" }],
         overview:
-          "A study group exploring AI papers and tools. We don't stop at reading: learnings become experiments and shared projects.",
-        tags: ["Paper reading", "Tool experiments", "Projects"],
+          "A hands-on AI study for working software developers. Learn LLMs, prompt engineering, and open-source AI tooling together, and discuss how to apply them to real development work like code generation and workflow automation in weekly sessions.",
+        tags: ["LLMs", "Prompt engineering", "Hands-on", "Weekly sessions"],
         steps: [
-          { title: "Pick a topic", desc: "Choose a paper or tool to explore together." },
+          { title: "Pick a topic", desc: "Choose an AI technique or tool to explore together." },
           { title: "Study solo", desc: "Read and experiment during the week." },
-          { title: "Share session", desc: "Present learnings and discuss." },
-        ],
-        outcomes: [
-          { value: "4th", label: "Current cohort" },
-          { value: "Weekly", label: "Share sessions" },
-          { value: "Many", label: "Experiments" },
+          { title: "Share session", desc: "Rotate presenters, share learnings, and discuss." },
         ],
         joinDesc: "Watch the AI channel on Discord for the next cohort announcement.",
         ctaLabel: "Join the Discord channel",
@@ -232,21 +210,17 @@ export const en: Messages = {
         cta2Url: "https://github.com/DaleStudy",
       },
       blog: {
-        icon: "messageCircleMore",
+        icon: "penLine",
         title: "Blog Study",
-        subtitle: "Discord #blog",
+        subtitleLinks: [{ label: "Discord #blog", url: "https://dales.link/discord" }],
         overview:
-          "A study group for consistent technical writing. Write with deadlines, get feedback through peers' eyes.",
-        tags: ["Tech writing", "Peer feedback", "Consistency"],
+          "One post a week, for ten weeks, together. Publish on your own blog, read each other's posts, and exchange feedback. Open to everyone, from first-time bloggers to experienced writers building consistency.",
+        tags: ["Weekly publishing", "10-week cohort", "Peer feedback"],
         steps: [
-          { title: "Share topics", desc: "Share what you'll write this cycle." },
+          { title: "Share topics", desc: "Share what you'll write this week." },
           { title: "Draft", desc: "Write your draft before the deadline." },
           { title: "Exchange feedback", desc: "Read each other's posts and comment." },
           { title: "Publish", desc: "Publish the polished post on your blog." },
-        ],
-        outcomes: [
-          { value: "1st", label: "Current cohort" },
-          { value: "Bi-weekly", label: "Publishing cycle" },
         ],
         joinDesc: "The blog channel on Discord recruits for each cohort.",
         ctaLabel: "Join the Discord channel",
@@ -255,12 +229,15 @@ export const en: Messages = {
         cta2Url: "https://github.com/DaleStudy",
       },
       daleui: {
-        icon: "codeXml",
-        title: "daleui",
-        subtitle: "daleui.com · npm daleui",
+        icon: "palette",
+        title: "daleui Design System",
+        subtitleLinks: [
+          { label: "daleui.com", url: "https://www.daleui.com" },
+          { label: "npm daleui", url: "https://www.npmjs.com/package/daleui" },
+        ],
         overview:
-          "An open-source React + Panda CSS design system built by the community. Experience a real-world collaboration process: issue triage, PR reviews, releases. Published to npm and used in real projects.",
-        tags: ["React", "Panda CSS", "npm", "Design system"],
+          "An open-source React design system specialized for Korean, built together by the community. Korean typography and accessibility (WCAG) come first, and designers and developers share a real-world collaboration process: issue triage, PR reviews, releases. Published to npm and used in real projects.",
+        tags: ["Korean-first", "Accessibility", "React", "npm"],
         steps: [
           {
             title: "Pick an issue",
@@ -272,11 +249,6 @@ export const en: Messages = {
           },
           { title: "Code review", desc: "Polish the code through maintainer and peer reviews." },
           { title: "Release", desc: "Merged changes ship to npm with semantic versioning." },
-        ],
-        outcomes: [
-          { value: "109", label: "GitHub stars" },
-          { value: "19", label: "Components shipped" },
-          { value: "v1.1.1", label: "Latest on npm" },
         ],
         joinDesc:
           "Interested in design systems? Start with the repo issues. Designer contributions welcome too.",
@@ -290,6 +262,21 @@ export const en: Messages = {
   community: {
     title: "Community",
     sub: "Study groups are not everything: coffee chats, co-working, and meetups keep us connected.",
+    story: {
+      eyebrow: "Weekend prime time",
+      title: "The rooms that never go dark on weekends",
+      p1: "DaleStudy's golden hours are a little unusual: Saturday morning in Korea, Sunday night in North America. When prime time comes, people trickle into the voice channels until the rooms are full.",
+      p2: "Weekdays are async chat. Weekends are a different story.",
+      p3: "That's when text-only connections turn into real-time conversation and collaboration. Small actions beat grand resolutions: don't trust willpower, change your environment.",
+      quotes: [
+        "“I prepped a demo, anyone want to watch?”",
+        "“Up for some quick pair programming?”",
+        "“Could someone review this part?”",
+      ],
+      imgSrc: "/images/community/discord-rooms.png",
+      imgAlt: "Members gathered in weekend voice channels",
+      imgCaption: "One Saturday's voice channels, meeting rooms at capacity",
+    },
     sections: [
       {
         icon: "messageCircle",
@@ -301,6 +288,7 @@ export const en: Messages = {
           "Join with one slash command",
           "Any topic: career, tech, life",
         ],
+        images: [],
       },
       {
         icon: "globe",
@@ -312,6 +300,7 @@ export const en: Messages = {
           "Cam & mic optional, zero pressure",
           "A running mate for focus days",
         ],
+        images: [{ src: "/images/community/mogakco.jpg", cap: "Co-working room illustration" }],
       },
       {
         icon: "users",
@@ -323,6 +312,17 @@ export const en: Messages = {
           "Lightning talks & networking",
           "First-timer friendly culture",
         ],
+        images: [
+          {
+            src: "/images/community/meetup-leaderboard.jpg",
+            cap: "Leaderboard v1.0.0 demo at a meetup",
+          },
+          { src: "/images/community/meetup-kahoot.jpg", cap: "Kahoot quiz time together" },
+          { src: "/images/community/meetup-quiz.jpg", cap: "Quiz podium winners" },
+          { src: "/images/community/meetup-daleui.jpg", cap: "daleui lightning talk" },
+          { src: "/images/community/meetup-ai-coach.jpg", cap: "AI coach project proposal" },
+          { src: "/images/community/meetup-group.jpg", cap: "Wrapping up with the whole crew" },
+        ],
       },
     ],
     ctaTitle: "Start today",
@@ -332,21 +332,26 @@ export const en: Messages = {
     title: "Sponsor",
     intro:
       "DaleStudy is a non-profit community with no ads or paid membership. Your sponsorship keeps it running.",
+    intro2:
+      "Sponsorship is more than financial support: it is the foundation that keeps this community sustainable. We hope the culture of giving back, familiar in the global open-source ecosystem, takes root among Korean developer communities too.",
+    quote:
+      "“We believe that when small acts of support come together, they create positive change in the developer community.”",
+    usesTitle: "Where your sponsorship goes",
     uses: [
       {
         icon: "globe",
-        title: "Infrastructure",
-        desc: "Servers and domains that run the website, leaderboard, and bots.",
+        title: "Software & cloud",
+        desc: "Covers the software subscriptions and cloud costs essential to running the community and team projects.",
       },
       {
         icon: "users",
-        title: "Program support",
-        desc: "Covers the costs of running our study groups and projects.",
+        title: "Networking & learning",
+        desc: "Supports networking events and expands learning resources to help members grow.",
       },
       {
         icon: "handHeart",
-        title: "Service subscriptions",
-        desc: "Subscription fees for the services that keep the community running.",
+        title: "Open-source activity",
+        desc: "Encourages open-source project work, creating greater value for the whole community.",
       },
     ],
     ctaTitle: "Become a sponsor",
@@ -354,10 +359,12 @@ export const en: Messages = {
     ctaBtn: "GitHub Sponsors",
     ctaBtn2: "OpenCollective",
     listTitle: "Our sponsors",
-    listNote: "Based on public GitHub Sponsors data.",
+    listNote: "20 current sponsors, 105 all-time. Based on public GitHub Sponsors data.",
     transparencyTitle: "Transparent by default",
-    transparencyDesc:
-      "How funds are spent is shared publicly on GitHub and LinkedIn. Any funds remaining at the end of each year are donated in full to the Beautiful Foundation.",
+    transparencyDesc: "How funds are spent is shared publicly on GitHub and LinkedIn.",
+    donationTitle: "Year-end donation",
+    donationDesc:
+      "Any funds remaining at the end of each year are donated in full to a non-profit organization, so your support flows beyond the community.",
     corpTitle: "Corporate sponsorship",
     corpDesc: "We welcome employer branding, meetup venues, service credits, and more.",
     nonMoneyTitle: "Non-monetary contributions",
@@ -375,7 +382,6 @@ export const en: Messages = {
     studies: "Studies",
     projects: "Projects",
     support: "Support",
-    sponsorPage: "Sponsorship",
     rights: "All rights reserved.",
   },
   seo: {

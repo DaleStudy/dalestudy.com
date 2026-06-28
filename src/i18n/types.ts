@@ -4,6 +4,9 @@ export type Locale = "ko" | "en";
 
 export type IconName = IconProps["name"];
 
+/** daleui 아이콘 + SiteIcon이 lucide에서 보강하는 아이콘 */
+export type SiteIconName = IconName | "palette" | "brain" | "penLine" | "puzzle";
+
 export type TagTone = "brand" | "neutral" | "success" | "warning" | "danger" | "info";
 
 export const programSlugs = ["leetcode", "ai", "blog", "daleui"] as const;
@@ -20,7 +23,7 @@ export interface SeoEntry {
 
 export interface ProgramCard {
   slug: ProgramSlug;
-  icon: IconName;
+  icon: SiteIconName;
   title: string;
   /** 홈 카드용 짧은 설명 */
   desc: string;
@@ -31,13 +34,12 @@ export interface ProgramCard {
 }
 
 export interface ProgramDetail {
-  icon: IconName;
+  icon: SiteIconName;
   title: string;
-  subtitle: string;
+  subtitleLinks: { label: string; url: string }[];
   overview: string;
   tags: string[];
   steps: { title: string; desc: string }[];
-  outcomes: { value: string; label: string }[];
   joinDesc: string;
   ctaLabel: string;
   ctaUrl: string;
@@ -46,11 +48,12 @@ export interface ProgramDetail {
 }
 
 export interface CommunitySection {
-  icon: IconName;
+  icon: SiteIconName;
   title: string;
   tagline: string | null;
   desc: string;
   points: string[];
+  images: { src: string; cap: string }[];
 }
 
 export interface Messages {
@@ -74,7 +77,7 @@ export interface Messages {
     sponsorBannerSub: string;
     sponsorBannerCta: string;
     stats: { value: string; label: string }[];
-    activities: { icon: IconName; title: string; desc: string }[];
+    activities: { icon: SiteIconName; title: string; desc: string }[];
   };
   about: {
     title: string;
@@ -84,9 +87,9 @@ export interface Messages {
     visionLabel: string;
     visionBody: string;
     valuesTitle: string;
-    values: { icon: IconName; title: string; desc: string }[];
+    values: { icon: SiteIconName; title: string; desc: string }[];
     teamTitle: string;
-    roles: { icon: IconName; title: string; desc: string }[];
+    members: { login: string; name: string; role: string }[];
     teamCtaText: string;
     teamCtaBtn: string;
   };
@@ -100,13 +103,23 @@ export interface Messages {
   programDetail: {
     backToHub: string;
     howItWorks: string;
-    outcomes: string;
     join: string;
     details: Record<ProgramSlug, ProgramDetail>;
   };
   community: {
     title: string;
     sub: string;
+    story: {
+      eyebrow: string;
+      title: string;
+      p1: string;
+      p2: string;
+      p3: string;
+      quotes: string[];
+      imgSrc: string;
+      imgAlt: string;
+      imgCaption: string;
+    };
     sections: CommunitySection[];
     ctaTitle: string;
     ctaSub: string;
@@ -114,7 +127,10 @@ export interface Messages {
   sponsor: {
     title: string;
     intro: string;
-    uses: { icon: IconName; title: string; desc: string }[];
+    intro2: string;
+    quote: string;
+    usesTitle: string;
+    uses: { icon: SiteIconName; title: string; desc: string }[];
     ctaTitle: string;
     ctaSub: string;
     ctaBtn: string;
@@ -123,6 +139,8 @@ export interface Messages {
     listNote: string;
     transparencyTitle: string;
     transparencyDesc: string;
+    donationTitle: string;
+    donationDesc: string;
     corpTitle: string;
     corpDesc: string;
     nonMoneyTitle: string;
@@ -135,7 +153,6 @@ export interface Messages {
     studies: string;
     projects: string;
     support: string;
-    sponsorPage: string;
     rights: string;
   };
   seo: {

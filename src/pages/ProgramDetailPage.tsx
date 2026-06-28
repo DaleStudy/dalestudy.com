@@ -1,4 +1,6 @@
-import { Icon, Tag } from "daleui";
+import { Tag } from "daleui";
+import { SiteIcon } from "../components/SiteIcon";
+import { Fragment } from "react";
 import { AppLink } from "../components/AppLink";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages, localePath } from "../i18n";
@@ -26,11 +28,20 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
             className="icon-tile"
             style={{ width: 64, height: 64, borderRadius: "var(--radii-xl)" }}
           >
-            <Icon name={detail.icon} tone="brand" size="lg" />
+            <SiteIcon name={detail.icon} tone="brand" size="lg" />
           </span>
           <div>
             <h1>{detail.title}</h1>
-            <span className="detail-subtitle">{detail.subtitle}</span>
+            <span className="detail-subtitle">
+              {detail.subtitleLinks.map((link, index) => (
+                <Fragment key={link.url}>
+                  {index > 0 && <span className="detail-subtitle-sep"> · </span>}
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                </Fragment>
+              ))}
+            </span>
           </div>
         </div>
         <p className="detail-overview">{detail.overview}</p>
@@ -62,24 +73,7 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
         </div>
       </section>
 
-      <section className="detail-container" style={{ padding: "48px 20px" }}>
-        <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
-          {t.programDetail.outcomes}
-        </h2>
-        <div
-          className="card-grid"
-          style={{ gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}
-        >
-          {detail.outcomes.map((o) => (
-            <div key={o.label} className="outcome-card">
-              <strong>{o.value}</strong>
-              <span>{o.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="detail-container" style={{ paddingBottom: 72 }}>
+      <section className="detail-container" style={{ padding: "48px 20px 72px" }}>
         <div className="join-cta">
           <h2>{t.programDetail.join}</h2>
           <p>{detail.joinDesc}</p>

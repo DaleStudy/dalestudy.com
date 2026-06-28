@@ -1,4 +1,4 @@
-import { Icon } from "daleui";
+import { SiteIcon } from "../components/SiteIcon";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages } from "../i18n";
 import type { Locale } from "../i18n/types";
@@ -35,7 +35,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         <div className="card-grid" style={{ maxWidth: 960, margin: "0 auto" }}>
           {t.about.values.map((v) => (
             <div key={v.title} className="value-card">
-              <Icon name={v.icon} tone="brand" size="lg" />
+              <SiteIcon name={v.icon} tone="brand" size="lg" />
               <strong>{v.title}</strong>
               <span>{v.desc}</span>
             </div>
@@ -47,17 +47,27 @@ export function AboutPage({ locale }: { locale: Locale }) {
         <h2 className="section-title" style={{ fontSize: 24, marginBottom: 24 }}>
           {t.about.teamTitle}
         </h2>
-        <div>
-          {t.about.roles.map((r) => (
-            <div key={r.title} className="role-row">
-              <span className="icon-tile" style={{ width: 40, height: 40 }}>
-                <Icon name={r.icon} tone="brand" size="sm" />
-              </span>
-              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                <strong>{r.title}</strong>
-                <span className="role-desc">{r.desc}</span>
-              </div>
-            </div>
+        <div className="member-grid">
+          {t.about.members.map((m) => (
+            <a
+              key={m.login}
+              className="member-card"
+              href={`https://github.com/${m.login}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="member-avatar"
+                src={`https://github.com/${m.login}.png?size=112`}
+                alt=""
+                width={56}
+                height={56}
+                loading="lazy"
+              />
+              <strong>{m.name}</strong>
+              <span className="member-role">{m.role}</span>
+              <span className="member-handle">@{m.login}</span>
+            </a>
           ))}
         </div>
         <div className="team-cta">

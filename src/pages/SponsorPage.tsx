@@ -1,4 +1,4 @@
-import { Icon } from "daleui";
+import { SiteIcon } from "../components/SiteIcon";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages } from "../i18n";
 import type { Locale } from "../i18n/types";
@@ -14,6 +14,10 @@ export function SponsorPage({ locale }: { locale: Locale }) {
         <p className="page-intro" style={{ fontSize: 18 }}>
           {t.sponsor.intro}
         </p>
+        <p className="page-intro" style={{ marginTop: 12 }}>
+          {t.sponsor.intro2}
+        </p>
+        <p className="sponsor-quote">{t.sponsor.quote}</p>
       </section>
 
       <section className="container" style={{ padding: "0 20px 56px" }}>
@@ -34,6 +38,9 @@ export function SponsorPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="container" style={{ paddingBottom: 56 }}>
+        <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
+          {t.sponsor.usesTitle}
+        </h2>
         <div className="card-grid" style={{ maxWidth: 960 }}>
           {t.sponsor.uses.map((use) => (
             <div
@@ -41,7 +48,7 @@ export function SponsorPage({ locale }: { locale: Locale }) {
               className="info-box"
               style={{ display: "flex", flexDirection: "column", gap: 10 }}
             >
-              <Icon name={use.icon} tone="brand" size="md" />
+              <SiteIcon name={use.icon} tone="brand" size="md" />
               <strong style={{ margin: 0 }}>{use.title}</strong>
               <p>{use.desc}</p>
             </div>
@@ -73,12 +80,16 @@ export function SponsorPage({ locale }: { locale: Locale }) {
           <p>{t.sponsor.transparencyDesc}</p>
         </div>
         <div className="info-box">
-          <strong>{t.sponsor.corpTitle}</strong>
-          <p>{t.sponsor.corpDesc}</p>
+          <strong>{t.sponsor.donationTitle}</strong>
+          <p>{t.sponsor.donationDesc}</p>
         </div>
         <div className="info-box">
           <strong>{t.sponsor.nonMoneyTitle}</strong>
           <p>{t.sponsor.nonMoneyDesc}</p>
+        </div>
+        <div className="info-box">
+          <strong>{t.sponsor.corpTitle}</strong>
+          <p>{t.sponsor.corpDesc}</p>
         </div>
       </section>
     </>

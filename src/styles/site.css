@@ -656,22 +656,50 @@ a.card-link:hover .mini-card {
   text-wrap: pretty;
 }
 
-.role-row {
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.member-card {
   display: flex;
-  gap: 16px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--colors-border-neutral);
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 24px 16px 20px;
+  border: 1px solid var(--colors-border-neutral);
+  border-radius: var(--radii-xl);
+  text-align: center;
+  color: var(--colors-fg-neutral);
+  transition: border-color 0.15s;
 }
 
-.role-row strong {
-  font-size: 16px;
+.member-card:hover {
+  border-color: var(--colors-border-brand);
+  color: var(--colors-fg-neutral);
 }
 
-.role-row .role-desc {
-  font-size: 14.5px;
-  line-height: 1.6;
+.member-card strong {
+  margin-top: 8px;
+  font-size: 15.5px;
+}
+
+.member-avatar {
+  border-radius: var(--radii-full);
+  border: 2px solid var(--colors-border-brand);
+  background: var(--colors-bg-neutral);
+}
+
+.member-role {
+  font-size: 13.5px;
+  line-height: 1.5;
   opacity: 0.75;
-  text-wrap: pretty;
+}
+
+.member-handle {
+  font-size: 12.5px;
+  color: var(--colors-fg-brand);
 }
 
 .team-cta {
@@ -713,6 +741,20 @@ a.card-link:hover .mini-card {
 
 .detail-subtitle {
   font-size: 14px;
+}
+
+.detail-subtitle a {
+  color: var(--colors-fg-neutral);
+  opacity: 0.65;
+}
+
+.detail-subtitle a:hover {
+  opacity: 1;
+  color: var(--colors-fg-brand);
+  text-decoration: underline;
+}
+
+.detail-subtitle-sep {
   opacity: 0.65;
 }
 
@@ -764,26 +806,6 @@ a.card-link:hover .mini-card {
   opacity: 0.75;
 }
 
-.outcome-card {
-  border: 1px solid var(--colors-border-neutral);
-  border-radius: var(--radii-lg);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.outcome-card strong {
-  font-size: 22px;
-  color: var(--colors-fg-brand);
-  font-variant-numeric: tabular-nums;
-}
-
-.outcome-card span {
-  font-size: 13.5px;
-  opacity: 0.7;
-}
-
 .join-cta {
   border-radius: var(--radii-2xl);
   background: var(--colors-bg-brand);
@@ -814,6 +836,106 @@ a.card-link:hover .mini-card {
 }
 
 /* ===== 커뮤니티 ===== */
+
+.community-story {
+  padding: 64px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  align-items: center;
+}
+
+.story-eyebrow {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--colors-fg-brand);
+}
+
+.story-title {
+  margin: 0 0 16px;
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.story-body {
+  margin: 0 0 12px;
+  font-size: 15.5px;
+  line-height: 1.75;
+  opacity: 0.85;
+  text-wrap: pretty;
+}
+
+.story-quotes {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.story-quote {
+  align-self: flex-start;
+  background: var(--colors-app-bg);
+  border: 1px solid var(--colors-border-neutral);
+  border-radius: 4px 18px 18px 18px;
+  padding: 10px 16px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.story-figure {
+  margin: 0;
+  justify-self: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.story-figure img {
+  display: block;
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radii-xl);
+  border: 1px solid var(--colors-border-neutral);
+}
+
+.story-figure figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.community-gallery {
+  margin-top: -16px;
+  padding: 0 20px 56px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.community-gallery figure {
+  margin: 0;
+}
+
+.community-gallery img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radii-lg);
+  border: 1px solid var(--colors-border-neutral);
+}
+
+.community-gallery figcaption {
+  margin-top: 6px;
+  font-size: 12.5px;
+  opacity: 0.6;
+}
 
 .community-section-inner {
   padding: 56px 0;
@@ -898,6 +1020,15 @@ a.card-link:hover .mini-card {
   text-align: center;
   font-size: 13.5px;
   opacity: 0.6;
+}
+
+.sponsor-quote {
+  margin: 20px 0 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--colors-fg-brand);
+  text-wrap: pretty;
 }
 
 .info-box {
