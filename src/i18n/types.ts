@@ -39,7 +39,9 @@ export interface ProgramDetail {
   subtitleLinks: { label: string; url: string }[];
   overview: string;
   tags: string[];
+  captures: { src: string; alt: string; cap: string }[];
   steps: { title: string; desc: string }[];
+  testimonials: { quote: string; author: string; login: string }[];
   joinDesc: string;
   ctaLabel: string;
   ctaUrl: string;
@@ -50,9 +52,8 @@ export interface ProgramDetail {
 export interface CommunitySection {
   icon: SiteIconName;
   title: string;
-  tagline: string | null;
   desc: string;
-  points: string[];
+  detail: string;
   images: { src: string; cap: string }[];
 }
 
@@ -89,6 +90,7 @@ export interface Messages {
     valuesTitle: string;
     values: { icon: SiteIconName; title: string; desc: string }[];
     teamTitle: string;
+    teamIntro: string;
     members: { login: string; name: string; role: string }[];
     teamCtaText: string;
     teamCtaBtn: string;
@@ -98,11 +100,16 @@ export interface Messages {
     hubSub: string;
     otherTitle: string;
     other: { title: string; desc: string; url: string }[];
+    commonTitle: string;
+    commonSub: string;
+    commonSteps: { title: string; desc: string }[];
     cards: ProgramCard[];
   };
   programDetail: {
     backToHub: string;
     howItWorks: string;
+    testimonialsTitle: string;
+    testimonialsMore: string;
     join: string;
     details: Record<ProgramSlug, ProgramDetail>;
   };
@@ -135,7 +142,6 @@ export interface Messages {
     ctaSub: string;
     ctaBtn: string;
     ctaBtn2: string;
-    listTitle: string;
     listNote: string;
     transparencyTitle: string;
     transparencyDesc: string;

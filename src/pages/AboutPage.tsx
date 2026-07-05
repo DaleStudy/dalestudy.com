@@ -44,9 +44,10 @@ export function AboutPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="prose-section" style={{ padding: "16px 20px 64px" }}>
-        <h2 className="section-title" style={{ fontSize: 24, marginBottom: 24 }}>
+        <h2 className="section-title" style={{ fontSize: 24, marginBottom: 12 }}>
           {t.about.teamTitle}
         </h2>
+        <p className="team-intro">{t.about.teamIntro}</p>
         <div className="member-grid">
           {t.about.members.map((m) => (
             <a

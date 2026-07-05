@@ -37,17 +37,17 @@ export const ko: Messages = {
       {
         icon: "messageCircle",
         title: "커피챗",
-        desc: "코드 리뷰 너머의 연결. 봇이 매주 자동으로 대화 상대를 매칭해 줍니다.",
+        desc: "봇이 매주 대화 상대를 자동으로 매칭해 줍니다. 코드 얘기든 커리어 고민이든, 주제는 자유입니다.",
       },
       {
         icon: "globe",
         title: "모각코",
-        desc: "상시 열려 있는 음성 채널에서 각자 작업하며 함께 있는 감각을 나눕니다.",
+        desc: "상시 열려 있는 음성 채널에서 각자 작업합니다. 혼자가 아니라는 느낌이 꾸준함을 만듭니다.",
       },
       {
         icon: "users",
         title: "밋업",
-        desc: "발표와 네트워킹이 있는 정기 온라인 모임입니다. 어디에 살든 참여할 수 있습니다.",
+        desc: "발표와 네트워킹이 있는 정기 모임입니다. 어디에 살든 참여할 수 있습니다.",
       },
     ],
   },
@@ -79,6 +79,8 @@ export const ko: Messages = {
       },
     ],
     teamTitle: "운영진",
+    teamIntro:
+      "운영진은 건강한 스터디 문화를 만들고 참여자분들께 좋은 경험을 드리기 위해 늘 고민합니다. 정기 회의와 회고를 거치고, 매 기수 참여자들의 피드백을 다음 기수 운영에 반영합니다.",
     members: [
       { login: "DaleSeo", name: "DaleSeo", role: "커뮤니티 매니저" },
       { login: "SamTheKorean", name: "Sam", role: "리트코드 스터디 리드" },
@@ -95,6 +97,27 @@ export const ko: Messages = {
     hubSub:
       "진행 중인 스터디와 프로젝트입니다. 스터디는 참여자의 경험을 지속적으로 개선하기 위해 기수제로 운영되고, 프로젝트는 모두 오픈소스입니다. 모든 프로그램은 Discord와 GitHub에서 공개적으로 진행됩니다.",
     otherTitle: "기타 프로젝트",
+    commonTitle: "기수를 거듭할수록 성숙해지는 프로그램",
+    commonSub:
+      "회고와 피드백이 다음 기수로 이어지는 선순환, 달레 스터디가 프로그램을 운영하는 방식입니다.",
+    commonSteps: [
+      {
+        title: "Discord에서 시작",
+        desc: "채널에 인사를 남기거나 모집 공지에 신청하면 바로 합류할 수 있습니다.",
+      },
+      {
+        title: "GitHub에서 협업",
+        desc: "PR, 코드 리뷰, 이슈 등 실무와 같은 공개 협업 프로세스로 진행됩니다.",
+      },
+      {
+        title: "결과를 함께 공유",
+        desc: "풀이, 글, 릴리스가 커뮤니티에 쌓이고 다음 참여자의 발판이 됩니다.",
+      },
+      {
+        title: "회고와 개선",
+        desc: "기수가 끝나면 회고로 다음 기수를 개선하고, 수료자가 코치로 돌아옵니다.",
+      },
+    ],
     other: [
       {
         title: "리더보드",
@@ -159,6 +182,8 @@ export const ko: Messages = {
   programDetail: {
     backToHub: "프로그램 전체 보기",
     howItWorks: "진행 방식",
+    testimonialsTitle: "참여자 후기",
+    testimonialsMore: "후기 전체 보기",
     join: "참여 방법",
     details: {
       leetcode: {
@@ -168,6 +193,18 @@ export const ko: Messages = {
         overview:
           "개발자 해외 취업의 관문인 코딩 인터뷰를 준비하는 스터디입니다. 15주 동안 매주 5문제씩 Blind 75를 함께 풀고, 오픈소스 프로젝트처럼 GitHub PR로 답안을 제출해 상호 코드 리뷰를 합니다. 리더보드로 서로의 꾸준함을 응원합니다.",
         tags: ["Blind 75", "매주 5문제", "GitHub PR 리뷰", "리더보드"],
+        captures: [
+          {
+            src: "/images/programs/leetcode-discussions.jpg",
+            alt: "GitHub Discussions에 주차별 공지가 올라온 화면",
+            cap: "주차별 문제와 공지는 GitHub Discussions로 공유됩니다.",
+          },
+          {
+            src: "/images/programs/leetcode-studyroom.jpg",
+            alt: "Discord 음성 채널에서 열린 리트코드 스터디 1주차 모임",
+            cap: "매주 Discord 공부방에서 함께 풀이를 나눕니다.",
+          },
+        ],
         steps: [
           { title: "기수 등록", desc: "모집 기간에 Discord에서 참가 신청을 합니다." },
           {
@@ -176,6 +213,26 @@ export const ko: Messages = {
           },
           { title: "코드 리뷰", desc: "동료의 풀이를 리뷰하고 내 풀이도 피드백을 받습니다." },
           { title: "회고와 수료", desc: "기수가 끝나면 회고를 나누고 다음 기수로 이어집니다." },
+        ],
+        testimonials: [
+          {
+            quote:
+              "달레 스터디는 15주간 풀어야 할 문제들의 로드맵을 제시하고, 서로의 코드를 리뷰하도록 강제합니다. 이 간단한 시스템이 매우 강력한 보조가 됩니다.",
+            author: "Ju Hwijung",
+            login: "hwi-middle",
+          },
+          {
+            quote:
+              "몰랐던 자료구조들을 공부하고 선배 개발자분들께 코드 리뷰도 받는 등 주니어 개발자로서 하기 어려운 값진 경험을 하고 있습니다.",
+            author: "Sam Lee",
+            login: "SamTheKorean",
+          },
+          {
+            quote:
+              "회사 밖의 생태계 안에서 수준 높은 리뷰어 분들의 피드백을 받을 수 있었습니다. 단순히 문제를 푸는 것을 넘어서, 어떻게 하면 더 좋은 코드를 작성할 수 있을지 많이 배웠습니다.",
+            author: "Reese",
+            login: "reeseo3o",
+          },
         ],
         joinDesc: "자세한 커리큘럼과 기수 일정은 전용 사이트에서 확인하세요.",
         ctaLabel: "leetcode.dalestudy.com 방문",
@@ -190,11 +247,29 @@ export const ko: Messages = {
         overview:
           "일반 소프트웨어 개발자를 위한 실무 중심 AI 스터디입니다. LLM, 프롬프트 엔지니어링 같은 최신 기술과 오픈소스 AI 도구를 함께 익히고, 코드 생성과 업무 자동화처럼 개발 실무에 접목하는 방법을 매주 발표하고 토론합니다.",
         tags: ["LLM", "프롬프트 엔지니어링", "실무 적용", "매주 세션"],
+        captures: [
+          {
+            src: "/images/programs/ai-figjam-ideas.jpg",
+            alt: "FigJam 브레인스토밍 보드: AI로 해결할 문제를 포스트잇으로 모은 화면",
+            cap: "FigJam 브레인스토밍: AI로 해결할 문제를 커뮤니티가 직접 고릅니다.",
+          },
+          {
+            src: "/images/programs/ai-figjam-retro.jpg",
+            alt: "FigJam 회고 보드: 잘한 점, 어려웠던 점, 배움과 액션 아이템을 정리한 화면",
+            cap: "프로젝트가 끝나면 FigJam으로 함께 회고합니다.",
+          },
+          {
+            src: "/images/programs/ai-last-meeting.jpg",
+            alt: "시즌을 마무리하는 모임에서 손을 흔드는 멤버들",
+            cap: "시즌을 마무리하는 모임.",
+          },
+        ],
         steps: [
           { title: "주제 선정", desc: "함께 익힐 AI 기술이나 실험할 도구를 정합니다." },
           { title: "각자 학습", desc: "한 주 동안 각자 읽고 실험합니다." },
           { title: "공유 세션", desc: "발표자를 돌아가며 배운 것을 발표하고 토론합니다." },
         ],
+        testimonials: [],
         joinDesc: "Discord의 인공지능 채널에서 다음 기수 모집 소식을 확인하세요.",
         ctaLabel: "Discord 채널 참여",
         ctaUrl: "https://dales.link/discord",
@@ -208,12 +283,14 @@ export const ko: Messages = {
         overview:
           "매주 한 편씩, 10주 동안, 함께 씁니다. 각자의 블로그에 글을 발행하고 서로의 글을 읽으며 피드백을 나눕니다. 블로그를 시작하려는 분부터 꾸준함을 만들고 싶은 경험자까지 누구나 참여할 수 있습니다.",
         tags: ["주 1회 발행", "10주 과정", "상호 피드백"],
+        captures: [],
         steps: [
           { title: "주제 공유", desc: "이번 주에 쓸 글의 주제를 공유합니다." },
           { title: "초안 작성", desc: "마감까지 초안을 씁니다." },
           { title: "피드백 교환", desc: "서로의 글을 읽고 피드백을 남깁니다." },
           { title: "발행", desc: "다듬은 글을 각자의 블로그에 발행합니다." },
         ],
+        testimonials: [],
         joinDesc: "Discord의 블로그 채널에서 다음 기수 참여자를 모집합니다.",
         ctaLabel: "Discord 채널 참여",
         ctaUrl: "https://dales.link/discord",
@@ -230,10 +307,21 @@ export const ko: Messages = {
         overview:
           "한국어 환경에 특화된 오픈소스 React 디자인 시스템을 커뮤니티가 함께 만듭니다. 한국어 타이포그래피와 접근성(WCAG)을 최우선으로 고려하며, 디자이너와 개발자가 이슈 선택부터 PR 리뷰, 릴리스까지 실무와 같은 협업 프로세스를 그대로 경험합니다. npm에 배포되어 실제 프로젝트에서 사용됩니다.",
         tags: ["한국어 특화", "접근성", "React", "npm 배포"],
+        captures: [
+          {
+            src: "/images/programs/daleui-components.jpg",
+            alt: "달레 UI v1.0 컴포넌트: 버튼, 폼, 태그, 카드가 라이트·다크 모드로 정리된 화면",
+            cap: "달레 UI v1.0, 커뮤니티가 함께 만든 컴포넌트들, 라이트·다크 모드 모두 지원합니다.",
+          },
+        ],
         steps: [
           {
             title: "이슈 선택",
             desc: "GitHub 이슈에서 하고 싶은 작업을 고릅니다. good first issue부터 시작해도 좋습니다.",
+          },
+          {
+            title: "디자인과 설계",
+            desc: "Figma에서 디자인을 다듬고, 컴포넌트 API와 토큰 구조를 함께 논의해 확정합니다.",
           },
           {
             title: "구현과 PR",
@@ -242,6 +330,7 @@ export const ko: Messages = {
           { title: "코드 리뷰", desc: "메인테이너와 동료들의 리뷰를 거쳐 코드를 다듬습니다." },
           { title: "릴리스", desc: "머지된 변경은 시맨틱 버저닝으로 npm에 배포됩니다." },
         ],
+        testimonials: [],
         joinDesc:
           "디자인 시스템에 관심이 있다면 저장소의 이슈부터 살펴보세요. 디자이너의 기여도 환영합니다.",
         ctaLabel: "daleui.com 방문",
@@ -273,33 +362,27 @@ export const ko: Messages = {
       {
         icon: "messageCircle",
         title: "커피챗",
-        tagline: "“코드 리뷰 너머의 연결”",
         desc: "봇이 매주 자동으로 대화 상대를 매칭해 줍니다. 슬래시 명령어 하나로 참여하고, 주제는 자유입니다. 커리어 고민부터 취미까지 무엇이든 좋습니다.",
-        points: [
-          "봇이 자동으로 상대를 매칭",
-          "/커피챗 명령어로 간단히 참여",
-          "주제 제한 없음: 커리어, 기술, 일상",
+        detail:
+          "참여는 간단합니다. Discord에서 슬래시 명령어 하나를 입력해 두면 매주 봇이 새로운 상대를 찾아 짝을 지어 줍니다. 커리어 고민, 이직 이야기, 요즘 빠져 있는 기술이나 취미까지 무엇이든 나눌 수 있습니다. 어색한 첫 인사만 지나면 화면 너머의 아이디가 동료가 됩니다.",
+        images: [
+          { src: "/images/community/coffee-command.png", cap: "/coffee 명령어 하나로 참여와 중단" },
         ],
-        images: [],
       },
       {
         icon: "globe",
         title: "모각코",
-        tagline: null,
-        desc: "음성 채널이 상시 열려 있습니다. 각자 자기 일을 하면서도 함께 있는 감각이 꾸준함을 만듭니다. 마이크는 켜도, 꺼도 좋습니다.",
-        points: [
-          "상시 열려 있는 음성 채널",
-          "캠·마이크 자유, 부담 없이 참여",
-          "집중이 필요한 날의 러닝메이트",
-        ],
+        desc: "음성 채널이 상시 열려 있습니다. 각자 자기 일을 하면서도 혼자가 아니라는 느낌이 꾸준함을 만듭니다. 마이크는 켜도, 꺼도 좋습니다.",
+        detail:
+          "방법은 따로 없습니다. 들어와서 각자 할 일을 하면 됩니다. 캠과 마이크는 켜도 꺼도 좋고, 인사만 남기고 조용히 작업해도 괜찮습니다. 혼자서는 자꾸 미뤄지던 일이 이 방에서는 이상하게 진행됩니다. 집중이 필요한 날의 러닝메이트인 셈입니다.",
         images: [{ src: "/images/community/mogakco.jpg", cap: "모각코 안내 일러스트" }],
       },
       {
         icon: "users",
         title: "밋업",
-        tagline: null,
-        desc: "발표와 네트워킹이 있는 정기 온라인 모임입니다. 어디에 살든 참여할 수 있고, 처음 온 사람도 어색하지 않도록 운영진이 챙깁니다.",
-        points: ["정기 온라인 모임", "라이트닝 토크와 네트워킹", "첫 참여자 환영 문화"],
+        desc: "발표와 네트워킹이 있는 정기 모임입니다. 어디에 살든 참여할 수 있고, 처음 온 사람도 어색하지 않도록 운영진이 챙깁니다.",
+        detail:
+          "정기적으로 모여 라이트닝 토크를 듣고 근황을 나눕니다. 발표는 거창하지 않아도 됩니다. 삽질기, 회고, 작게 만든 도구 이야기가 오히려 환영받습니다. 처음 온 사람이 겉돌지 않도록 운영진이 자연스럽게 대화에 끌어들입니다.",
         images: [
           { src: "/images/community/meetup-leaderboard.jpg", cap: "밋업에서 리더보드 v1.0.0 데모" },
           { src: "/images/community/meetup-kahoot.jpg", cap: "다 같이 Kahoot 퀴즈 타임" },
@@ -343,14 +426,11 @@ export const ko: Messages = {
     ctaSub: "월 1달러부터 시작할 수 있습니다. 작은 후원도 큰 힘이 되고, 언제든 중단할 수 있습니다.",
     ctaBtn: "GitHub Sponsors",
     ctaBtn2: "OpenCollective",
-    listTitle: "달레 스터디의 후원자들",
-    listNote:
-      "현재 20명이 후원 중이며, 지금까지 105명이 함께해 주셨습니다. (GitHub Sponsors 공개 정보 기준)",
+    listNote: "함께해 주시는 후원자들 (GitHub Sponsors 공개 정보 기준)",
     transparencyTitle: "투명한 운영",
     transparencyDesc: "후원금 사용 내역은 GitHub과 LinkedIn을 통해 투명하게 공개합니다.",
     donationTitle: "남은 후원금 기부",
-    donationDesc:
-      "매년 남은 후원금은 전액 비영리 단체에 기부합니다. 여러분의 후원이 커뮤니티를 넘어 더 넓은 곳까지 흘러갑니다.",
+    donationDesc: "매년 남은 후원금은 전액 비영리 단체에 기부합니다.",
     corpTitle: "기업 후원",
     corpDesc: "채용 브랜딩, 밋업 장소 제공, 서비스 크레딧 등 다양한 방식의 기업 후원을 환영합니다.",
     nonMoneyTitle: "비금전적 기여",

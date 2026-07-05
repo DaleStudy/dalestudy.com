@@ -5,6 +5,7 @@ import { AppLink } from "../components/AppLink";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages, localePath } from "../i18n";
 import type { Locale, ProgramSlug } from "../i18n/types";
+import { LEETCODE_SITE_URL } from "../links";
 
 export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: ProgramSlug }) {
   const t = getMessages(locale);
@@ -54,6 +55,17 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
         </div>
       </section>
 
+      {detail.captures.length > 0 && (
+        <section className="container capture-grid" style={{ paddingBottom: 48 }}>
+          {detail.captures.map((capture) => (
+            <figure key={capture.src}>
+              <img src={capture.src} alt={capture.alt} loading="lazy" />
+              <figcaption>{capture.cap}</figcaption>
+            </figure>
+          ))}
+        </section>
+      )}
+
       <section className="band-neutral">
         <div className="detail-container" style={{ padding: "48px 20px" }}>
           <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
@@ -72,6 +84,45 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
           </div>
         </div>
       </section>
+
+      {detail.testimonials.length > 0 && (
+        <section className="container" style={{ padding: "48px 20px 24px" }}>
+          <h2
+            className="section-title"
+            style={{ fontSize: 22, textAlign: "center", marginBottom: 20 }}
+          >
+            {t.programDetail.testimonialsTitle}
+          </h2>
+          <div className="testimonial-grid">
+            {detail.testimonials.map((tm) => (
+              <figure key={tm.login} className="testimonial-card">
+                <blockquote>“{tm.quote}”</blockquote>
+                <figcaption>
+                  <img
+                    src={`https://github.com/${tm.login}.png?size=72`}
+                    alt=""
+                    width={36}
+                    height={36}
+                    loading="lazy"
+                  />
+                  <a
+                    href={`https://github.com/${tm.login}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {tm.author}
+                  </a>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="testimonial-more">
+            <a href={LEETCODE_SITE_URL} target="_blank" rel="noopener noreferrer">
+              {t.programDetail.testimonialsMore} →
+            </a>
+          </p>
+        </section>
+      )}
 
       <section className="detail-container" style={{ padding: "48px 20px 72px" }}>
         <div className="join-cta">

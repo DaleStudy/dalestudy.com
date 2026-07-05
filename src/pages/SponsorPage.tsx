@@ -21,12 +21,6 @@ export function SponsorPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="container" style={{ padding: "0 20px 56px" }}>
-        <h2
-          className="section-title"
-          style={{ fontSize: 22, textAlign: "center", marginBottom: 24 }}
-        >
-          {t.sponsor.listTitle}
-        </h2>
         <a href={SPONSORS_URL} target="_blank" rel="noopener noreferrer">
           <img
             className="sponsors-embed"

@@ -38,6 +38,24 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <section className="container" style={{ padding: "8px 20px 64px" }}>
+        <div className="common-steps-box">
+          <h2>{t.programs.commonTitle}</h2>
+          <p>{t.programs.commonSub}</p>
+          <div className="common-steps-grid">
+            {t.programs.commonSteps.map((step, index) => (
+              <div key={step.title} className="common-step">
+                <span className="step-num" style={{ width: 32, height: 32 }}>
+                  {index + 1}
+                </span>
+                <strong>{step.title}</strong>
+                <span>{step.desc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="band-neutral">
         <div className="container" style={{ padding: "56px 20px 72px" }}>
           <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
