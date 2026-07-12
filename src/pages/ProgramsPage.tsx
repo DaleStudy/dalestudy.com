@@ -22,16 +22,19 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
               className="card-link"
               to={localePath(locale, `/programs/${p.slug}`)}
             >
-              <div className="program-card program-card-lg">
-                <div className="program-card-head">
-                  <span className="icon-tile" style={{ width: 52, height: 52 }}>
-                    <SiteIcon name={p.icon} tone="brand" size="md" />
-                  </span>
-                  <Tag tone={p.tagTone}>{p.tag}</Tag>
+              <div className="program-card-thumbed">
+                <img className="program-card-thumb" src={p.thumb} alt="" loading="lazy" />
+                <div className="program-card program-card-lg">
+                  <div className="program-card-head">
+                    <span className="icon-tile" style={{ width: 52, height: 52 }}>
+                      <SiteIcon name={p.icon} tone="brand" size="md" />
+                    </span>
+                    <Tag tone={p.tagTone}>{p.tag}</Tag>
+                  </div>
+                  <strong>{p.title}</strong>
+                  <span className="card-desc">{p.fullDesc}</span>
+                  <span className="card-more">{t.cta.learnMore} →</span>
                 </div>
-                <strong>{p.title}</strong>
-                <span className="card-desc">{p.fullDesc}</span>
-                <span className="card-more">{t.cta.learnMore} →</span>
               </div>
             </AppLink>
           ))}

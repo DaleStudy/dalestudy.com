@@ -16,16 +16,40 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </p>
       </section>
 
-      <section className="prose-section" style={{ paddingBottom: 56 }}>
-        <h2 className="prose-label">{t.about.missionLabel}</h2>
-        <p className="prose-body">{t.about.missionBody}</p>
+      <section className="band-neutral">
+        <div className="container community-story" style={{ alignItems: "start" }}>
+          <div className="mission-vision-col">
+            <div>
+              <h2 className="prose-label">{t.about.missionLabel}</h2>
+              <p className="prose-body">{t.about.missionBody}</p>
+            </div>
+            <div>
+              <h2 className="prose-label">{t.about.visionLabel}</h2>
+              <p className="prose-body">{t.about.visionBody}</p>
+            </div>
+          </div>
+          <figure className="story-figure">
+            <img src={t.about.photoSrc} alt={t.about.photoAlt} loading="lazy" />
+            <figcaption>{t.about.photoCaption}</figcaption>
+          </figure>
+        </div>
       </section>
 
-      <section className="band-neutral">
-        <div className="prose-section" style={{ padding: "56px 20px" }}>
-          <h2 className="prose-label">{t.about.visionLabel}</h2>
-          <p className="prose-body">{t.about.visionBody}</p>
+      <section className="prose-section" style={{ padding: "56px 20px" }}>
+        <p className="story-eyebrow">{t.about.story.eyebrow}</p>
+        <h2 className="story-title">{t.about.story.title}</h2>
+        <p className="story-body">{t.about.story.p1}</p>
+        <p className="story-body">{t.about.story.p2}</p>
+        <div className="story-quotes">
+          {t.about.story.quotes.map((quote) => (
+            <div key={quote} className="story-quote">
+              {quote}
+            </div>
+          ))}
         </div>
+        <p className="story-body" style={{ marginTop: 20 }}>
+          {t.about.story.p3}
+        </p>
       </section>
 
       <section className="container" style={{ padding: "64px 20px" }}>

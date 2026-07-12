@@ -30,7 +30,7 @@ export const en: Messages = {
     stats: [
       { value: "1,500+", label: "Discord members" },
       { value: "400+", label: "GitHub members" },
-      { value: "1,000+", label: "LinkedIn followers" },
+      { value: "900+", label: "LinkedIn followers" },
       { value: "300+", label: "GitHub stars" },
     ],
     activities: [
@@ -61,6 +61,9 @@ export const en: Messages = {
     visionLabel: "Vision",
     visionBody:
       "A community where anyone can become a contributor, regardless of skill or background. Paying forward the help you received keeps the community sustainable.",
+    photoSrc: "/images/community/discord-rooms.png",
+    photoAlt: "Members gathered in weekend voice channels",
+    photoCaption: "One Saturday's voice channels, meeting rooms at capacity",
     valuesTitle: "Core values",
     values: [
       {
@@ -79,6 +82,18 @@ export const en: Messages = {
         desc: "Pay forward the help you received. Small contributions compound into a virtuous cycle.",
       },
     ],
+    story: {
+      eyebrow: "Weekend prime time",
+      title: "The rooms that never go dark on weekends",
+      p1: "DaleStudy's golden hours are a little unusual: Saturday morning in Korea, Sunday night in North America. When prime time comes, people trickle into the voice channels until the rooms are full.",
+      p2: "Weekdays are async chat. Weekends are a different story.",
+      p3: "That's when text-only connections turn into real-time conversation and collaboration. Small actions beat grand resolutions. Don't trust willpower, change your environment.",
+      quotes: [
+        "“I prepped a demo, anyone want to watch?”",
+        "“Up for some quick pair programming?”",
+        "“Could someone review this part?”",
+      ],
+    },
     teamTitle: "Team",
     teamIntro:
       "The team works hard to foster a healthy study culture and a great experience for participants: through regular meetings, retrospectives, and by folding each cohort's feedback into the next.",
@@ -103,7 +118,7 @@ export const en: Messages = {
       "Retrospectives and feedback carry into the next cohort: a virtuous cycle at the heart of how DaleStudy runs its programs.",
     commonSteps: [
       {
-        title: "Start on Discord",
+        title: "Connect on Discord",
         desc: "Say hi in the channel or apply to a recruitment post. That's all it takes.",
       },
       {
@@ -144,6 +159,7 @@ export const en: Messages = {
     cards: [
       {
         slug: "leetcode",
+        thumb: "/images/programs/leetcode-discussions.jpg",
         icon: "puzzle",
         title: "LeetCode Study",
         desc: "A study group solving the Blind 75 for coding interviews, with PR-driven code reviews.",
@@ -154,6 +170,7 @@ export const en: Messages = {
       },
       {
         slug: "daleui",
+        thumb: "/images/programs/daleui-cover.jpg",
         icon: "palette",
         title: "daleui Design System",
         desc: "An open-source design system specialized for Korean, built by the community.",
@@ -164,6 +181,7 @@ export const en: Messages = {
       },
       {
         slug: "ai",
+        thumb: "/images/programs/ai-figjam-ideas.jpg",
         icon: "brain",
         title: "AI Study",
         desc: "A hands-on study on applying AI to everyday development, experimenting with LLMs and the latest tools.",
@@ -174,6 +192,7 @@ export const en: Messages = {
       },
       {
         slug: "blog",
+        thumb: "/images/programs/blog-channel.jpg",
         icon: "penLine",
         title: "Blog Study",
         desc: "Write one blog post a week for ten weeks, together.",
@@ -251,7 +270,12 @@ export const en: Messages = {
       ai: {
         icon: "brain",
         title: "AI Study",
-        subtitleLinks: [{ label: "Discord #ai", url: "https://dales.link/discord" }],
+        subtitleLinks: [
+          {
+            label: "Discord #AI-스터디",
+            url: "https://discord.com/channels/775115965964222492/1374000564807012382",
+          },
+        ],
         overview:
           "A hands-on AI study for working software developers. Learn LLMs, prompt engineering, and open-source AI tooling together, and discuss how to apply them to real development work like code generation and workflow automation in weekly sessions.",
         tags: ["LLMs", "Prompt engineering", "Hands-on", "Weekly sessions"],
@@ -278,30 +302,59 @@ export const en: Messages = {
           { title: "Share session", desc: "Rotate presenters, share learnings, and discuss." },
         ],
         testimonials: [],
-        joinDesc: "Watch the AI channel on Discord for the next cohort announcement.",
+        joinDesc: "Watch the AI-스터디 channel on Discord for the next cohort announcement.",
         ctaLabel: "Join the Discord channel",
-        ctaUrl: "https://dales.link/discord",
+        ctaUrl: "https://discord.com/channels/775115965964222492/1374000564807012382",
         cta2Label: "View GitHub",
         cta2Url: "https://github.com/DaleStudy",
       },
       blog: {
         icon: "penLine",
         title: "Blog Study",
-        subtitleLinks: [{ label: "Discord #blog", url: "https://dales.link/discord" }],
+        subtitleLinks: [
+          {
+            label: "Discord #블로그-스터디",
+            url: "https://discord.com/channels/775115965964222492/1513687699729416232",
+          },
+        ],
         overview:
           "One post a week, for ten weeks, together. Publish on your own blog, read each other's posts, and exchange feedback. Open to everyone, from first-time bloggers to experienced writers building consistency.",
         tags: ["Weekly publishing", "10-week cohort", "Peer feedback"],
-        captures: [],
+        captures: [
+          {
+            src: "/images/programs/blog-channel.jpg",
+            alt: "Discord blog-sharing channel with members' published posts and reactions",
+            cap: "Posts published each week pile up in the blog-sharing channel, followed by reactions and feedback.",
+          },
+          {
+            src: "/images/programs/blog-linkedin.jpg",
+            alt: "LinkedIn DaleStudy page introducing the week-one best posts",
+            cap: "The most-recommended posts are shared beyond the community via the LinkedIn page.",
+          },
+        ],
         steps: [
-          { title: "Share topics", desc: "Share what you'll write this week." },
-          { title: "Draft", desc: "Write your draft before the deadline." },
-          { title: "Exchange feedback", desc: "Read each other's posts and comment." },
-          { title: "Publish", desc: "Publish the polished post on your blog." },
+          {
+            title: "Publish",
+            desc: "Publish one post a week on your own blog about what you learned or experienced.",
+          },
+          {
+            title: "Share",
+            desc: "Share the post with the community, with a link and a short note.",
+          },
+          {
+            title: "Refine with feedback",
+            desc: "Exchange feedback with peers from diverse backgrounds and polish your writing.",
+          },
+          {
+            title: "Best post",
+            desc: "The most-recommended post is shared beyond the community via the LinkedIn page.",
+          },
         ],
         testimonials: [],
-        joinDesc: "The blog channel on Discord recruits for each cohort.",
+        joinDesc:
+          "Each week runs from Monday 9 AM to the following Monday midnight, with a simple late-and-warning rule to keep everyone consistent. The 블로그-스터디 channel on Discord recruits for each cohort.",
         ctaLabel: "Join the Discord channel",
-        ctaUrl: "https://dales.link/discord",
+        ctaUrl: "https://discord.com/channels/775115965964222492/1513687699729416232",
         cta2Label: "Read members' posts",
         cta2Url: "https://github.com/DaleStudy",
       },
@@ -310,12 +363,21 @@ export const en: Messages = {
         title: "daleui Design System",
         subtitleLinks: [
           { label: "daleui.com", url: "https://www.daleui.com" },
+          {
+            label: "Figma UI Kit",
+            url: "https://www.figma.com/community/file/1559487636467651573/daleui-figma-kit",
+          },
           { label: "npm daleui", url: "https://www.npmjs.com/package/daleui" },
         ],
         overview:
           "An open-source React design system specialized for Korean, built together by the community. Korean typography and accessibility (WCAG) come first, and designers and developers share a real-world collaboration process: issue triage, PR reviews, releases. Published to npm and used in real projects.",
         tags: ["Korean-first", "Accessibility", "React", "npm"],
         captures: [
+          {
+            src: "/images/programs/daleui-cover.jpg",
+            alt: "daleui cover: a design system for everyone, specialized for Korean",
+            cap: "A design system for everyone that puts the Korean user experience first.",
+          },
           {
             src: "/images/programs/daleui-components.jpg",
             alt: "daleui v1.0 components: buttons, forms, tags, and cards in light and dark mode",
@@ -351,21 +413,6 @@ export const en: Messages = {
   community: {
     title: "Community",
     sub: "Study groups are not everything: coffee chats, co-working, and meetups keep us connected.",
-    story: {
-      eyebrow: "Weekend prime time",
-      title: "The rooms that never go dark on weekends",
-      p1: "DaleStudy's golden hours are a little unusual: Saturday morning in Korea, Sunday night in North America. When prime time comes, people trickle into the voice channels until the rooms are full.",
-      p2: "Weekdays are async chat. Weekends are a different story.",
-      p3: "That's when text-only connections turn into real-time conversation and collaboration. Small actions beat grand resolutions: don't trust willpower, change your environment.",
-      quotes: [
-        "“I prepped a demo, anyone want to watch?”",
-        "“Up for some quick pair programming?”",
-        "“Could someone review this part?”",
-      ],
-      imgSrc: "/images/community/discord-rooms.png",
-      imgAlt: "Members gathered in weekend voice channels",
-      imgCaption: "One Saturday's voice channels, meeting rooms at capacity",
-    },
     sections: [
       {
         icon: "messageCircle",
@@ -391,7 +438,7 @@ export const en: Messages = {
       {
         icon: "users",
         title: "Meetups",
-        desc: "Regular meetups with talks and networking. Join from wherever you are, and organizers make sure first-timers feel at home.",
+        desc: "Regular meetups with talks and networking. Join from wherever you are.",
         detail:
           "We gather regularly for lightning talks and catch-ups. Talks don't need to be grand. Debugging war stories, retrospectives, and small tools you built are the most welcome. Organizers make sure first-timers are drawn into the conversation.",
         images: [
@@ -405,6 +452,31 @@ export const en: Messages = {
           { src: "/images/community/meetup-ai-coach.jpg", cap: "AI coach project proposal" },
           { src: "/images/community/meetup-group.jpg", cap: "Wrapping up with the whole crew" },
         ],
+      },
+    ],
+    normsTitle: "Community norms",
+    normsIntro:
+      "A quick read to keep our study culture healthy, so everyone can enjoy meaningful activities together.",
+    norms: [
+      {
+        title: "Participate freely, but consistently!",
+        desc: "Study participation is voluntary, but consistency builds skill. No need to overdo it; keep going, even in small steps!",
+      },
+      {
+        title: "Cheer each other on with reactions",
+        desc: "Leave at least a reaction on others' posts and questions. Small responses become big motivation.",
+      },
+      {
+        title: "Questions are always welcome!",
+        desc: "If something is unclear, don't hesitate to ask. There is no such thing as a wrong question. This is a space where we grow together.",
+      },
+      {
+        title: "Speak with care for one another",
+        desc: "Since we communicate in text, please pay a little extra attention to tone and wording. Every member deserves respect.",
+      },
+      {
+        title: "No bad manners",
+        desc: "Per Discord policy, behavior that makes others uncomfortable may be moderated. Please keep conversations aligned with our study goals!",
       },
     ],
     ctaTitle: "Start today",

@@ -24,6 +24,8 @@ export interface SeoEntry {
 export interface ProgramCard {
   slug: ProgramSlug;
   icon: SiteIconName;
+  /** 프로그램 허브 카드 상단 썸네일 */
+  thumb: string;
   title: string;
   /** 홈 카드용 짧은 설명 */
   desc: string;
@@ -87,8 +89,19 @@ export interface Messages {
     missionBody: string;
     visionLabel: string;
     visionBody: string;
+    photoSrc: string;
+    photoAlt: string;
+    photoCaption: string;
     valuesTitle: string;
     values: { icon: SiteIconName; title: string; desc: string }[];
+    story: {
+      eyebrow: string;
+      title: string;
+      p1: string;
+      p2: string;
+      p3: string;
+      quotes: string[];
+    };
     teamTitle: string;
     teamIntro: string;
     members: { login: string; name: string; role: string }[];
@@ -116,18 +129,10 @@ export interface Messages {
   community: {
     title: string;
     sub: string;
-    story: {
-      eyebrow: string;
-      title: string;
-      p1: string;
-      p2: string;
-      p3: string;
-      quotes: string[];
-      imgSrc: string;
-      imgAlt: string;
-      imgCaption: string;
-    };
     sections: CommunitySection[];
+    normsTitle: string;
+    normsIntro: string;
+    norms: { title: string; desc: string }[];
     ctaTitle: string;
     ctaSub: string;
   };

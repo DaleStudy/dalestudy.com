@@ -44,35 +44,14 @@ export function CommunityPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="band-neutral">
-        <div className="container community-story">
-          <div>
-            <p className="story-eyebrow">{t.community.story.eyebrow}</p>
-            <h2 className="story-title">{t.community.story.title}</h2>
-            <p className="story-body">{t.community.story.p1}</p>
-            <p className="story-body">{t.community.story.p2}</p>
-            <div className="story-quotes">
-              {t.community.story.quotes.map((quote) => (
-                <div key={quote} className="story-quote">
-                  {quote}
-                </div>
-              ))}
+        <div className="container community-story" style={{ padding: "24px 20px 64px" }}>
+          {inlineSections.map((section) => (
+            <div key={section.title} className="community-inline">
+              <SectionHead section={section} />
+              <p className="community-desc">{section.desc}</p>
+              <SectionGallery section={section} />
             </div>
-            <p className="story-body" style={{ marginTop: 20 }}>
-              {t.community.story.p3}
-            </p>
-            {inlineSections.map((section) => (
-              <div key={section.title} className="community-inline">
-                <SectionHead section={section} />
-                <p className="community-desc">{section.desc}</p>
-                <p className="community-detail">{section.detail}</p>
-                <SectionGallery section={section} />
-              </div>
-            ))}
-          </div>
-          <figure className="story-figure">
-            <img src={t.community.story.imgSrc} alt={t.community.story.imgAlt} loading="lazy" />
-            <figcaption>{t.community.story.imgCaption}</figcaption>
-          </figure>
+          ))}
         </div>
       </section>
 
@@ -88,6 +67,24 @@ export function CommunityPage({ locale }: { locale: Locale }) {
         </div>
         <div className="container" style={{ paddingBottom: 56 }}>
           <SectionGallery section={meetup} />
+        </div>
+      </section>
+
+      <section className="container" style={{ padding: "16px 20px 24px" }}>
+        <h2 className="section-title" style={{ fontSize: 24, marginBottom: 8 }}>
+          {t.community.normsTitle}
+        </h2>
+        <p className="community-desc" style={{ marginBottom: 24 }}>
+          {t.community.normsIntro}
+        </p>
+        <div className="norm-grid">
+          {t.community.norms.map((norm, index) => (
+            <div key={norm.title} className="norm-card">
+              <span className="norm-num">{String(index + 1).padStart(2, "0")}</span>
+              <strong>{norm.title}</strong>
+              <span>{norm.desc}</span>
+            </div>
+          ))}
         </div>
       </section>
 

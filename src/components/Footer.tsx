@@ -40,14 +40,14 @@ export function Footer({ locale }: { locale: Locale }) {
           <a href={LEETCODE_SITE_URL} target="_blank" rel="noopener noreferrer">
             leetcode.dalestudy.com
           </a>
+          <a href={LEADERBOARD_URL} target="_blank" rel="noopener noreferrer">
+            leaderboard.dalestudy.com
+          </a>
         </div>
         <div className="footer-col">
           <strong className="footer-heading">{t.footer.projects}</strong>
           <a href={DALEUI_SITE_URL} target="_blank" rel="noopener noreferrer">
             daleui.com
-          </a>
-          <a href={LEADERBOARD_URL} target="_blank" rel="noopener noreferrer">
-            leaderboard.dalestudy.com
           </a>
           <a href={CHAT_SITE_URL} target="_blank" rel="noopener noreferrer">
             chat.dalestudy.com

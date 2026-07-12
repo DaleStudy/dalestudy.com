@@ -25,12 +25,12 @@ export const ko: Messages = {
     moreCommunity: "커뮤니티 활동 전체 보기",
     sponsorBannerTitle: "커뮤니티의 성장을 함께 만들어 주세요",
     sponsorBannerSub:
-      "여러분의 후원이 광고도 유료 멤버십도 없는 이 커뮤니티를 지속 가능하게 만듭니다.",
+      "여러분의 후원 덕분에 광고도 유료 멤버십도 없이 커뮤니티를 이어갈 수 있습니다.",
     sponsorBannerCta: "후원하기",
     stats: [
       { value: "1,500+", label: "Discord 멤버" },
       { value: "400+", label: "GitHub 멤버" },
-      { value: "1,000+", label: "LinkedIn 팔로워" },
+      { value: "900+", label: "LinkedIn 팔로워" },
       { value: "300+", label: "GitHub 스타" },
     ],
     activities: [
@@ -60,6 +60,9 @@ export const ko: Messages = {
     visionLabel: "비전",
     visionBody:
       "실력이나 배경과 관계없이 누구나 기여자가 될 수 있는 커뮤니티. 받은 도움을 다시 나누는 선순환이 커뮤니티를 지속 가능하게 만듭니다.",
+    photoSrc: "/images/community/discord-rooms.png",
+    photoAlt: "주말 음성 채널에 모인 멤버들",
+    photoCaption: "어느 토요일의 음성 채널, 회의실이 가득 찼습니다",
     valuesTitle: "핵심가치",
     values: [
       {
@@ -78,6 +81,18 @@ export const ko: Messages = {
         desc: "받은 도움을 다시 나눕니다. 작은 기여가 모여 커뮤니티의 선순환을 만듭니다.",
       },
     ],
+    story: {
+      eyebrow: "주말 프라임 타임",
+      title: "주말에도 불이 꺼지지 않는 회의실",
+      p1: "달레 스터디의 황금 시간대는 조금 독특합니다. 한국 시간으로는 토요일 아침부터, 북미 동부 시간으로는 일요일 밤까지. 이 시간이 되면 음성 채널로 하나둘 사람들이 모여 회의실을 가득 채웁니다.",
+      p2: "평일에는 채팅으로 비동기 소통을 하지만, 주말이 되면 이야기가 달라집니다.",
+      p3: "텍스트로만 이어지던 연결이 실시간 대화와 협업으로 바뀌는 순간입니다. 거창한 결심보다 중요한 건 작은 행동 하나. 의지를 너무 믿지 말고, 환경을 바꿔보세요.",
+      quotes: [
+        "“데모를 준비했는데 같이 볼 사람?”",
+        "“지금 잠깐 페어 프로그래밍 가능해요?”",
+        "“이 부분 코드 리뷰 부탁드려요!”",
+      ],
+    },
     teamTitle: "운영진",
     teamIntro:
       "운영진은 건강한 스터디 문화를 만들고 참여자분들께 좋은 경험을 드리기 위해 늘 고민합니다. 정기 회의와 회고를 거치고, 매 기수 참여자들의 피드백을 다음 기수 운영에 반영합니다.",
@@ -85,7 +100,7 @@ export const ko: Messages = {
       { login: "DaleSeo", name: "DaleSeo", role: "커뮤니티 매니저" },
       { login: "SamTheKorean", name: "Sam", role: "리트코드 스터디 리드" },
       { login: "yolophg", name: "Helena", role: "디자인시스템 리드" },
-      { login: "sounmind", name: "Evan", role: "인공지능 스터디 리드" },
+      { login: "sounmind", name: "Evan", role: "AI 스터디 리드" },
       { login: "lms0806", name: "lms0806", role: "블로그 스터디 리드" },
     ],
     teamCtaText:
@@ -102,7 +117,7 @@ export const ko: Messages = {
       "회고와 피드백이 다음 기수로 이어지는 선순환, 달레 스터디가 프로그램을 운영하는 방식입니다.",
     commonSteps: [
       {
-        title: "Discord에서 시작",
+        title: "Discord에서 소통",
         desc: "채널에 인사를 남기거나 모집 공지에 신청하면 바로 합류할 수 있습니다.",
       },
       {
@@ -139,6 +154,7 @@ export const ko: Messages = {
     cards: [
       {
         slug: "leetcode",
+        thumb: "/images/programs/leetcode-discussions.jpg",
         icon: "puzzle",
         title: "리트코드 스터디",
         desc: "코딩 인터뷰 필수 문제 모음 Blind 75를 함께 푸는 스터디. PR 코드 리뷰로 풀이를 다듬습니다.",
@@ -149,6 +165,7 @@ export const ko: Messages = {
       },
       {
         slug: "daleui",
+        thumb: "/images/programs/daleui-cover.jpg",
         icon: "palette",
         title: "달레 UI 디자인시스템",
         desc: "한국어 환경에 특화된 오픈소스 디자인 시스템을 커뮤니티가 함께 만듭니다.",
@@ -159,8 +176,9 @@ export const ko: Messages = {
       },
       {
         slug: "ai",
+        thumb: "/images/programs/ai-figjam-ideas.jpg",
         icon: "brain",
-        title: "인공지능 스터디",
+        title: "AI 스터디",
         desc: "개발 실무에 AI를 접목하는 방법을 함께 탐구하는 스터디. LLM과 최신 도구를 실험합니다.",
         fullDesc:
           "AI 엔지니어가 아니어도 참여할 수 있는 실무 중심 AI 스터디입니다. LLM과 최신 도구를 함께 실험하고, 배운 것을 매주 발표하며 개발 업무에 적용합니다.",
@@ -169,6 +187,7 @@ export const ko: Messages = {
       },
       {
         slug: "blog",
+        thumb: "/images/programs/blog-channel.jpg",
         icon: "penLine",
         title: "블로그 스터디",
         desc: "매주 한 편씩 10주 동안 함께 쓰는 기술 블로그 스터디.",
@@ -242,8 +261,13 @@ export const ko: Messages = {
       },
       ai: {
         icon: "brain",
-        title: "인공지능 스터디",
-        subtitleLinks: [{ label: "Discord #ai", url: "https://dales.link/discord" }],
+        title: "AI 스터디",
+        subtitleLinks: [
+          {
+            label: "Discord #AI-스터디",
+            url: "https://discord.com/channels/775115965964222492/1374000564807012382",
+          },
+        ],
         overview:
           "일반 소프트웨어 개발자를 위한 실무 중심 AI 스터디입니다. LLM, 프롬프트 엔지니어링 같은 최신 기술과 오픈소스 AI 도구를 함께 익히고, 코드 생성과 업무 자동화처럼 개발 실무에 접목하는 방법을 매주 발표하고 토론합니다.",
         tags: ["LLM", "프롬프트 엔지니어링", "실무 적용", "매주 세션"],
@@ -270,30 +294,56 @@ export const ko: Messages = {
           { title: "공유 세션", desc: "발표자를 돌아가며 배운 것을 발표하고 토론합니다." },
         ],
         testimonials: [],
-        joinDesc: "Discord의 인공지능 채널에서 다음 기수 모집 소식을 확인하세요.",
+        joinDesc: "Discord의 AI-스터디 채널에서 다음 기수 모집 소식을 확인하세요.",
         ctaLabel: "Discord 채널 참여",
-        ctaUrl: "https://dales.link/discord",
+        ctaUrl: "https://discord.com/channels/775115965964222492/1374000564807012382",
         cta2Label: "GitHub 보기",
         cta2Url: "https://github.com/DaleStudy",
       },
       blog: {
         icon: "penLine",
         title: "블로그 스터디",
-        subtitleLinks: [{ label: "Discord #blog", url: "https://dales.link/discord" }],
+        subtitleLinks: [
+          {
+            label: "Discord #블로그-스터디",
+            url: "https://discord.com/channels/775115965964222492/1513687699729416232",
+          },
+        ],
         overview:
           "매주 한 편씩, 10주 동안, 함께 씁니다. 각자의 블로그에 글을 발행하고 서로의 글을 읽으며 피드백을 나눕니다. 블로그를 시작하려는 분부터 꾸준함을 만들고 싶은 경험자까지 누구나 참여할 수 있습니다.",
         tags: ["주 1회 발행", "10주 과정", "상호 피드백"],
-        captures: [],
+        captures: [
+          {
+            src: "/images/programs/blog-channel.jpg",
+            alt: "Discord 블로그글-공유 채널: 멤버들이 발행한 글과 리액션이 이어지는 화면",
+            cap: "매주 발행된 글이 블로그글-공유 채널에 쌓이고, 리액션과 피드백이 이어집니다.",
+          },
+          {
+            src: "/images/programs/blog-linkedin.jpg",
+            alt: "LinkedIn 달레 스터디 페이지: 1주차 베스트 글 세 편을 소개하는 게시물",
+            cap: "가장 많은 추천을 받은 베스트 글은 LinkedIn 페이지를 통해 커뮤니티 밖까지 공유됩니다.",
+          },
+        ],
         steps: [
-          { title: "주제 공유", desc: "이번 주에 쓸 글의 주제를 공유합니다." },
-          { title: "초안 작성", desc: "마감까지 초안을 씁니다." },
-          { title: "피드백 교환", desc: "서로의 글을 읽고 피드백을 남깁니다." },
-          { title: "발행", desc: "다듬은 글을 각자의 블로그에 발행합니다." },
+          {
+            title: "발행",
+            desc: "한 주간 학습하고 경험한 내용을 매주 한 편씩 자기 블로그에 발행합니다.",
+          },
+          { title: "공유", desc: "발행한 글을 링크와 간단한 설명과 함께 커뮤니티에 공유합니다." },
+          {
+            title: "피드백",
+            desc: "다양한 직군과 배경의 동료와 피드백을 주고받으며 글을 다듬습니다.",
+          },
+          {
+            title: "베스트 글 선정",
+            desc: "가장 많은 추천을 받은 글은 LinkedIn 페이지를 통해 커뮤니티 밖까지 공유됩니다.",
+          },
         ],
         testimonials: [],
-        joinDesc: "Discord의 블로그 채널에서 다음 기수 참여자를 모집합니다.",
+        joinDesc:
+          "매주 월요일 오전 9시에 시작해 다음 주 월요일 자정에 마감합니다. 꾸준한 참여를 위해 지각과 경고 규칙을 함께 지킵니다. 다음 기수 모집은 Discord의 블로그-스터디 채널에서 진행됩니다.",
         ctaLabel: "Discord 채널 참여",
-        ctaUrl: "https://dales.link/discord",
+        ctaUrl: "https://discord.com/channels/775115965964222492/1513687699729416232",
         cta2Label: "멤버들의 글 보기",
         cta2Url: "https://github.com/DaleStudy",
       },
@@ -302,12 +352,21 @@ export const ko: Messages = {
         title: "달레 UI 디자인시스템",
         subtitleLinks: [
           { label: "daleui.com", url: "https://www.daleui.com" },
+          {
+            label: "Figma UI Kit",
+            url: "https://www.figma.com/community/file/1559487636467651573/daleui-figma-kit",
+          },
           { label: "npm daleui", url: "https://www.npmjs.com/package/daleui" },
         ],
         overview:
           "한국어 환경에 특화된 오픈소스 React 디자인 시스템을 커뮤니티가 함께 만듭니다. 한국어 타이포그래피와 접근성(WCAG)을 최우선으로 고려하며, 디자이너와 개발자가 이슈 선택부터 PR 리뷰, 릴리스까지 실무와 같은 협업 프로세스를 그대로 경험합니다. npm에 배포되어 실제 프로젝트에서 사용됩니다.",
         tags: ["한국어 특화", "접근성", "React", "npm 배포"],
         captures: [
+          {
+            src: "/images/programs/daleui-cover.jpg",
+            alt: "한국어 환경에 특화된 모두를 위한 디자인 시스템, 달레UI 커버 이미지",
+            cap: "한국어 사용자 경험을 최우선으로 고려한, 모두를 위한 디자인 시스템입니다.",
+          },
           {
             src: "/images/programs/daleui-components.jpg",
             alt: "달레 UI v1.0 컴포넌트: 버튼, 폼, 태그, 카드가 라이트·다크 모드로 정리된 화면",
@@ -341,23 +400,8 @@ export const ko: Messages = {
     },
   },
   community: {
-    title: "커뮤니티 활동",
+    title: "커뮤니티",
     sub: "스터디가 전부는 아닙니다. 커피챗, 모각코, 밋업으로 연결을 이어갑니다.",
-    story: {
-      eyebrow: "주말 프라임 타임",
-      title: "주말에도 불이 꺼지지 않는 회의실",
-      p1: "달레 스터디의 황금 시간대는 조금 독특합니다. 한국 시간으로는 토요일 아침부터, 북미 동부 시간으로는 일요일 밤까지. 이 시간이 되면 음성 채널로 하나둘 사람들이 모여 회의실을 가득 채웁니다.",
-      p2: "평일에는 채팅으로 비동기 소통을 하지만, 주말이 되면 이야기가 달라집니다.",
-      p3: "텍스트로만 이어지던 연결이 실시간 대화와 협업으로 바뀌는 순간입니다. 거창한 결심보다 중요한 건 작은 행동 하나. 의지를 너무 믿지 말고, 환경을 바꿔보세요.",
-      quotes: [
-        "“데모를 준비했는데 같이 볼 사람?”",
-        "“지금 잠깐 페어 프로그래밍 가능해요?”",
-        "“이 부분 코드 리뷰 부탁드려요!”",
-      ],
-      imgSrc: "/images/community/discord-rooms.png",
-      imgAlt: "주말 음성 채널에 모인 멤버들",
-      imgCaption: "어느 토요일의 음성 채널, 회의실이 가득 찼습니다",
-    },
     sections: [
       {
         icon: "messageCircle",
@@ -380,7 +424,7 @@ export const ko: Messages = {
       {
         icon: "users",
         title: "밋업",
-        desc: "발표와 네트워킹이 있는 정기 모임입니다. 어디에 살든 참여할 수 있고, 처음 온 사람도 어색하지 않도록 운영진이 챙깁니다.",
+        desc: "발표와 네트워킹이 있는 정기 모임입니다. 어디에 살든 참여할 수 있습니다.",
         detail:
           "정기적으로 모여 라이트닝 토크를 듣고 근황을 나눕니다. 발표는 거창하지 않아도 됩니다. 삽질기, 회고, 작게 만든 도구 이야기가 오히려 환영받습니다. 처음 온 사람이 겉돌지 않도록 운영진이 자연스럽게 대화에 끌어들입니다.",
         images: [
@@ -391,6 +435,31 @@ export const ko: Messages = {
           { src: "/images/community/meetup-ai-coach.jpg", cap: "AI 코치 프로젝트 제안 발표" },
           { src: "/images/community/meetup-group.jpg", cap: "밋업을 마무리하는 단체 화면" },
         ],
+      },
+    ],
+    normsTitle: "커뮤니티 규범",
+    normsIntro:
+      "건강한 스터디 문화를 만들고 모두가 즐겁고 의미 있는 활동을 할 수 있도록 잠깐만 읽고 함께 지켜주세요.",
+    norms: [
+      {
+        title: "자율 참여, 그러나 꾸준히!",
+        desc: "스터디는 자율적으로 참여하되, 꾸준함이 실력을 만듭니다. 무리하지 않아도 괜찮으니, 작게라도 계속해봐요!",
+      },
+      {
+        title: "리액션으로 서로 응원하기",
+        desc: "다른 사람의 글이나 질문에 리액션 하나라도 남겨주세요. 작은 반응이 큰 동기부여가 됩니다.",
+      },
+      {
+        title: "질문은 언제든지 환영!",
+        desc: "모르겠는 게 있다면 주저 말고 질문하세요. 틀린 질문이란 건 없습니다. 다 함께 성장하는 공간이에요.",
+      },
+      {
+        title: "서로를 배려하는 말투로",
+        desc: "텍스트 기반 커뮤니케이션인 만큼, 말투와 표현에 조금만 더 신경 써 주세요. 모든 멤버는 존중받아야 합니다.",
+      },
+      {
+        title: "비매너 금지",
+        desc: "디스코드 운영 방침에 따라 불쾌감을 줄 수 있는 행동은 제재될 수 있습니다. 스터디 목적에 맞는 대화를 해주세요!",
       },
     ],
     ctaTitle: "오늘 바로 시작하세요",
@@ -464,10 +533,10 @@ export const ko: Messages = {
     programs: {
       title: "프로그램 | 달레 스터디",
       description:
-        "리트코드 스터디, 인공지능 스터디, 블로그 스터디, 달레 UI 디자인시스템까지 달레 스터디에서 진행 중인 스터디와 오픈소스 프로젝트를 소개합니다.",
+        "리트코드 스터디, AI 스터디, 블로그 스터디, 달레 UI 디자인시스템까지 달레 스터디에서 진행 중인 스터디와 오픈소스 프로젝트를 소개합니다.",
     },
     community: {
-      title: "커뮤니티 활동 | 달레 스터디",
+      title: "커뮤니티 | 달레 스터디",
       description:
         "스터디 밖에서도 이어지는 달레 스터디의 네트워킹 활동, 커피챗·모각코·밋업을 소개합니다.",
     },
