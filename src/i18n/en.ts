@@ -50,17 +50,97 @@ export const en: Messages = {
         desc: "Regular meetups with talks and networking, wherever you live.",
       },
     ],
+    showcaseTitle: "Built by the community",
+    showcaseSub:
+      "Participation leaves products, not just promises. Everything is open source, and still evolving.",
+    showcase: [
+      {
+        title: "daleui",
+        desc: "An open-source React design system specialized for Korean, published to npm and used in real projects.",
+        host: "daleui.com",
+        url: "https://www.daleui.com",
+      },
+      {
+        title: "Leaderboard",
+        desc: "Visualizes LeetCode study participation and issues certificates.",
+        host: "leaderboard.dalestudy.com",
+        url: "https://leaderboard.dalestudy.com",
+      },
+      {
+        title: "LeetCode study site",
+        desc: "A dedicated site with the curriculum and cohort schedule.",
+        host: "leetcode.dalestudy.com",
+        url: "https://leetcode.dalestudy.com",
+      },
+      {
+        title: "Chatbot",
+        desc: "A chat UI that answers questions about the community.",
+        host: "chat.dalestudy.com",
+        url: "https://chat.dalestudy.com",
+      },
+      {
+        title: "Coffee chat",
+        desc: "A bot that auto-matches conversation partners each week. Meet a new colleague with one slash command.",
+        host: "coffee.dalestudy.com",
+        url: "https://coffee.dalestudy.com",
+      },
+      {
+        title: "Scheduler",
+        desc: "A tool for coordinating meeting schedules.",
+        host: "schedule.dalestudy.com",
+        url: "https://schedule.dalestudy.com",
+      },
+      {
+        title: "Agent Skills",
+        desc: "A skill collection for AI agents.",
+        host: "skills.sh",
+        url: "https://www.skills.sh/dalestudy/skills",
+      },
+    ],
+    faqTitle: "FAQ",
+    faqs: [
+      {
+        q: "Is there a participation fee?",
+        a: "No, everything is free. DaleStudy is a non-profit community run on sponsorships, with no ads or paid membership.",
+      },
+      {
+        q: "How much skill do I need?",
+        a: "There is no skill threshold. Aspiring developers, juniors, and career changers all start from different places, and every starting point is respected. Wanting to contribute is enough.",
+      },
+      {
+        q: "Can I join while working full-time?",
+        a: "Yes. Weekdays are async on Discord and GitHub, and real-time gatherings happen during weekend prime time (Saturday morning in Korea, Sunday night in North America), so it fits alongside a job.",
+      },
+      {
+        q: "Can I join from abroad?",
+        a: "Of course. Everything happens online, and schedules account for both Korean and North American time zones. Members join from many countries.",
+      },
+      {
+        q: "How much time does it take?",
+        a: "It depends on the program: five problems a week for the LeetCode study, one post a week for the blog study. What matters most is going steadily at your own pace.",
+      },
+      {
+        q: "How do I get started?",
+        a: "Join Discord and say hi. Cohort-based studies recruit via announcements; projects and community activities are open the moment you join.",
+      },
+    ],
   },
   about: {
     title: "About",
     intro:
       "DaleStudy is an open-source community where developers learn, build, and grow together.",
     missionLabel: "Mission",
-    missionBody:
-      "We help developers grow through real collaboration on open-source projects: code reviews, teamwork, and communication experience that is hard to gain alone.",
+    missionMain:
+      "Help developers grow by collaborating on open-source projects the way real teams do.",
+    missionSubs: [
+      "DaleStudy is a collaborative learning community built around open-source projects that mirror professional development. Teams experience the full cycle: code review, design, testing, deployment, and collaboration. Finished projects ship as working services that become real portfolios.",
+    ],
     visionLabel: "Vision",
-    visionBody:
-      "A community where anyone can become a contributor, regardless of skill or background. Paying forward the help you received keeps the community sustainable.",
+    visionMain:
+      "Build a sustainable open-source learning ecosystem where developers learn, grow, and lead one another.",
+    visionSubs: [
+      "Projects evolve continuously like real products, open to anyone on GitHub and Discord regardless of location or background. Members who grow here return as mentors and reviewers, a virtuous cycle that leads the next generation.",
+    ],
     photoSrc: "/images/community/discord-rooms.png",
     photoAlt: "Members gathered in weekend voice channels",
     photoCaption: "One Saturday's voice channels, meeting rooms at capacity",
@@ -69,17 +149,20 @@ export const en: Messages = {
       {
         icon: "thumbsUp",
         title: "Autonomy & Respect",
-        desc: "No one is forced. Everyone's pace and style are respected here.",
+        summary:
+          "Choose, own, and grow on your own terms. Because every starting point is respected, anyone can ask and take on challenges freely.",
       },
       {
         icon: "messageCircle",
         title: "Communication & Collaboration",
-        desc: "We learn to excel together, not alone. Reviews and conversations are our tools for growth.",
+        summary:
+          "We practice async communication and collaboration on GitHub and Discord, building soft skills that are hard to gain alone.",
       },
       {
         icon: "heartHandshake",
         title: "Contribution & Sharing",
-        desc: "Pay forward the help you received. Small contributions compound into a virtuous cycle.",
+        summary:
+          "Small contributions grow the project and the contributor alike. Paying help forward keeps the community sustainable.",
       },
     ],
     story: {
@@ -156,6 +239,75 @@ export const en: Messages = {
         url: "https://www.skills.sh/dalestudy/skills",
       },
     ],
+    reviewsTitle: "Reviews",
+    reviewsSub:
+      "Stories written by the participants themselves: the voices that show best what DaleStudy is like.",
+    reviews: [
+      {
+        program: "LeetCode Study",
+        quote:
+          "The study lays out a 15-week problem roadmap and makes you review each other's code. That simple system is a remarkably powerful support.",
+        author: "Ju Hwijung",
+        login: "hwi-middle",
+      },
+      {
+        program: "LeetCode Study",
+        quote:
+          "Studying unfamiliar data structures and getting code reviews from senior developers: valuable experiences that are hard to come by as a junior.",
+        author: "Sam Lee",
+        login: "SamTheKorean",
+      },
+      {
+        program: "LeetCode Study",
+        quote:
+          "I got high-quality reviewer feedback outside my company. Beyond solving problems, I learned how to write better code.",
+        author: "Reese",
+        login: "reeseo3o",
+      },
+      {
+        program: "LeetCode Study",
+        quote:
+          "Because we were working toward the same goal together, I kept solving problems consistently. Writing solutions hoping to help others even a little made me write more careful code, too.",
+        author: "Dongyeong Chon",
+        login: "obzva",
+      },
+      {
+        program: "LeetCode Study",
+        quote:
+          "The biggest change was how I approach a problem. I used to just start coding; now I weigh time and space complexity first and think about which data structure and algorithm fit before touching the keyboard.",
+        author: "E.M. Lee",
+        login: "jamiebase",
+      },
+      {
+        program: "LeetCode Study",
+        quote:
+          "Thanks to DaleStudy's system for reviewing code across languages, I finished the cohort while picking up five new languages. You just solve and post reviews, and before long you are a contributor across every directory on the leaderboard.",
+        author: "yhkee0404",
+        login: "yhkee0404",
+      },
+      {
+        program: "daleui",
+        quote:
+          "From issue triage to npm release, I experienced a design-system release process that is hard to get even at work. Now my portfolio includes a package people actually use.",
+        author: "daleui contributor",
+      },
+      {
+        program: "AI Study",
+        quote:
+          "Presenting felt intimidating, but sharing in rotation every week turned me into the person who tries AI tools first at work.",
+        author: "AI Study participant",
+      },
+      {
+        program: "Blog Study",
+        quote:
+          "Alone I never made it past three posts; writing together, finishing feels within reach. Peer reactions and feedback motivate more than any deadline.",
+        author: "Blog Study participant",
+      },
+    ],
+    reviewsCtaTitle: "Tell us your story too",
+    reviewsCtaSub:
+      "Reviews are the biggest help for the next participant. Share yours freely on Discord.",
+    reviewsCtaBtn: "Leave a review",
     cards: [
       {
         slug: "leetcode",

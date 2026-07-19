@@ -81,19 +81,26 @@ export interface Messages {
     sponsorBannerCta: string;
     stats: { value: string; label: string }[];
     activities: { icon: SiteIconName; title: string; desc: string }[];
+    showcaseTitle: string;
+    showcaseSub: string;
+    showcase: { title: string; desc: string; host: string; url: string }[];
+    faqTitle: string;
+    faqs: { q: string; a: string }[];
   };
   about: {
     title: string;
     intro: string;
     missionLabel: string;
-    missionBody: string;
+    missionMain: string;
+    missionSubs: string[];
     visionLabel: string;
-    visionBody: string;
+    visionMain: string;
+    visionSubs: string[];
     photoSrc: string;
     photoAlt: string;
     photoCaption: string;
     valuesTitle: string;
-    values: { icon: SiteIconName; title: string; desc: string }[];
+    values: { icon: SiteIconName; title: string; summary: string }[];
     story: {
       eyebrow: string;
       title: string;
@@ -116,6 +123,13 @@ export interface Messages {
     commonTitle: string;
     commonSub: string;
     commonSteps: { title: string; desc: string }[];
+    reviewsTitle: string;
+    reviewsSub: string;
+    /** login이 있으면 GitHub 아바타·프로필 링크, 없으면 익명 표기 */
+    reviews: { program: string; quote: string; author: string; login?: string }[];
+    reviewsCtaTitle: string;
+    reviewsCtaSub: string;
+    reviewsCtaBtn: string;
     cards: ProgramCard[];
   };
   programDetail: {

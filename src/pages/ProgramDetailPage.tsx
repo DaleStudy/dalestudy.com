@@ -5,7 +5,6 @@ import { AppLink } from "../components/AppLink";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages, localePath } from "../i18n";
 import type { Locale, ProgramSlug } from "../i18n/types";
-import { LEETCODE_SITE_URL } from "../links";
 
 export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: ProgramSlug }) {
   const t = getMessages(locale);
@@ -117,9 +116,9 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
             ))}
           </div>
           <p className="testimonial-more">
-            <a href={LEETCODE_SITE_URL} target="_blank" rel="noopener noreferrer">
+            <AppLink to={`${localePath(locale, "/programs")}#reviews`}>
               {t.programDetail.testimonialsMore} →
-            </a>
+            </AppLink>
           </p>
         </section>
       )}

@@ -1,8 +1,10 @@
 import { Icon, Tag } from "daleui";
 import { SiteIcon } from "../components/SiteIcon";
 import { AppLink } from "../components/AppLink";
+import { LinkButton } from "../components/LinkButton";
 import { getMessages, localePath } from "../i18n";
 import type { Locale } from "../i18n/types";
+import { DISCORD_URL } from "../links";
 
 export function ProgramsPage({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -56,6 +58,60 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="container" id="reviews" style={{ padding: "64px 20px 8px" }}>
+        <h2 className="section-title" style={{ fontSize: 28 }}>
+          {t.programs.reviewsTitle}
+        </h2>
+        <p className="section-sub" style={{ marginBottom: 0 }}>
+          {t.programs.reviewsSub}
+        </p>
+      </section>
+
+      <section className="container" style={{ padding: "24px 20px 56px" }}>
+        <div className="review-grid">
+          {t.programs.reviews.map((review) => (
+            <figure key={review.quote} className="testimonial-card">
+              <div style={{ display: "flex" }}>
+                <Tag tone="brand">{review.program}</Tag>
+              </div>
+              <blockquote>“{review.quote}”</blockquote>
+              <figcaption>
+                {review.login ? (
+                  <>
+                    <img
+                      src={`https://github.com/${review.login}.png?size=72`}
+                      alt=""
+                      width={36}
+                      height={36}
+                      loading="lazy"
+                    />
+                    <a
+                      href={`https://github.com/${review.login}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {review.author}
+                    </a>
+                  </>
+                ) : (
+                  <span className="review-anon">{review.author}</span>
+                )}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="detail-container" style={{ paddingBottom: 72 }}>
+        <div className="join-cta">
+          <h2>{t.programs.reviewsCtaTitle}</h2>
+          <p>{t.programs.reviewsCtaSub}</p>
+          <LinkButton href={DISCORD_URL} size="lg">
+            {t.programs.reviewsCtaBtn}
+          </LinkButton>
         </div>
       </section>
 

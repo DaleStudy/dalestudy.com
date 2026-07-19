@@ -16,40 +16,55 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </p>
       </section>
 
+      <section className="container" style={{ padding: "0 20px 64px" }}>
+        <div className="mission-vision-grid">
+          <div>
+            <h2 className="prose-label">{t.about.missionLabel}</h2>
+            <p className="prose-main">{t.about.missionMain}</p>
+            {t.about.missionSubs.map((paragraph) => (
+              <p key={paragraph} className="prose-sub">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <div>
+            <h2 className="prose-label">{t.about.visionLabel}</h2>
+            <p className="prose-main">{t.about.visionMain}</p>
+            {t.about.visionSubs.map((paragraph) => (
+              <p key={paragraph} className="prose-sub">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="band-neutral">
-        <div className="container community-story" style={{ alignItems: "start" }}>
-          <div className="mission-vision-col">
-            <div>
-              <h2 className="prose-label">{t.about.missionLabel}</h2>
-              <p className="prose-body">{t.about.missionBody}</p>
+        <div
+          className="container community-story"
+          style={{ padding: "56px 20px", alignItems: "start" }}
+        >
+          <div>
+            <p className="story-eyebrow">{t.about.story.eyebrow}</p>
+            <h2 className="story-title">{t.about.story.title}</h2>
+            <p className="story-body">{t.about.story.p1}</p>
+            <p className="story-body">{t.about.story.p2}</p>
+            <div className="story-quotes">
+              {t.about.story.quotes.map((quote) => (
+                <div key={quote} className="story-quote">
+                  {quote}
+                </div>
+              ))}
             </div>
-            <div>
-              <h2 className="prose-label">{t.about.visionLabel}</h2>
-              <p className="prose-body">{t.about.visionBody}</p>
-            </div>
+            <p className="story-body" style={{ marginTop: 20 }}>
+              {t.about.story.p3}
+            </p>
           </div>
           <figure className="story-figure">
             <img src={t.about.photoSrc} alt={t.about.photoAlt} loading="lazy" />
             <figcaption>{t.about.photoCaption}</figcaption>
           </figure>
         </div>
-      </section>
-
-      <section className="prose-section" style={{ padding: "56px 20px" }}>
-        <p className="story-eyebrow">{t.about.story.eyebrow}</p>
-        <h2 className="story-title">{t.about.story.title}</h2>
-        <p className="story-body">{t.about.story.p1}</p>
-        <p className="story-body">{t.about.story.p2}</p>
-        <div className="story-quotes">
-          {t.about.story.quotes.map((quote) => (
-            <div key={quote} className="story-quote">
-              {quote}
-            </div>
-          ))}
-        </div>
-        <p className="story-body" style={{ marginTop: 20 }}>
-          {t.about.story.p3}
-        </p>
       </section>
 
       <section className="container" style={{ padding: "64px 20px" }}>
@@ -61,7 +76,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <div key={v.title} className="value-card">
               <SiteIcon name={v.icon} tone="brand" size="lg" />
               <strong>{v.title}</strong>
-              <span>{v.desc}</span>
+              <span>{v.summary}</span>
             </div>
           ))}
         </div>

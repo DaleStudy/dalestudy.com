@@ -1,4 +1,4 @@
-import { Tag } from "daleui";
+import { Icon, Tag } from "daleui";
 import { SiteIcon } from "../components/SiteIcon";
 import { AppLink } from "../components/AppLink";
 import { LinkButton } from "../components/LinkButton";
@@ -105,7 +105,53 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ paddingBottom: 72 }}>
+      <section className="band-neutral">
+        <div className="container section">
+          <h2 className="section-title" style={{ fontSize: "clamp(24px, 3.5vw, 32px)" }}>
+            {t.home.showcaseTitle}
+          </h2>
+          <p className="section-sub">{t.home.showcaseSub}</p>
+          <div className="showcase-grid">
+            {t.home.showcase.map((work) => (
+              <a
+                key={work.url}
+                className="card-link showcase-card"
+                href={work.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="showcase-card-head">
+                  <strong>{work.title}</strong>
+                  <Icon name="externalLink" size="xs" tone="brand" />
+                </div>
+                <span className="showcase-desc">{work.desc}</span>
+                <span className="showcase-host">{work.host}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="prose-section" style={{ padding: "72px 20px 8px" }}>
+        <h2 className="section-title" style={{ fontSize: "clamp(24px, 3.5vw, 32px)" }}>
+          {t.home.faqTitle}
+        </h2>
+        <div className="faq-list">
+          {t.home.faqs.map((faq) => (
+            <details key={faq.q}>
+              <summary>
+                <span>{faq.q}</span>
+                <span className="faq-chevron">
+                  <Icon name="chevronDown" size="sm" tone="brand" />
+                </span>
+              </summary>
+              <p>{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="container" style={{ padding: "64px 20px 72px" }}>
         <div className="sponsor-banner">
           <div style={{ maxWidth: 520 }}>
             <strong>{t.home.sponsorBannerTitle}</strong>
