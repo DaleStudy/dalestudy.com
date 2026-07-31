@@ -15,6 +15,7 @@
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/DaleSeo"><img src="https://avatars.githubusercontent.com/u/5466341?v=4?s=100" width="100px;" alt="Dale Seo"/><br /><sub><b>Dale Seo</b></sub></a><br /><a href="https://github.com/DaleStudy/dalestudy.com/commits?author=DaleSeo" title="Code">💻</a> <a href="#design-DaleSeo" title="Design">🎨</a> <a href="https://github.com/DaleStudy/dalestudy.com/commits?author=DaleSeo" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.hoonnotes.me"><img src="https://avatars.githubusercontent.com/u/58735578?v=4?s=100" width="100px;" alt="Hoon Oh"/><br /><sub><b>Hoon Oh</b></sub></a><br /><a href="https://github.com/DaleStudy/dalestudy.com/commits?author=1005hoon" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
