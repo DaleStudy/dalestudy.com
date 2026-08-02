@@ -4,6 +4,13 @@ import viteReact from "@vitejs/plugin-react";
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
+  fmt: {
+    ignorePatterns: [
+      // TanStack Router와 All Contributors가 자체 포맷으로 관리하는 산출물
+      "src/routeTree.gen.ts",
+      ".all-contributorsrc",
+    ],
+  },
   plugins: [
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     // 마케팅 페이지 전체를 빌드 타임에 정적 HTML로 굽는다 (SEO/AEO 필수 원칙)
