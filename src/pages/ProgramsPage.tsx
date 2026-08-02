@@ -11,7 +11,7 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <section className="container" style={{ padding: "80px 20px 48px" }}>
+      <section className="container" style={{ paddingBlock: "80px 48px" }}>
         <h1 className="page-title">{t.programs.hubTitle}</h1>
         <p className="page-intro">{t.programs.hubSub}</p>
       </section>
@@ -43,7 +43,7 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ padding: "8px 20px 64px" }}>
+      <section className="container" style={{ paddingBlock: "8px 64px" }}>
         <div className="common-steps-box">
           <h2>{t.programs.commonTitle}</h2>
           <p>{t.programs.commonSub}</p>
@@ -61,7 +61,7 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" id="reviews" style={{ padding: "64px 20px 8px" }}>
+      <section className="container" id="reviews" style={{ paddingBlock: "64px 8px" }}>
         <h2 className="section-title" style={{ fontSize: 28 }}>
           {t.programs.reviewsTitle}
         </h2>
@@ -70,7 +70,7 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
         </p>
       </section>
 
-      <section className="container" style={{ padding: "24px 20px 56px" }}>
+      <section className="container" style={{ paddingBlock: "24px 56px" }}>
         <div className="review-grid">
           {t.programs.reviews.map((review) => (
             <figure key={review.quote} className="testimonial-card">
@@ -116,7 +116,7 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="band-neutral">
-        <div className="container" style={{ padding: "56px 20px 72px" }}>
+        <div className="container" style={{ paddingBlock: "56px 72px" }}>
           <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
             {t.programs.otherTitle}
           </h2>

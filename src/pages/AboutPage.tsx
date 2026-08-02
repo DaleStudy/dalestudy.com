@@ -9,14 +9,14 @@ export function AboutPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <section className="prose-section" style={{ padding: "80px 20px 56px" }}>
+      <section className="prose-section" style={{ paddingBlock: "80px 56px" }}>
         <h1 className="page-title">{t.about.title}</h1>
         <p className="page-intro" style={{ fontSize: 18 }}>
           {t.about.intro}
         </p>
       </section>
 
-      <section className="container" style={{ padding: "0 20px 64px" }}>
+      <section className="container" style={{ paddingBlock: "0 64px" }}>
         <div className="mission-vision-grid">
           <div>
             <h2 className="prose-label">{t.about.missionLabel}</h2>
@@ -42,7 +42,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
       <section className="band-neutral">
         <div
           className="container community-story"
-          style={{ padding: "56px 20px", alignItems: "start" }}
+          style={{ paddingBlock: 56, alignItems: "start" }}
         >
           <div>
             <p className="story-eyebrow">{t.about.story.eyebrow}</p>
@@ -67,7 +67,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ padding: "64px 20px" }}>
+      <section className="container" style={{ paddingBlock: 64 }}>
         <h2 className="section-title" style={{ textAlign: "center", marginBottom: 32 }}>
           {t.about.valuesTitle}
         </h2>
@@ -82,7 +82,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="prose-section" style={{ padding: "16px 20px 64px" }}>
+      <section className="prose-section" style={{ paddingBlock: "16px 64px" }}>
         <h2 className="section-title" style={{ fontSize: 24, marginBottom: 12 }}>
           {t.about.teamTitle}
         </h2>

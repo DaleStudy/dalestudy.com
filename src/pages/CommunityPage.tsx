@@ -38,13 +38,13 @@ export function CommunityPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <section className="container" style={{ padding: "80px 20px 40px" }}>
+      <section className="container" style={{ paddingBlock: "80px 40px" }}>
         <h1 className="page-title">{t.community.title}</h1>
         <p className="page-intro">{t.community.sub}</p>
       </section>
 
       <section className="band-neutral">
-        <div className="container community-story" style={{ padding: "24px 20px 64px" }}>
+        <div className="container community-story" style={{ paddingBlock: "24px 64px" }}>
           {inlineSections.map((section) => (
             <div key={section.title} className="community-inline">
               <SectionHead section={section} />
@@ -70,7 +70,7 @@ export function CommunityPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ padding: "16px 20px 24px" }}>
+      <section className="container" style={{ paddingBlock: "16px 24px" }}>
         <h2 className="section-title" style={{ fontSize: 24, marginBottom: 8 }}>
           {t.community.normsTitle}
         </h2>
@@ -88,7 +88,7 @@ export function CommunityPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="detail-container" style={{ padding: "40px 20px 80px" }}>
+      <section className="detail-container" style={{ paddingBlock: "40px 80px" }}>
         <div className="join-cta">
           <h2>{t.community.ctaTitle}</h2>
           <p>{t.community.ctaSub}</p>

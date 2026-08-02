@@ -47,7 +47,8 @@ a:hover {
 .container {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-inline: max(20px, env(safe-area-inset-left, 0px))
+    max(20px, env(safe-area-inset-right, 0px));
 }
 
 /* ===== Buttons (링크 CTA — daleui Button 룩을 토큰으로 재현) ===== */
@@ -280,7 +281,7 @@ a:hover {
 /* ===== 공통 섹션 ===== */
 
 .section {
-  padding: 72px 0;
+  padding-block: 72px;
 }
 
 .section-title {
@@ -353,7 +354,7 @@ a:hover {
 
 .hero {
   position: relative;
-  padding: 88px 0 72px;
+  padding-block: 88px 72px;
   text-align: center;
 }
 
@@ -616,7 +617,8 @@ a.card-link:hover .mini-card {
 .prose-section {
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-inline: max(20px, env(safe-area-inset-left, 0px))
+    max(20px, env(safe-area-inset-right, 0px));
 }
 
 .prose-label {
@@ -722,7 +724,8 @@ a.card-link:hover .mini-card {
 .detail-container {
   max-width: 760px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-inline: max(20px, env(safe-area-inset-left, 0px))
+    max(20px, env(safe-area-inset-right, 0px));
 }
 
 .detail-head {
@@ -840,7 +843,7 @@ a.card-link:hover .mini-card {
 /* ===== 커뮤니티 ===== */
 
 .community-story {
-  padding: 64px 20px;
+  padding-block: 64px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 48px;
@@ -965,7 +968,7 @@ a.card-link:hover .mini-card {
 }
 
 .community-section-inner {
-  padding: 56px 0;
+  padding-block: 56px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
@@ -1462,7 +1465,7 @@ a.card-link:hover .program-card-thumbed .program-card-lg {
 }
 
 .site-footer-grid {
-  padding: 48px 0 40px;
+  padding-block: 48px 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 32px;
@@ -1505,7 +1508,7 @@ a.card-link:hover .program-card-thumbed .program-card-lg {
 }
 
 .footer-bottom {
-  padding: 0 0 32px;
+  padding-block: 0 32px;
   font-size: 13px;
   opacity: 0.55;
 }

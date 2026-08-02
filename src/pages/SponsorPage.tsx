@@ -9,7 +9,7 @@ export function SponsorPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <section className="prose-section" style={{ padding: "80px 20px 40px" }}>
+      <section className="prose-section" style={{ paddingBlock: "80px 40px" }}>
         <h1 className="page-title">{t.sponsor.title}</h1>
         <p className="page-intro" style={{ fontSize: 18 }}>
           {t.sponsor.intro}
@@ -20,7 +20,7 @@ export function SponsorPage({ locale }: { locale: Locale }) {
         <p className="sponsor-quote">{t.sponsor.quote}</p>
       </section>
 
-      <section className="container" style={{ padding: "0 20px 56px" }}>
+      <section className="container" style={{ paddingBlock: "0 56px" }}>
         <a href={SPONSORS_URL} target="_blank" rel="noopener noreferrer">
           <img
             className="sponsors-embed"
@@ -67,7 +67,12 @@ export function SponsorPage({ locale }: { locale: Locale }) {
 
       <section
         className="prose-section"
-        style={{ padding: "56px 20px 80px", display: "flex", flexDirection: "column", gap: 16 }}
+        style={{
+          paddingBlock: "56px 80px",
+          display: "flex",
+          flexDirection: "column",
+          gap: 16,
+        }}
       >
         <div className="info-box">
           <strong>{t.sponsor.transparencyTitle}</strong>

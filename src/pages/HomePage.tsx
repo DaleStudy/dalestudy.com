@@ -132,7 +132,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ padding: "72px 0 8px" }}>
+      <section className="container" style={{ paddingBlock: "72px 8px" }}>
         <h2 className="section-title" style={{ fontSize: "clamp(24px, 3.5vw, 32px)" }}>
           {t.home.faqTitle}
         </h2>
@@ -151,7 +151,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ padding: "64px 20px 72px" }}>
+      <section className="container" style={{ paddingBlock: "64px 72px" }}>
         <div className="sponsor-banner">
           <div style={{ maxWidth: 520 }}>
             <strong>{t.home.sponsorBannerTitle}</strong>

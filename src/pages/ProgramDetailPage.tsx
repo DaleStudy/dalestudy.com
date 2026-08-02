@@ -22,7 +22,7 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
         </AppLink>
       </section>
 
-      <section className="detail-container" style={{ padding: "28px 20px 48px" }}>
+      <section className="detail-container" style={{ paddingBlock: "28px 48px" }}>
         <div className="detail-head">
           <span
             className="icon-tile"
@@ -66,7 +66,7 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
       )}
 
       <section className="band-neutral">
-        <div className="detail-container" style={{ padding: "48px 20px" }}>
+        <div className="detail-container" style={{ paddingBlock: 48 }}>
           <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
             {t.programDetail.howItWorks}
           </h2>
@@ -85,7 +85,7 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
       </section>
 
       {detail.testimonials.length > 0 && (
-        <section className="container" style={{ padding: "48px 20px 24px" }}>
+        <section className="container" style={{ paddingBlock: "48px 24px" }}>
           <h2
             className="section-title"
             style={{ fontSize: 22, textAlign: "center", marginBottom: 20 }}
@@ -123,7 +123,7 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
         </section>
       )}
 
-      <section className="detail-container" style={{ padding: "48px 20px 72px" }}>
+      <section className="detail-container" style={{ paddingBlock: "48px 72px" }}>
         <div className="join-cta">
           <h2>{t.programDetail.join}</h2>
           <p>{detail.joinDesc}</p>
