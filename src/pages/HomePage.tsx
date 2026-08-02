@@ -1,5 +1,4 @@
 import { Icon, Tag } from "daleui";
-import { SiteIcon } from "../components/SiteIcon";
 import { AppLink } from "../components/AppLink";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages, localePath } from "../i18n";
@@ -57,7 +56,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             >
               <div className="program-card">
                 <span className="icon-tile" style={{ width: 44, height: 44 }}>
-                  <SiteIcon name={p.icon} tone="brand" size="md" />
+                  <Icon name={p.icon} tone="brand" size="md" />
                 </span>
                 <strong>{p.title}</strong>
                 <span className="card-desc">{p.desc}</span>
@@ -79,7 +78,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             {t.home.activities.map((a) => (
               <div key={a.title} className="activity-card">
                 <div className="activity-card-head">
-                  <SiteIcon name={a.icon} tone="brand" size="sm" />
+                  <Icon name={a.icon} tone="brand" size="sm" />
                   <strong>{a.title}</strong>
                 </div>
                 <span>{a.desc}</span>

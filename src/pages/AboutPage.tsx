@@ -1,4 +1,4 @@
-import { SiteIcon } from "../components/SiteIcon";
+import { Icon } from "daleui";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages } from "../i18n";
 import type { Locale } from "../i18n/types";
@@ -74,7 +74,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         <div className="card-grid" style={{ maxWidth: 960, margin: "0 auto" }}>
           {t.about.values.map((v) => (
             <div key={v.title} className="value-card">
-              <SiteIcon name={v.icon} tone="brand" size="lg" />
+              <Icon name={v.icon} tone="brand" size="lg" />
               <strong>{v.title}</strong>
               <span>{v.summary}</span>
             </div>

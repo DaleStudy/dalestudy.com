@@ -1,5 +1,5 @@
+import { Icon } from "daleui";
 import { LinkButton } from "../components/LinkButton";
-import { SiteIcon } from "../components/SiteIcon";
 import { getMessages } from "../i18n";
 import type { CommunitySection, Locale } from "../i18n/types";
 import { DISCORD_URL } from "../links";
@@ -8,7 +8,7 @@ function SectionHead({ section }: { section: CommunitySection }) {
   return (
     <div className="community-section-head">
       <span className="icon-tile" style={{ width: 44, height: 44 }}>
-        <SiteIcon name={section.icon} tone="brand" size="md" />
+        <Icon name={section.icon} tone="brand" size="md" />
       </span>
       <h2>{section.title}</h2>
     </div>

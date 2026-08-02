@@ -10,34 +10,24 @@
       "name": "Dale Seo",
       "avatar_url": "https://avatars.githubusercontent.com/u/5466341?v=4",
       "profile": "https://github.com/DaleSeo",
-      "contributions": [
-        "code",
-        "design",
-        "doc"
-      ]
+      "contributions": ["code", "design", "doc"]
     },
     {
       "login": "1005hoon",
       "name": "Hoon Oh",
       "avatar_url": "https://avatars.githubusercontent.com/u/58735578?v=4",
       "profile": "https://www.hoonnotes.me",
-      "contributions": [
-        "code"
-      ]
+      "contributions": ["code"]
     },
     {
       "login": "devkade",
       "name": "DongKyu Kang",
       "avatar_url": "https://avatars.githubusercontent.com/u/64977390?v=4",
       "profile": "https://techtellus.pages.dev/",
-      "contributions": [
-        "code"
-      ]
+      "contributions": ["code"]
     }
   ],
-  "files": [
-    "README.md"
-  ],
+  "files": ["README.md"],
   "commitType": "docs",
   "contributorsPerLine": 7
 }

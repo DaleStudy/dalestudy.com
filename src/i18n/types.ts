@@ -4,9 +4,6 @@ export type Locale = "ko" | "en";
 
 export type IconName = IconProps["name"];
 
-/** daleui 아이콘 + SiteIcon이 lucide에서 보강하는 아이콘 */
-export type SiteIconName = IconName | "palette" | "brain" | "penLine" | "puzzle" | "laptop";
-
 export type TagTone = "brand" | "neutral" | "success" | "warning" | "danger" | "info";
 
 export const programSlugs = ["leetcode", "ai", "blog", "daleui"] as const;
@@ -23,7 +20,7 @@ export interface SeoEntry {
 
 export interface ProgramCard {
   slug: ProgramSlug;
-  icon: SiteIconName;
+  icon: IconName;
   /** 프로그램 허브 카드 상단 썸네일 */
   thumb: string;
   title: string;
@@ -36,7 +33,7 @@ export interface ProgramCard {
 }
 
 export interface ProgramDetail {
-  icon: SiteIconName;
+  icon: IconName;
   title: string;
   subtitleLinks: { label: string; url: string }[];
   overview: string;
@@ -52,7 +49,7 @@ export interface ProgramDetail {
 }
 
 export interface CommunitySection {
-  icon: SiteIconName;
+  icon: IconName;
   title: string;
   desc: string;
   detail: string;
@@ -80,7 +77,7 @@ export interface Messages {
     sponsorBannerSub: string;
     sponsorBannerCta: string;
     stats: { value: string; label: string }[];
-    activities: { icon: SiteIconName; title: string; desc: string }[];
+    activities: { icon: IconName; title: string; desc: string }[];
     showcaseTitle: string;
     showcaseSub: string;
     showcase: { title: string; desc: string; host: string; url: string }[];
@@ -100,7 +97,7 @@ export interface Messages {
     photoAlt: string;
     photoCaption: string;
     valuesTitle: string;
-    values: { icon: SiteIconName; title: string; summary: string }[];
+    values: { icon: IconName; title: string; summary: string }[];
     story: {
       eyebrow: string;
       title: string;
@@ -156,7 +153,7 @@ export interface Messages {
     intro2: string;
     quote: string;
     usesTitle: string;
-    uses: { icon: SiteIconName; title: string; desc: string }[];
+    uses: { icon: IconName; title: string; desc: string }[];
     ctaTitle: string;
     ctaSub: string;
     ctaBtn: string;

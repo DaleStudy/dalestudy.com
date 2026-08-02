@@ -1,5 +1,4 @@
-import { Tag } from "daleui";
-import { SiteIcon } from "../components/SiteIcon";
+import { Icon, Tag } from "daleui";
 import { Fragment } from "react";
 import { AppLink } from "../components/AppLink";
 import { LinkButton } from "../components/LinkButton";
@@ -28,7 +27,7 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
             className="icon-tile"
             style={{ width: 64, height: 64, borderRadius: "var(--radii-xl)" }}
           >
-            <SiteIcon name={detail.icon} tone="brand" size="lg" />
+            <Icon name={detail.icon} tone="brand" size="lg" />
           </span>
           <div>
             <h1>{detail.title}</h1>

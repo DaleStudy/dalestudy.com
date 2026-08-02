@@ -1,4 +1,4 @@
-import { SiteIcon } from "../components/SiteIcon";
+import { Icon } from "daleui";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages } from "../i18n";
 import type { Locale } from "../i18n/types";
@@ -42,7 +42,7 @@ export function SponsorPage({ locale }: { locale: Locale }) {
               className="info-box"
               style={{ display: "flex", flexDirection: "column", gap: 10 }}
             >
-              <SiteIcon name={use.icon} tone="brand" size="md" />
+              <Icon name={use.icon} tone="brand" size="md" />
               <strong style={{ margin: 0 }}>{use.title}</strong>
               <p>{use.desc}</p>
             </div>
