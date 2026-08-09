@@ -1,5 +1,6 @@
 import { Icon, Tag } from "daleui";
 import { AppLink } from "../components/AppLink";
+import { ExternalCard } from "../components/ExternalCard";
 import { LinkButton } from "../components/LinkButton";
 import { getMessages, localePath } from "../i18n";
 import type { Locale } from "../i18n/types";
@@ -110,22 +111,15 @@ export function HomePage({ locale }: { locale: Locale }) {
             {t.home.showcaseTitle}
           </h2>
           <p className="section-sub">{t.home.showcaseSub}</p>
-          <div className="showcase-grid">
+          <div className="card-grid">
             {t.home.showcase.map((work) => (
-              <a
+              <ExternalCard
                 key={work.url}
-                className="showcase-card"
                 href={work.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="showcase-card-head">
-                  <strong>{work.title}</strong>
-                  <Icon name="externalLink" size="xs" tone="brand" />
-                </div>
-                <span className="showcase-desc">{work.desc}</span>
-                <span className="showcase-host">{work.host}</span>
-              </a>
+                title={work.title}
+                desc={work.desc}
+                meta={work.host}
+              />
             ))}
           </div>
         </div>
