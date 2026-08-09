@@ -3,9 +3,7 @@ import { localePath } from "./i18n";
 
 export const SITE_URL = "https://dalestudy.com";
 
-// 정식 도메인은 아직 구 사이트가 차지하고 있어 베타에서 서빙한다.
-// 정식 오픈 시 `${SITE_URL}/og.png`로 되돌릴 것.
-export const OG_IMAGE_URL = "https://beta.dalestudy.com/og.png";
+const OG_IMAGE_URL = `${SITE_URL}/og.png`;
 
 interface PageHeadOptions {
   locale: Locale;
