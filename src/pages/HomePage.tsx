@@ -111,7 +111,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             {t.home.showcaseTitle}
           </h2>
           <p className="section-sub">{t.home.showcaseSub}</p>
-          <div className="card-grid">
+          <div className="card-grid card-grid-wide">
             {t.home.showcase.map((work) => (
               <ExternalCard
                 key={work.url}
