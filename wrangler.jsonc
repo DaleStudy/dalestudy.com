@@ -6,5 +6,7 @@
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry",
   "preview_urls": true,
-  "routes": [{ "pattern": "beta.dalestudy.com", "custom_domain": true }],
+  // apex는 GitHub Pages 시절 DNS 레코드를 그대로 둔 채 route로 가로챈다.
+  // www는 Cloudflare 리다이렉트 규칙이 apex로 301 처리하므로 여기에 없다.
+  "routes": [{ "pattern": "dalestudy.com/*", "zone_name": "dalestudy.com" }],
 }

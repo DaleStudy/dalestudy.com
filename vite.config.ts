@@ -9,6 +9,8 @@ export default defineConfig({
       // TanStack Router와 All Contributors가 자체 포맷으로 관리하는 산출물
       "src/routeTree.gen.ts",
       ".all-contributorsrc",
+      // 네이버 웹마스터도구 소유 확인 파일은 원본 바이트를 유지해야 한다
+      "public/naver*.html",
     ],
   },
   plugins: [
