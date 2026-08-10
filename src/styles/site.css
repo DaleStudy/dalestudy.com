@@ -532,37 +532,51 @@ a.card-link:hover .program-card {
   text-wrap: pretty;
 }
 
-.mini-card {
-  border: 1px solid var(--colors-border-neutral);
-  border-radius: var(--radii-lg);
-  padding: 16px 18px;
-  background: var(--colors-app-bg);
+.external-card {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   height: 100%;
+  padding: 24px;
+  border: 1px solid var(--colors-border-neutral);
+  border-radius: var(--radii-xl);
+  background: var(--colors-app-bg);
+  color: var(--colors-fg-neutral);
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+}
+
+a.external-card:hover {
+  border-color: var(--colors-border-brand);
+  transform: translateY(-2px);
   color: var(--colors-fg-neutral);
 }
 
-a.card-link:hover .mini-card {
-  border-color: var(--colors-border-brand);
-}
-
-.mini-card-head {
+.external-card-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
 
-.mini-card strong {
-  font-size: 15px;
+.external-card-head strong {
+  font-size: 17px;
 }
 
-.mini-card span {
-  font-size: 13.5px;
-  line-height: 1.5;
-  opacity: 0.7;
+.external-card-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  opacity: 0.75;
+  text-wrap: pretty;
+}
+
+.external-card-meta {
+  margin-top: auto;
+  padding-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--colors-fg-brand);
 }
 
 /* ===== 통계 ===== */
@@ -1066,57 +1080,6 @@ a.card-link:hover .mini-card {
   line-height: 1.75;
   opacity: 0.8;
   text-wrap: pretty;
-}
-
-.showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-}
-
-.showcase-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 24px;
-  border: 1px solid var(--colors-border-neutral);
-  border-radius: var(--radii-xl);
-  background: var(--colors-app-bg);
-  color: var(--colors-fg-neutral);
-  transition:
-    border-color 0.15s,
-    transform 0.15s;
-}
-
-a.showcase-card:hover {
-  border-color: var(--colors-border-brand);
-  transform: translateY(-2px);
-  color: var(--colors-fg-neutral);
-}
-
-.showcase-card-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.showcase-card-head strong {
-  font-size: 17px;
-}
-
-.showcase-desc {
-  font-size: 14.5px;
-  line-height: 1.6;
-  opacity: 0.75;
-  text-wrap: pretty;
-}
-
-.showcase-host {
-  margin-top: auto;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--colors-fg-brand);
 }
 
 .faq-list {
