@@ -1,10 +1,14 @@
 import { Icon, Tag } from "daleui";
+import { ANCHORS } from "../anchors";
 import { AppLink } from "../components/AppLink";
 import { ExternalCard } from "../components/ExternalCard";
 import { LinkButton } from "../components/LinkButton";
+import { SectionHeading } from "../components/SectionHeading";
 import { getMessages, localePath } from "../i18n";
 import type { Locale } from "../i18n/types";
 import { DISCORD_URL } from "../links";
+
+const anchors = ANCHORS.home;
 
 export function HomePage({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -45,8 +49,12 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container section">
-        <h2 className="section-title">{t.home.programsTitle}</h2>
+      <section className="container section" id={anchors.programs}>
+        <SectionHeading
+          anchor={anchors.programs}
+          title={t.home.programsTitle}
+          className="section-title"
+        />
         <p className="section-sub">{t.home.programsSub}</p>
         <div className="card-grid">
           {t.programs.cards.map((p) => (
@@ -68,9 +76,13 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="band-neutral">
+      <section className="band-neutral" id={anchors.community}>
         <div className="container section">
-          <h2 className="section-title">{t.home.communityTitle}</h2>
+          <SectionHeading
+            anchor={anchors.community}
+            title={t.home.communityTitle}
+            className="section-title"
+          />
           <p className="section-sub">{t.home.communitySub}</p>
           <div
             className="card-grid"
@@ -105,11 +117,14 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="band-neutral">
+      <section className="band-neutral" id={anchors.showcase}>
         <div className="container section">
-          <h2 className="section-title" style={{ fontSize: "clamp(24px, 3.5vw, 32px)" }}>
-            {t.home.showcaseTitle}
-          </h2>
+          <SectionHeading
+            anchor={anchors.showcase}
+            title={t.home.showcaseTitle}
+            className="section-title"
+            style={{ fontSize: "clamp(24px, 3.5vw, 32px)" }}
+          />
           <p className="section-sub">{t.home.showcaseSub}</p>
           <div className="card-grid card-grid-wide">
             {t.home.showcase.map((work) => (
@@ -125,10 +140,13 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ paddingBlock: "72px 8px" }}>
-        <h2 className="section-title" style={{ fontSize: "clamp(24px, 3.5vw, 32px)" }}>
-          {t.home.faqTitle}
-        </h2>
+      <section className="container" id={anchors.faq} style={{ paddingBlock: "72px 8px" }}>
+        <SectionHeading
+          anchor={anchors.faq}
+          title={t.home.faqTitle}
+          className="section-title"
+          style={{ fontSize: "clamp(24px, 3.5vw, 32px)" }}
+        />
         <div className="faq-list">
           {t.home.faqs.map((faq) => (
             <details key={faq.q}>

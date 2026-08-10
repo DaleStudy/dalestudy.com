@@ -1,9 +1,13 @@
 import { Icon, Tag } from "daleui";
 import { Fragment } from "react";
+import { ANCHORS } from "../anchors";
 import { AppLink } from "../components/AppLink";
 import { LinkButton } from "../components/LinkButton";
+import { SectionHeading } from "../components/SectionHeading";
 import { getMessages, localePath } from "../i18n";
 import type { Locale, ProgramSlug } from "../i18n/types";
+
+const anchors = ANCHORS.programDetail;
 
 export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: ProgramSlug }) {
   const t = getMessages(locale);
@@ -64,11 +68,14 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
         </section>
       )}
 
-      <section className="band-neutral">
+      <section className="band-neutral" id={anchors.howItWorks}>
         <div className="detail-container" style={{ paddingBlock: 48 }}>
-          <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
-            {t.programDetail.howItWorks}
-          </h2>
+          <SectionHeading
+            anchor={anchors.howItWorks}
+            title={t.programDetail.howItWorks}
+            className="section-title"
+            style={{ fontSize: 22, marginBottom: 20 }}
+          />
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {detail.steps.map((step, index) => (
               <div key={step.title} className="step-row">
@@ -84,13 +91,17 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
       </section>
 
       {detail.testimonials.length > 0 && (
-        <section className="container" style={{ paddingBlock: "48px 24px" }}>
-          <h2
+        <section
+          className="container"
+          id={anchors.testimonials}
+          style={{ paddingBlock: "48px 24px" }}
+        >
+          <SectionHeading
+            anchor={anchors.testimonials}
+            title={t.programDetail.testimonialsTitle}
             className="section-title"
             style={{ fontSize: 22, textAlign: "center", marginBottom: 20 }}
-          >
-            {t.programDetail.testimonialsTitle}
-          </h2>
+          />
           <div className="testimonial-grid">
             {detail.testimonials.map((tm) => (
               <figure key={tm.login} className="testimonial-card">
@@ -115,16 +126,16 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
             ))}
           </div>
           <p className="testimonial-more">
-            <AppLink to={`${localePath(locale, "/programs")}#reviews`}>
+            <AppLink to={`${localePath(locale, "/programs")}#${ANCHORS.programs.reviews}`}>
               {t.programDetail.testimonialsMore} →
             </AppLink>
           </p>
         </section>
       )}
 
-      <section className="detail-container" style={{ paddingBlock: "48px 72px" }}>
+      <section className="detail-container" id={anchors.join} style={{ paddingBlock: "48px 72px" }}>
         <div className="join-cta">
-          <h2>{t.programDetail.join}</h2>
+          <SectionHeading anchor={anchors.join} title={t.programDetail.join} />
           <p>{detail.joinDesc}</p>
           <div className="cta-row">
             <LinkButton href={detail.ctaUrl} size="lg">

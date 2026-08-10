@@ -1,12 +1,12 @@
 /// <reference types="vite/client" />
-import { createRootRoute, HeadContent, Outlet, Scripts, useLocation } from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import jetbrainsMonoCss from "@fontsource-variable/jetbrains-mono/index.css?url";
 import daleuiCss from "daleui/styles.css?url";
 import pretendardCss from "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css?url";
 import type { ReactNode } from "react";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-import { localeFromPath } from "../i18n";
+import { useLocale } from "../i18n/useLocale";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { SITE_URL } from "../seo";
 import siteCss from "../styles/site.css?url";
@@ -63,8 +63,7 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
-  const { pathname } = useLocation();
-  const locale = localeFromPath(pathname);
+  const locale = useLocale();
 
   return (
     <RootDocument locale={locale}>
