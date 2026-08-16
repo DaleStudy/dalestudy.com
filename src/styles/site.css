@@ -388,7 +388,8 @@ a:hover {
   font-size: clamp(16px, 2.2vw, 19px);
   line-height: 1.6;
   opacity: 0.8;
-  text-wrap: pretty;
+  /* pretty는 마지막 줄에 한 어절만 남는 걸 못 막아서, 제목과 같이 줄 길이를 맞춘다 */
+  text-wrap: balance;
 }
 
 .hero-actions {
