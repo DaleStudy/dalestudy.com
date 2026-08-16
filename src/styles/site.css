@@ -426,17 +426,30 @@ a:hover {
   gap: 6px;
 }
 
-/* ===== 카드 그리드 ===== */
+/* ===== 카드 그리드 =====
+   줄바꿈 지점은 카드 최소 폭이 정한다 — auto-fit + minmax와 같은 규칙이라 열 수는 그대로다.
+   마지막 줄에 남는 카드는 상한까지만 넓어지고, 남은 여백은 좌우로 나뉘어 가운데 놓인다. */
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+  --card-min: 240px;
+  --card-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--card-gap);
+}
+
+.card-grid > * {
+  flex: 1 1 var(--card-min);
+  /* 카드가 이 폭을 넘으면 열이 하나 더 들어간다. 즉 꽉 찬 줄에는 절대 걸리지 않고
+     마지막 줄에만 작용하는 상한이라, 다른 줄의 배치는 그대로 유지된다. */
+  max-width: calc(2 * var(--card-min) + var(--card-gap));
+  min-width: 0;
 }
 
 .card-grid-wide {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  --card-min: 280px;
+  --card-gap: 20px;
 }
 
 .program-card {
@@ -582,10 +595,17 @@ a.external-card:hover {
 /* ===== 통계 ===== */
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   text-align: center;
+}
+
+.stats-grid > * {
+  flex: 1 1 160px;
+  max-width: calc(2 * 160px + 24px);
+  min-width: 0;
 }
 
 .stat-value {
@@ -672,6 +692,8 @@ a.external-card:hover {
   text-wrap: pretty;
 }
 
+/* 카드 최소 폭(150px)이 작아 한 줄에 여러 장이 들어간다. 여기에 카드 그리드 방식을 쓰면
+   마지막 줄 카드가 56px 아바타에 비해 지나치게 넓어져서, 기존 그리드를 그대로 둔다. */
 .member-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1252,9 +1274,16 @@ a.card-link:hover .program-card-thumbed .program-card-lg {
 }
 
 .common-steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+}
+
+.common-steps-grid > * {
+  flex: 1 1 220px;
+  max-width: calc(2 * 220px + 20px);
+  min-width: 0;
 }
 
 .common-step {

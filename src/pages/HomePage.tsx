@@ -1,4 +1,5 @@
 import { Icon, Tag } from "daleui";
+import type { CSSProperties } from "react";
 import { AppLink } from "../components/AppLink";
 import { ExternalCard } from "../components/ExternalCard";
 import { LinkButton } from "../components/LinkButton";
@@ -72,10 +73,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="container section">
           <h2 className="section-title">{t.home.communityTitle}</h2>
           <p className="section-sub">{t.home.communitySub}</p>
-          <div
-            className="card-grid"
-            style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}
-          >
+          <div className="card-grid" style={{ "--card-min": "260px" } as CSSProperties}>
             {t.home.activities.map((a) => (
               <div key={a.title} className="activity-card">
                 <div className="activity-card-head">
