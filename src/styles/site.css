@@ -992,10 +992,16 @@ a.external-card:hover {
 }
 
 .community-section-head {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
+}
+
+/* 제목 앞에 아이콘 타일이 있으므로 앵커는 타일까지 포함한 블록의 왼쪽 바깥에 놓는다. */
+.community-section-head .heading-text {
+  position: static;
 }
 
 .community-section-head h2 {
@@ -1150,16 +1156,22 @@ section[id] {
   scroll-margin-top: calc(var(--header-height) + 16px);
 }
 
-/* 간격을 padding으로 주어 제목과 앵커 사이에서 호버가 끊기지 않게 한다. */
+.heading-text {
+  position: relative;
+}
+
+/* 제목 글자 왼쪽 바깥에 놓는다. 간격을 padding으로 주어 호버가 끊기지 않게 한다. */
 .heading-anchor {
-  padding-left: 0.35em;
+  position: absolute;
+  right: 100%;
+  padding-right: 0.35em;
   color: var(--colors-fg-neutral-placeholder);
   font-weight: 400;
   opacity: 0;
   transition: opacity 0.15s;
 }
 
-.heading-text:hover + .heading-anchor {
+.heading-text:hover .heading-anchor {
   opacity: 1;
 }
 
@@ -1167,6 +1179,13 @@ section[id] {
 .heading-anchor:focus-visible {
   color: var(--colors-fg-neutral-hover);
   opacity: 1;
+}
+
+/* 왼쪽 여백이 없는 폭에서는 앵커를 흐름 안(제목 첫 글자 앞)으로 되돌린다. */
+@media (max-width: 1240px) {
+  .heading-anchor {
+    position: static;
+  }
 }
 
 /* 호버가 없는 기기에서는 앵커를 발견할 방법이 없으므로 항상 보여준다. */
