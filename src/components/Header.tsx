@@ -20,7 +20,7 @@ function toggleTheme() {
 
 export function Header({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
@@ -61,7 +61,7 @@ export function Header({ locale }: { locale: Locale }) {
         <div className="site-header-actions">
           <AppLink
             className="header-icon-btn"
-            to={switchLocalePath(pathname)}
+            to={switchLocalePath(pathname, hash)}
             aria-label={locale === "ko" ? "Switch to English" : "한국어로 전환"}
           >
             {t.langSwitch}
