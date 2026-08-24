@@ -1,8 +1,12 @@
 import { Icon } from "daleui";
+import { ANCHORS } from "../anchors";
 import { LinkButton } from "../components/LinkButton";
+import { SectionHeading } from "../components/SectionHeading";
 import { getMessages } from "../i18n";
 import type { Locale } from "../i18n/types";
 import { OPENCOLLECTIVE_URL, SPONSORS_SVG_URL, SPONSORS_URL } from "../links";
+
+const anchors = ANCHORS.sponsor;
 
 export function SponsorPage({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -31,10 +35,13 @@ export function SponsorPage({ locale }: { locale: Locale }) {
         <p className="sponsor-note">{t.sponsor.listNote}</p>
       </section>
 
-      <section className="container" style={{ paddingBottom: 56 }}>
-        <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
-          {t.sponsor.usesTitle}
-        </h2>
+      <section className="container" id={anchors.useOfFunds} style={{ paddingBottom: 56 }}>
+        <SectionHeading
+          anchor={anchors.useOfFunds}
+          title={t.sponsor.usesTitle}
+          className="section-title"
+          style={{ fontSize: 22, marginBottom: 20 }}
+        />
         <div className="card-grid" style={{ maxWidth: 960 }}>
           {t.sponsor.uses.map((use) => (
             <div

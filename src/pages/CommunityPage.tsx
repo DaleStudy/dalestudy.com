@@ -1,16 +1,18 @@
 import { Icon } from "daleui";
+import { ANCHORS } from "../anchors";
 import { LinkButton } from "../components/LinkButton";
+import { SectionHeading } from "../components/SectionHeading";
 import { getMessages } from "../i18n";
 import type { CommunitySection, Locale } from "../i18n/types";
 import { DISCORD_URL } from "../links";
 
-function SectionHead({ section }: { section: CommunitySection }) {
+function SectionHead({ anchor, section }: { anchor: string; section: CommunitySection }) {
   return (
     <div className="community-section-head">
       <span className="icon-tile" style={{ width: 44, height: 44 }}>
         <Icon name={section.icon} tone="brand" size="md" />
       </span>
-      <h2>{section.title}</h2>
+      <SectionHeading anchor={anchor} title={section.title} />
     </div>
   );
 }
@@ -31,10 +33,11 @@ function SectionGallery({ section }: { section: CommunitySection }) {
   );
 }
 
+const anchors = ANCHORS.community;
+
 export function CommunityPage({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
-  const [meetup] = t.community.sections.slice(2);
-  const inlineSections = t.community.sections.slice(0, 2);
+  const [coffeeChat, coWorking, meetup] = t.community.sections;
 
   return (
     <>
@@ -45,20 +48,23 @@ export function CommunityPage({ locale }: { locale: Locale }) {
 
       <section className="band-neutral">
         <div className="container community-story" style={{ paddingBlock: "24px 64px" }}>
-          {inlineSections.map((section) => (
-            <div key={section.title} className="community-inline">
-              <SectionHead section={section} />
-              <p className="community-desc">{section.desc}</p>
-              <SectionGallery section={section} />
-            </div>
-          ))}
+          <section className="community-inline" id={anchors.coffeeChat}>
+            <SectionHead anchor={anchors.coffeeChat} section={coffeeChat} />
+            <p className="community-desc">{coffeeChat.desc}</p>
+            <SectionGallery section={coffeeChat} />
+          </section>
+          <section className="community-inline" id={anchors.coWorking}>
+            <SectionHead anchor={anchors.coWorking} section={coWorking} />
+            <p className="community-desc">{coWorking.desc}</p>
+            <SectionGallery section={coWorking} />
+          </section>
         </div>
       </section>
 
-      <section>
+      <section id={anchors.meetups}>
         <div className="container community-section-inner">
           <div>
-            <SectionHead section={meetup} />
+            <SectionHead anchor={anchors.meetups} section={meetup} />
             <p className="community-desc">{meetup.desc}</p>
           </div>
           <p className="community-detail" style={{ alignSelf: "center", margin: 0 }}>
@@ -70,10 +76,13 @@ export function CommunityPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ paddingBlock: "16px 24px" }}>
-        <h2 className="section-title" style={{ fontSize: 24, marginBottom: 8 }}>
-          {t.community.normsTitle}
-        </h2>
+      <section className="container" id={anchors.norms} style={{ paddingBlock: "16px 24px" }}>
+        <SectionHeading
+          anchor={anchors.norms}
+          title={t.community.normsTitle}
+          className="section-title"
+          style={{ fontSize: 24, marginBottom: 8 }}
+        />
         <p className="community-desc" style={{ marginBottom: 24 }}>
           {t.community.normsIntro}
         </p>

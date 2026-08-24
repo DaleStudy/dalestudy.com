@@ -1,10 +1,9 @@
-import { useLocation } from "@tanstack/react-router";
 import { LinkButton } from "../components/LinkButton";
-import { getMessages, localeFromPath, localePath } from "../i18n";
+import { getMessages, localePath } from "../i18n";
+import { useLocale } from "../i18n/useLocale";
 
 export function NotFoundPage() {
-  const { pathname } = useLocation();
-  const locale = localeFromPath(pathname);
+  const locale = useLocale();
   const t = getMessages(locale);
 
   return (

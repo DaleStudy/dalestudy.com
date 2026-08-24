@@ -1,8 +1,9 @@
 /* dalestudy.com 사이트 전용 스타일.
    색상·서체·radius는 daleui 토큰의 CSS 변수를 사용하고,
-   teal→violet 그라데이션(기존 사이트에서 계승한 브랜드 유산)만 로컬 변수로 확장한다. */
+   teal→violet 그라데이션(기존 사이트에서 계승한 브랜드 유산)을 로컬 변수로 확장한다. */
 
 :root {
+  --header-height: 64px;
   --grad-teal-wash: rgba(36, 234, 202, 0.28);
   --grad-violet-wash: rgba(132, 109, 233, 0.28);
   --grad-text: linear-gradient(90deg, #0e9e85, #6d51d6);
@@ -133,7 +134,7 @@ a:hover {
 }
 
 .site-header-inner {
-  height: 64px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -991,10 +992,16 @@ a.external-card:hover {
 }
 
 .community-section-head {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
+}
+
+/* 제목 앞에 아이콘 타일이 있으므로 앵커는 타일까지 포함한 블록의 왼쪽 바깥에 놓는다. */
+.community-section-head .heading-text {
+  position: static;
 }
 
 .community-section-head h2 {
@@ -1143,8 +1150,49 @@ a.external-card:hover {
   opacity: 0.7;
 }
 
-#reviews {
-  scroll-margin-top: 80px;
+/* ===== 섹션 앵커 ===== */
+
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+.heading-text {
+  position: relative;
+}
+
+/* 제목 글자 왼쪽 바깥에 놓는다. 간격을 padding으로 주어 호버가 끊기지 않게 한다. */
+.heading-anchor {
+  position: absolute;
+  right: 100%;
+  padding-right: 0.35em;
+  color: var(--colors-fg-neutral-placeholder);
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.heading-text:hover .heading-anchor {
+  opacity: 1;
+}
+
+.heading-anchor:hover,
+.heading-anchor:focus-visible {
+  color: var(--colors-fg-neutral-hover);
+  opacity: 1;
+}
+
+/* 왼쪽 여백이 없는 폭에서는 앵커를 흐름 안(제목 첫 글자 앞)으로 되돌린다. */
+@media (max-width: 1240px) {
+  .heading-anchor {
+    position: static;
+  }
+}
+
+/* 호버가 없는 기기에서는 앵커를 발견할 방법이 없으므로 항상 보여준다. */
+@media (hover: none) {
+  .heading-anchor {
+    opacity: 1;
+  }
 }
 
 .mission-vision-grid {

@@ -1,8 +1,12 @@
 import { Icon } from "daleui";
+import { ANCHORS } from "../anchors";
 import { LinkButton } from "../components/LinkButton";
+import { SectionHeading } from "../components/SectionHeading";
 import { getMessages } from "../i18n";
 import type { Locale } from "../i18n/types";
 import { DISCORD_URL } from "../links";
+
+const anchors = ANCHORS.about;
 
 export function AboutPage({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -18,35 +22,47 @@ export function AboutPage({ locale }: { locale: Locale }) {
 
       <section className="container" style={{ paddingBlock: "0 64px" }}>
         <div className="mission-vision-grid">
-          <div>
-            <h2 className="prose-label">{t.about.missionLabel}</h2>
+          <section id={anchors.mission}>
+            <SectionHeading
+              anchor={anchors.mission}
+              title={t.about.missionLabel}
+              className="prose-label"
+            />
             <p className="prose-main">{t.about.missionMain}</p>
             {t.about.missionSubs.map((paragraph) => (
               <p key={paragraph} className="prose-sub">
                 {paragraph}
               </p>
             ))}
-          </div>
-          <div>
-            <h2 className="prose-label">{t.about.visionLabel}</h2>
+          </section>
+          <section id={anchors.vision}>
+            <SectionHeading
+              anchor={anchors.vision}
+              title={t.about.visionLabel}
+              className="prose-label"
+            />
             <p className="prose-main">{t.about.visionMain}</p>
             {t.about.visionSubs.map((paragraph) => (
               <p key={paragraph} className="prose-sub">
                 {paragraph}
               </p>
             ))}
-          </div>
+          </section>
         </div>
       </section>
 
-      <section className="band-neutral">
+      <section className="band-neutral" id={anchors.story}>
         <div
           className="container community-story"
           style={{ paddingBlock: 56, alignItems: "start" }}
         >
           <div>
             <p className="story-eyebrow">{t.about.story.eyebrow}</p>
-            <h2 className="story-title">{t.about.story.title}</h2>
+            <SectionHeading
+              anchor={anchors.story}
+              title={t.about.story.title}
+              className="story-title"
+            />
             <p className="story-body">{t.about.story.p1}</p>
             <p className="story-body">{t.about.story.p2}</p>
             <div className="story-quotes">
@@ -67,10 +83,13 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ paddingBlock: 64 }}>
-        <h2 className="section-title" style={{ textAlign: "center", marginBottom: 32 }}>
-          {t.about.valuesTitle}
-        </h2>
+      <section className="container" id={anchors.values} style={{ paddingBlock: 64 }}>
+        <SectionHeading
+          anchor={anchors.values}
+          title={t.about.valuesTitle}
+          className="section-title"
+          style={{ textAlign: "center", marginBottom: 32 }}
+        />
         <div className="card-grid" style={{ maxWidth: 960, margin: "0 auto" }}>
           {t.about.values.map((v) => (
             <div key={v.title} className="value-card">
@@ -82,10 +101,13 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="prose-section" style={{ paddingBlock: "16px 64px" }}>
-        <h2 className="section-title" style={{ fontSize: 24, marginBottom: 12 }}>
-          {t.about.teamTitle}
-        </h2>
+      <section className="prose-section" id={anchors.team} style={{ paddingBlock: "16px 64px" }}>
+        <SectionHeading
+          anchor={anchors.team}
+          title={t.about.teamTitle}
+          className="section-title"
+          style={{ fontSize: 24, marginBottom: 12 }}
+        />
         <p className="team-intro">{t.about.teamIntro}</p>
         <div className="member-grid">
           {t.about.members.map((m) => (

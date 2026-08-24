@@ -1,10 +1,14 @@
 import { Icon, Tag } from "daleui";
+import { ANCHORS } from "../anchors";
 import { AppLink } from "../components/AppLink";
 import { ExternalCard } from "../components/ExternalCard";
 import { LinkButton } from "../components/LinkButton";
+import { SectionHeading } from "../components/SectionHeading";
 import { getMessages, localePath } from "../i18n";
 import type { Locale } from "../i18n/types";
 import { DISCORD_URL } from "../links";
+
+const anchors = ANCHORS.programs;
 
 export function ProgramsPage({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -43,9 +47,9 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" style={{ paddingBlock: "8px 64px" }}>
+      <section className="container" id={anchors.howItWorks} style={{ paddingBlock: "8px 64px" }}>
         <div className="common-steps-box">
-          <h2>{t.programs.commonTitle}</h2>
+          <SectionHeading anchor={anchors.howItWorks} title={t.programs.commonTitle} />
           <p>{t.programs.commonSub}</p>
           <div className="common-steps-grid">
             {t.programs.commonSteps.map((step, index) => (
@@ -61,10 +65,13 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="container" id="reviews" style={{ paddingBlock: "64px 8px" }}>
-        <h2 className="section-title" style={{ fontSize: 28 }}>
-          {t.programs.reviewsTitle}
-        </h2>
+      <section className="container" id={anchors.reviews} style={{ paddingBlock: "64px 8px" }}>
+        <SectionHeading
+          anchor={anchors.reviews}
+          title={t.programs.reviewsTitle}
+          className="section-title"
+          style={{ fontSize: 28 }}
+        />
         <p className="section-sub" style={{ marginBottom: 0 }}>
           {t.programs.reviewsSub}
         </p>
@@ -115,11 +122,14 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="band-neutral">
+      <section className="band-neutral" id={anchors.otherProjects}>
         <div className="container" style={{ paddingBlock: "56px 72px" }}>
-          <h2 className="section-title" style={{ fontSize: 22, marginBottom: 20 }}>
-            {t.programs.otherTitle}
-          </h2>
+          <SectionHeading
+            anchor={anchors.otherProjects}
+            title={t.programs.otherTitle}
+            className="section-title"
+            style={{ fontSize: 22, marginBottom: 20 }}
+          />
           <div className="card-grid">
             {t.programs.other.map((p) => (
               <ExternalCard key={p.url} href={p.url} title={p.title} desc={p.desc} />

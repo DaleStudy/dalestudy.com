@@ -27,6 +27,7 @@ bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 - **src/i18n/**: `ko.ts`와 `en.ts`는 `Messages` 타입으로 강제되는 쌍이다. 카피를 수정하면 반드시 두 언어를 함께 수정한다
 - **src/seo.ts**: 페이지별 title/description/canonical/hreflang/OG 메타 생성 헬퍼
 - **src/links.ts**: 모든 외부 URL의 중앙 관리 지점
+- **src/anchors.ts**: 공개된 섹션 앵커 슬러그의 중앙 관리 지점
 - **public/**: `sitemap.xml`, `robots.txt`, `llms.txt`, `og.png`. 라우트를 추가하면 sitemap과 llms.txt도 갱신한다
 
 ## 컨벤션
@@ -35,5 +36,6 @@ bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 - 색상·radius·서체는 daleui 토큰의 CSS 변수만 사용한다. 유일한 로컬 확장은 `site.css`의 teal→violet 그라데이션 변수(`--grad-*`, 라이트/다크 변형)다
 - 내비게이션 성격의 CTA는 daleui `Button`(순수 `<button>`) 대신 `LinkButton`(`<a>`)을 쓴다 — 크롤러가 링크를 따라갈 수 있어야 한다
 - 내부 링크의 동적 경로 문자열은 `AppLink` 컴포넌트를 통해서만 쓴다
+- 섹션 제목은 `<h2>` 대신 `SectionHeading`을 쓰고, 감싸는 `<section>`에 같은 값의 `id`를 준다. 슬러그는 `src/anchors.ts`의 `ANCHORS`에 로케일과 무관한 영어로 적고 양쪽 모두 이 상수를 참조한다. 외부 링크가 의존하므로 한번 공개한 값은 바꾸지 않는다. 링크로 가리킬 목적지가 아닌 제목(예: "디스코드로 오세요" 같은 행동 유도 배너)은 예외다
 - 한국어 텍스트는 전역 `word-break: keep-all`을 전제로 작성한다
 - PR 전에 `bun run typecheck`, `bunx vp check`, `bun run build`가 통과해야 한다
