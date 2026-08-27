@@ -690,12 +690,15 @@ a.external-card:hover {
   border-radius: var(--radii-xl);
   text-align: center;
   color: var(--colors-fg-neutral);
-  transition: border-color 0.15s;
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
 }
 
 .member-card:hover {
   border-color: var(--colors-border-brand);
   color: var(--colors-fg-neutral);
+  transform: translateY(-2px);
 }
 
 .member-card strong {
