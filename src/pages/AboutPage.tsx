@@ -57,12 +57,12 @@ export function AboutPage({ locale }: { locale: Locale }) {
           style={{ paddingBlock: 56, alignItems: "start" }}
         >
           <div>
-            <p className="story-eyebrow">{t.about.story.eyebrow}</p>
             <SectionHeading
               anchor={anchors.story}
-              title={t.about.story.title}
-              className="section-title"
+              title={t.about.story.eyebrow}
+              className="section-title section-title-brand"
             />
+            <p className="prose-main">{t.about.story.title}</p>
             <p className="story-body">{t.about.story.p1}</p>
             <p className="story-body">{t.about.story.p2}</p>
             <div className="story-quotes">

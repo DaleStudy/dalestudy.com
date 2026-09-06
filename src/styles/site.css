@@ -859,14 +859,6 @@ a.external-card:hover {
   align-items: center;
 }
 
-.story-eyebrow {
-  margin: 0 0 10px;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--colors-fg-brand);
-}
-
 .story-body {
   margin: 0 0 12px;
   font-size: 15.5px;
