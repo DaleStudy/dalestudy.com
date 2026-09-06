@@ -10,7 +10,7 @@ type ExternalCardProps = {
 
 /**
  * 외부 사이트로 이동하는 링크 카드.
- * 홈의 오픈소스 쇼케이스와 프로그램 페이지의 기타 프로젝트가 함께 쓴다.
+ * 홈의 오픈 소스 쇼케이스와 프로그램 페이지의 기타 프로젝트가 함께 쓴다.
  */
 export function ExternalCard({ href, title, desc, meta }: ExternalCardProps) {
   return (
