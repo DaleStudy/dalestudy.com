@@ -133,7 +133,7 @@ export const en: Messages = {
     missionMain:
       "Help developers grow by collaborating on open-source projects the way real teams do.",
     missionSubs: [
-      "DaleStudy is a collaborative learning community built around open-source projects that mirror professional development. Teams experience the full cycle: code review, design, testing, deployment, and collaboration. Finished projects ship as working services that become real portfolios.",
+      "DaleStudy is a developer community built around open-source projects that mirror professional collaboration. Teams experience the full software development cycle: design, implementation, testing, review, and deployment. Finished projects ship as working services that become real portfolios for their contributors.",
     ],
     visionLabel: "Vision",
     visionMain:
@@ -188,7 +188,7 @@ export const en: Messages = {
       { login: "lms0806", name: "lms0806", role: "Blog Study Lead" },
     ],
     teamCtaText:
-      "DaleStudy is run by volunteer organizers. If you'd like to help run the community, you are always welcome.",
+      "DaleStudy is built entirely by volunteer organizers and contributors. If you'd like to help run the community, you are always welcome.",
     teamCtaBtn: "Apply to the team",
   },
   programs: {
