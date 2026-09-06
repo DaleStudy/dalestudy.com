@@ -101,7 +101,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="prose-section" id={anchors.team} style={{ paddingBlock: "16px 64px" }}>
+      <section className="container" id={anchors.team} style={{ paddingBlock: "16px 64px" }}>
         <SectionHeading
           anchor={anchors.team}
           title={t.about.teamTitle}
