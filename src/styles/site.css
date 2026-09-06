@@ -292,6 +292,10 @@ a:hover {
   letter-spacing: -0.01em;
 }
 
+.section-title-brand {
+  color: var(--colors-fg-brand);
+}
+
 .section-sub {
   margin: 0 0 32px;
   font-size: 16px;
@@ -637,20 +641,6 @@ a.external-card:hover {
     max(20px, env(safe-area-inset-right, 0px));
 }
 
-.prose-label {
-  margin: 0 0 12px;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--colors-fg-brand);
-}
-
-.prose-body {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.8;
-  text-wrap: pretty;
-}
-
 .value-card {
   border: 1px solid var(--colors-border-brand);
   border-radius: var(--radii-xl);
@@ -875,14 +865,6 @@ a.external-card:hover {
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--colors-fg-brand);
-}
-
-.story-title {
-  margin: 0 0 16px;
-  font-size: clamp(24px, 3.5vw, 32px);
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  text-wrap: pretty;
 }
 
 .story-body {
