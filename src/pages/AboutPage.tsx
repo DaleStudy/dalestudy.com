@@ -26,7 +26,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <SectionHeading
               anchor={anchors.mission}
               title={t.about.missionLabel}
-              className="prose-label"
+              className="section-title section-title-brand"
             />
             <p className="prose-main">{t.about.missionMain}</p>
             {t.about.missionSubs.map((paragraph) => (
@@ -39,7 +39,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <SectionHeading
               anchor={anchors.vision}
               title={t.about.visionLabel}
-              className="prose-label"
+              className="section-title section-title-brand"
             />
             <p className="prose-main">{t.about.visionMain}</p>
             {t.about.visionSubs.map((paragraph) => (
@@ -61,7 +61,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <SectionHeading
               anchor={anchors.story}
               title={t.about.story.title}
-              className="story-title"
+              className="section-title"
             />
             <p className="story-body">{t.about.story.p1}</p>
             <p className="story-body">{t.about.story.p2}</p>
@@ -101,12 +101,12 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="prose-section" id={anchors.team} style={{ paddingBlock: "16px 64px" }}>
+      <section className="container" id={anchors.team} style={{ paddingBlock: "16px 64px" }}>
         <SectionHeading
           anchor={anchors.team}
           title={t.about.teamTitle}
           className="section-title"
-          style={{ fontSize: 24, marginBottom: 12 }}
+          style={{ marginBottom: 12 }}
         />
         <p className="team-intro">{t.about.teamIntro}</p>
         <div className="member-grid">
