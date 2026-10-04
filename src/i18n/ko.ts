@@ -91,6 +91,12 @@ export const ko: Messages = {
         url: "https://schedule.dalestudy.com",
       },
       {
+        title: "피드백",
+        desc: "스터디 회고와 운영 피드백을 모으는 설문 도구. 외부 설문 서비스 없이 커뮤니티가 직접 운영합니다.",
+        host: "feedback.dalestudy.com",
+        url: "https://feedback.dalestudy.com",
+      },
+      {
         title: "에이전트 스킬",
         desc: "효과적인 협업을 위한 AI 에이전트 스킬 모음.",
         host: "skills.sh/dalestudy/skills",
@@ -180,10 +186,13 @@ export const ko: Messages = {
       "운영진은 건강한 스터디 문화를 만들고 참여자분들께 좋은 경험을 드리기 위해 늘 고민합니다. 정기 회의와 회고를 거치고, 매 기수 참여자들의 피드백을 다음 기수 운영에 반영합니다.",
     members: [
       { login: "DaleSeo", name: "DaleSeo", role: "커뮤니티 매니저" },
-      { login: "SamTheKorean", name: "Sam", role: "리트코드 스터디 리드" },
+      { login: "SamTheKorean", name: "Sam", role: "커뮤니티 매니저" },
+      { login: "parkhojeong", name: "Hojeong", role: "리트코드 스터디 리드" },
+      { login: "alphaorderly", name: "Alpha", role: "리트코드 스터디 코치" },
       { login: "yolophg", name: "Helena", role: "디자인시스템 리드" },
       { login: "sounmind", name: "Evan", role: "AI 스터디 리드" },
       { login: "lms0806", name: "lms0806", role: "블로그 스터디 리드" },
+      { login: "dybyte", name: "Doyeon", role: "독서 스터디 리드" },
     ],
     teamCtaText:
       "달레 스터디는 운영진과 기여자들의 100% 자발적인 참여로 만들어집니다. 커뮤니티 운영에 힘을 보태고 싶다면 언제든 환영합니다.",
@@ -232,6 +241,11 @@ export const ko: Messages = {
         url: "https://coffee.dalestudy.com",
       },
       { title: "스케줄러", desc: "모임 일정 조율 도구", url: "https://schedule.dalestudy.com" },
+      {
+        title: "피드백",
+        desc: "회고와 피드백 설문 도구",
+        url: "https://feedback.dalestudy.com",
+      },
       {
         title: "에이전트 스킬",
         desc: "AI 에이전트용 스킬 모음",
@@ -285,6 +299,13 @@ export const ko: Messages = {
         login: "yhkee0404",
       },
       {
+        program: "리트코드 스터디",
+        quote:
+          "다른 분들의 풀이를 리뷰하고 예전에 풀었던 Blind 75 문제를 새로 구현하면서, 어떤 코드가 더 읽기 좋고 빠르고 메모리를 덜 쓰는지 많이 고민하게 되었습니다. 특히 코드 리뷰에서 어떻게 말해야 의사 전달이 잘 되는지 고민할 수 있어서 좋았습니다.",
+        author: "Alpha",
+        login: "alphaorderly",
+      },
+      {
         program: "달레 UI",
         quote:
           "실무에서도 해보기 어려운 디자인 시스템 릴리스 과정을 이슈 선택부터 릴리스까지 경험했습니다. 포트폴리오에 실제로 쓰이는 패키지가 생겼어요.",
@@ -316,8 +337,8 @@ export const ko: Messages = {
         desc: "코딩 인터뷰 필수 문제 모음 Blind 75를 함께 푸는 스터디. PR 코드 리뷰로 풀이를 다듬습니다.",
         fullDesc:
           "코딩 인터뷰 준비를 위해 15주 동안 Blind 75 문제를 함께 푸는 스터디입니다. 풀이를 GitHub PR로 제출해 서로 리뷰하고, 리더보드로 동기를 얻으며 완주하면 수료증을 받습니다.",
-        tag: "8기 진행 중",
-        tagTone: "brand",
+        tag: "9기 준비 중",
+        tagTone: "neutral",
       },
       {
         slug: "daleui",
@@ -338,8 +359,8 @@ export const ko: Messages = {
         desc: "개발 실무에 AI를 접목하는 방법을 함께 탐구하는 스터디. LLM과 최신 도구를 실험합니다.",
         fullDesc:
           "AI 엔지니어가 아니어도 참여할 수 있는 실무 중심 AI 스터디입니다. LLM과 최신 도구를 함께 실험하고, 배운 것을 매주 발표하며 개발 업무에 적용합니다.",
-        tag: "4기 진행 중",
-        tagTone: "brand",
+        tag: "6기 준비 중",
+        tagTone: "neutral",
       },
       {
         slug: "blog",
@@ -349,8 +370,18 @@ export const ko: Messages = {
         desc: "매주 한 편씩 10주 동안 함께 쓰는 기술 블로그 스터디.",
         fullDesc:
           "매주 한 편씩 10주 동안 각자의 블로그에 글을 발행하는 스터디입니다. 함께 쓰는 동료들 덕분에 혼자서는 만들기 어려운 꾸준함이 생깁니다.",
-        tag: "1기 진행 중",
-        tagTone: "brand",
+        tag: "2기 모집 중",
+        tagTone: "success",
+      },
+      {
+        slug: "book",
+        icon: "bookOpen",
+        title: "독서 스터디",
+        desc: "함께 책을 읽고 배운 것을 나누는 스터디.",
+        fullDesc:
+          "함께 책을 읽고 배운 것을 나누는 스터디입니다. 1기를 준비하고 있으며, 읽을 책과 진행 방식은 모집 공지로 안내합니다.",
+        tag: "1기 준비 중",
+        tagTone: "neutral",
       },
     ],
   },
@@ -359,6 +390,7 @@ export const ko: Messages = {
     howItWorks: "진행 방식",
     testimonialsTitle: "참여자 후기",
     testimonialsMore: "후기 전체 보기",
+    mediaTitle: "미디어",
     join: "참여 방법",
     details: {
       leetcode: {
@@ -418,8 +450,7 @@ export const ko: Messages = {
         joinDesc: "자세한 커리큘럼과 기수 일정은 전용 사이트에서 확인하세요.",
         ctaLabel: "leetcode.dalestudy.com 방문",
         ctaUrl: "https://leetcode.dalestudy.com",
-        cta2Label: "GitHub 저장소",
-        cta2Url: "https://github.com/DaleStudy/leetcode-study",
+        cta2: { label: "GitHub 저장소", url: "https://github.com/DaleStudy/leetcode-study" },
       },
       ai: {
         icon: "brain",
@@ -466,11 +497,19 @@ export const ko: Messages = {
           { title: "공유 세션", desc: "발표자를 돌아가며 배운 것을 발표하고 토론합니다." },
         ],
         testimonials: [],
+        media: [
+          {
+            title: "AI 스터디 초대석: 개발자들은 AI를 어떻게 공부할까?",
+            desc: "AI 스터디 3기를 완주한 에반, 수빙, 샘 님이 혼자서는 막막한 AI 공부를 함께 해 온 두 달을 이야기합니다.",
+            meta: "달레줄레 팟캐스트 · EP.22",
+            url: "https://dalejule.com/episodes/22/",
+            image: "/images/media/dalejule-ep22.jpg",
+          },
+        ],
         joinDesc: "Discord의 AI-스터디 채널에서 다음 기수 모집 소식을 확인하세요.",
         ctaLabel: "Discord 채널 참여",
         ctaUrl: "https://discord.com/channels/775115965964222492/1374000564807012382",
-        cta2Label: "GitHub 보기",
-        cta2Url: "https://github.com/DaleStudy/ai-study",
+        cta2: { label: "GitHub 보기", url: "https://github.com/DaleStudy/ai-study" },
       },
       blog: {
         icon: "penLine",
@@ -516,8 +555,25 @@ export const ko: Messages = {
           "매주 월요일 오전 9시에 시작해 다음 주 월요일 자정에 마감합니다. 꾸준한 참여를 위해 지각과 경고 규칙을 함께 지킵니다. 다음 기수 모집은 Discord의 블로그-스터디 채널에서 진행됩니다.",
         ctaLabel: "Discord 채널 참여",
         ctaUrl: "https://discord.com/channels/775115965964222492/1513687699729416232",
-        cta2Label: "멤버들의 글 보기",
-        cta2Url: "https://discord.com/channels/775115965964222492/1513688270087786656",
+        cta2: {
+          label: "멤버들의 글 보기",
+          url: "https://discord.com/channels/775115965964222492/1513688270087786656",
+        },
+      },
+      book: {
+        icon: "bookOpen",
+        title: "독서 스터디",
+        subtitleLinks: [],
+        overview:
+          "함께 책을 읽고 배운 것을 나누는 스터디입니다. 지금 1기를 준비하고 있으며, 읽을 책과 진행 방식, 일정은 Discord 모집 공지로 안내할 예정입니다.",
+        tags: [],
+        captures: [],
+        steps: [],
+        testimonials: [],
+        joinDesc:
+          "읽을 책과 일정이 정해지면 Discord에 모집 공지를 올립니다. 미리 가입해 두시면 공지를 놓치지 않습니다.",
+        ctaLabel: "Discord 가입",
+        ctaUrl: "https://dales.link/discord",
       },
       daleui: {
         icon: "palette",
@@ -562,12 +618,20 @@ export const ko: Messages = {
           { title: "릴리스", desc: "머지된 변경은 시맨틱 버저닝으로 npm에 배포됩니다." },
         ],
         testimonials: [],
+        media: [
+          {
+            title: "달레 UI, 한국어를 위한 오픈소스 디자인 시스템",
+            desc: "리드 헬레나 님과 프런트엔드 개발자 효성 님이 프로젝트의 시작부터 1.0 출시, 앞으로의 방향까지 이야기합니다.",
+            meta: "달레줄레 팟캐스트 · EP.26",
+            url: "https://dalejule.com/episodes/26/",
+            image: "/images/media/dalejule-ep26.jpg",
+          },
+        ],
         joinDesc:
           "디자인 시스템에 관심이 있다면 저장소의 이슈부터 살펴보세요. 디자이너의 기여도 환영합니다.",
         ctaLabel: "daleui.com 방문",
         ctaUrl: "https://www.daleui.com",
-        cta2Label: "GitHub 저장소",
-        cta2Url: "https://github.com/DaleStudy/daleui",
+        cta2: { label: "GitHub 저장소", url: "https://github.com/DaleStudy/daleui" },
       },
     },
   },
@@ -673,7 +737,8 @@ export const ko: Messages = {
     donationTitle: "남은 후원금 기부",
     donationDesc: "매년 남은 후원금은 전액 비영리 단체에 기부합니다.",
     corpTitle: "기업 후원",
-    corpDesc: "채용 브랜딩, 밋업 장소 제공, 서비스 크레딧 등 다양한 방식의 기업 후원을 환영합니다.",
+    corpDesc:
+      "채용 브랜딩, 밋업 장소 제공, 서비스 크레딧 등 다양한 방식의 기업 후원을 환영합니다. 현재 OpenAI Codex 오픈 소스 지원 프로그램의 지원을 받고 있습니다.",
     nonMoneyTitle: "비금전적 기여",
     nonMoneyDesc:
       "코드, 리뷰, 문서, 번역, 밋업 발표도 모두 소중한 기여입니다. 후원만이 기여의 유일한 방법은 아닙니다.",
@@ -705,7 +770,7 @@ export const ko: Messages = {
     programs: {
       title: "프로그램 | 달레 스터디",
       description:
-        "리트코드 스터디, AI 스터디, 블로그 스터디, 달레 UI 디자인시스템까지 달레 스터디에서 진행 중인 스터디와 오픈 소스 프로젝트를 소개합니다.",
+        "리트코드 스터디, AI 스터디, 블로그 스터디, 독서 스터디, 달레 UI 디자인시스템까지 달레 스터디에서 진행 중인 스터디와 오픈 소스 프로젝트를 소개합니다.",
     },
     community: {
       title: "커뮤니티 | 달레 스터디",

@@ -29,7 +29,9 @@ export function ProgramsPage({ locale }: { locale: Locale }) {
               to={localePath(locale, `/programs/${p.slug}`)}
             >
               <div className="program-card-thumbed">
-                <img className="program-card-thumb" src={p.thumb} alt="" loading="lazy" />
+                {p.thumb && (
+                  <img className="program-card-thumb" src={p.thumb} alt="" loading="lazy" />
+                )}
                 <div className="program-card program-card-lg">
                   <div className="program-card-head">
                     <span className="icon-tile" style={{ width: 52, height: 52 }}>

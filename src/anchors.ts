@@ -15,6 +15,11 @@ export const ANCHORS = {
     norms: "norms",
   },
   programs: { howItWorks: "how-it-works", reviews: "reviews", otherProjects: "other-projects" },
-  programDetail: { howItWorks: "how-it-works", testimonials: "testimonials", join: "join" },
+  programDetail: {
+    howItWorks: "how-it-works",
+    testimonials: "testimonials",
+    media: "media",
+    join: "join",
+  },
   sponsor: { useOfFunds: "use-of-funds" },
 } as const;

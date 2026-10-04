@@ -585,6 +585,35 @@ a.external-card:hover {
   color: var(--colors-fg-brand);
 }
 
+.external-card-media {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.external-card-thumb {
+  flex: none;
+  width: 112px;
+  height: 112px;
+  border-radius: var(--radii-lg);
+  object-fit: cover;
+}
+
+.external-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .external-card-thumb {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 /* ===== 통계 ===== */
 
 .stats-grid {
