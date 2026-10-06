@@ -91,6 +91,12 @@ export const en: Messages = {
         url: "https://schedule.dalestudy.com",
       },
       {
+        title: "Feedback",
+        desc: "A survey tool for study retrospectives and feedback, run by the community instead of a third-party service.",
+        host: "feedback.dalestudy.com",
+        url: "https://feedback.dalestudy.com",
+      },
+      {
         title: "Agent Skills",
         desc: "A skill collection for AI agents.",
         host: "skills.sh",
@@ -182,10 +188,13 @@ export const en: Messages = {
       "The team works hard to foster a healthy study culture and a great experience for participants: through regular meetings, retrospectives, and by folding each cohort's feedback into the next.",
     members: [
       { login: "DaleSeo", name: "DaleSeo", role: "Community Manager" },
-      { login: "SamTheKorean", name: "Sam", role: "LeetCode Study Lead" },
+      { login: "SamTheKorean", name: "Sam", role: "Community Manager" },
+      { login: "parkhojeong", name: "Hojeong", role: "LeetCode Study Lead" },
+      { login: "alphaorderly", name: "Alpha", role: "LeetCode Study Coach" },
       { login: "yolophg", name: "Helena", role: "Design System Lead" },
       { login: "sounmind", name: "Evan", role: "AI Study Lead" },
       { login: "lms0806", name: "lms0806", role: "Blog Study Lead" },
+      { login: "dybyte", name: "Doyeon", role: "Book Study Lead" },
     ],
     teamCtaText:
       "DaleStudy is built entirely by volunteer organizers and contributors. If you'd like to help run the community, you are always welcome.",
@@ -237,6 +246,11 @@ export const en: Messages = {
         title: "Scheduler",
         desc: "Meeting scheduling tool",
         url: "https://schedule.dalestudy.com",
+      },
+      {
+        title: "Feedback",
+        desc: "Retrospective and feedback survey tool",
+        url: "https://feedback.dalestudy.com",
       },
       {
         title: "Agent Skills",
@@ -291,6 +305,13 @@ export const en: Messages = {
         login: "yhkee0404",
       },
       {
+        program: "LeetCode Study",
+        quote:
+          "Reviewing other people's solutions and re-implementing Blind 75 problems I had solved long ago made me think hard about which code is more readable, faster, and lighter on memory. I especially valued learning how to phrase code review comments so they actually get the point across.",
+        author: "Alpha",
+        login: "alphaorderly",
+      },
+      {
         program: "Dale UI",
         quote:
           "From issue triage to release, I experienced a design-system release process that is hard to get even at work. Now my portfolio includes a package people actually use.",
@@ -322,8 +343,8 @@ export const en: Messages = {
         desc: "A study group solving the Blind 75 for coding interviews, with PR-driven code reviews.",
         fullDesc:
           "Prepare for coding interviews by solving the Blind 75 together over 15 weeks. Submit solutions as GitHub PRs, review each other, and stay motivated with the leaderboard, earning a certificate on completion.",
-        tag: "Cohort 8",
-        tagTone: "brand",
+        tag: "Cohort 9 soon",
+        tagTone: "neutral",
       },
       {
         slug: "daleui",
@@ -344,8 +365,8 @@ export const en: Messages = {
         desc: "A hands-on study on applying AI to everyday development, experimenting with LLMs and the latest tools.",
         fullDesc:
           "A practical AI study open to any developer, not just AI engineers. Experiment with LLMs and modern tools together, and apply what you learn to everyday development work.",
-        tag: "Cohort 4",
-        tagTone: "brand",
+        tag: "Cohort 6 soon",
+        tagTone: "neutral",
       },
       {
         slug: "blog",
@@ -355,8 +376,18 @@ export const en: Messages = {
         desc: "Write one blog post a week for ten weeks, together.",
         fullDesc:
           "Publish one post a week on your own blog for ten weeks. Writing alongside peers builds the consistency that is hard to sustain alone.",
-        tag: "Cohort 1",
-        tagTone: "brand",
+        tag: "Cohort 2 open",
+        tagTone: "success",
+      },
+      {
+        slug: "book",
+        icon: "bookOpen",
+        title: "Book Study",
+        desc: "Read books together and share what you learn.",
+        fullDesc:
+          "A study group that reads books together and shares what they learn. Cohort 1 is in preparation; the book and format will be announced with recruitment.",
+        tag: "Cohort 1 soon",
+        tagTone: "neutral",
       },
     ],
   },
@@ -365,6 +396,7 @@ export const en: Messages = {
     howItWorks: "How it works",
     testimonialsTitle: "What participants say",
     testimonialsMore: "Read all testimonials",
+    mediaTitle: "In the media",
     join: "How to join",
     details: {
       leetcode: {
@@ -434,8 +466,7 @@ export const en: Messages = {
         joinDesc: "See the full curriculum and cohort schedule on the dedicated site.",
         ctaLabel: "Visit leetcode.dalestudy.com",
         ctaUrl: "https://leetcode.dalestudy.com",
-        cta2Label: "GitHub repo",
-        cta2Url: "https://github.com/DaleStudy/leetcode-study",
+        cta2: { label: "GitHub repo", url: "https://github.com/DaleStudy/leetcode-study" },
       },
       ai: {
         icon: "brain",
@@ -482,11 +513,19 @@ export const en: Messages = {
           { title: "Share session", desc: "Rotate presenters, share learnings, and discuss." },
         ],
         testimonials: [],
+        media: [
+          {
+            title: "AI Study special: How do developers learn AI?",
+            desc: "Three members who finished AI Study cohort 3 talk about two months of learning AI together. (In Korean)",
+            meta: "DaleJule Podcast · EP.22",
+            url: "https://dalejule.com/episodes/22/",
+            image: "/images/media/dalejule-ep22.jpg",
+          },
+        ],
         joinDesc: "Watch the AI-스터디 channel on Discord for the next cohort announcement.",
         ctaLabel: "Join the Discord channel",
         ctaUrl: "https://discord.com/channels/775115965964222492/1374000564807012382",
-        cta2Label: "View GitHub",
-        cta2Url: "https://github.com/DaleStudy/ai-study",
+        cta2: { label: "View GitHub", url: "https://github.com/DaleStudy/ai-study" },
       },
       blog: {
         icon: "penLine",
@@ -535,8 +574,25 @@ export const en: Messages = {
           "Each week runs from Monday 9 AM to the following Monday midnight, with a simple late-and-warning rule to keep everyone consistent. The 블로그-스터디 channel on Discord recruits for each cohort.",
         ctaLabel: "Join the Discord channel",
         ctaUrl: "https://discord.com/channels/775115965964222492/1513687699729416232",
-        cta2Label: "Read members' posts",
-        cta2Url: "https://discord.com/channels/775115965964222492/1513688270087786656",
+        cta2: {
+          label: "Read members' posts",
+          url: "https://discord.com/channels/775115965964222492/1513688270087786656",
+        },
+      },
+      book: {
+        icon: "bookOpen",
+        title: "Book Study",
+        subtitleLinks: [],
+        overview:
+          "A study group that reads books together and shares what they learn. Cohort 1 is in preparation, and the book, format, and schedule will be announced on Discord with recruitment.",
+        tags: [],
+        captures: [],
+        steps: [],
+        testimonials: [],
+        joinDesc:
+          "Once the book and schedule are set, we will post a recruitment announcement on Discord. Join now so you don't miss it.",
+        ctaLabel: "Join Discord",
+        ctaUrl: "https://dales.link/discord",
       },
       daleui: {
         icon: "palette",
@@ -581,12 +637,20 @@ export const en: Messages = {
           { title: "Release", desc: "Merged changes ship to npm with semantic versioning." },
         ],
         testimonials: [],
+        media: [
+          {
+            title: "Dale UI: an open-source design system for Korean",
+            desc: "Lead Helena and a frontend contributor talk about the project from its start through the 1.0 release and beyond. (In Korean)",
+            meta: "DaleJule Podcast · EP.26",
+            url: "https://dalejule.com/episodes/26/",
+            image: "/images/media/dalejule-ep26.jpg",
+          },
+        ],
         joinDesc:
           "Interested in design systems? Start with the repo issues. Designer contributions welcome too.",
         ctaLabel: "Visit daleui.com",
         ctaUrl: "https://www.daleui.com",
-        cta2Label: "GitHub repo",
-        cta2Url: "https://github.com/DaleStudy/daleui",
+        cta2: { label: "GitHub repo", url: "https://github.com/DaleStudy/daleui" },
       },
     },
   },
@@ -700,7 +764,8 @@ export const en: Messages = {
     donationDesc:
       "Any funds remaining at the end of each year are donated in full to a non-profit organization.",
     corpTitle: "Corporate sponsorship",
-    corpDesc: "We welcome employer branding, meetup venues, service credits, and more.",
+    corpDesc:
+      "We welcome employer branding, meetup venues, service credits, and more. We are currently supported by the OpenAI Codex open source program.",
     nonMoneyTitle: "Non-monetary contributions",
     nonMoneyDesc:
       "Code, reviews, docs, translations, and talks are all valuable contributions. Money is not the only way.",
@@ -732,7 +797,7 @@ export const en: Messages = {
     programs: {
       title: "Programs | DaleStudy",
       description:
-        "LeetCode Study, AI Study, Blog Study, and the daleui design system: active study groups and open-source projects at DaleStudy.",
+        "LeetCode Study, AI Study, Blog Study, Book Study, and the daleui design system: active study groups and open-source projects at DaleStudy.",
     },
     community: {
       title: "Community | DaleStudy",

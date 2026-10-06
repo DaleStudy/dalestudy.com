@@ -2,6 +2,7 @@ import { Icon, Tag } from "daleui";
 import { Fragment } from "react";
 import { ANCHORS } from "../anchors";
 import { AppLink } from "../components/AppLink";
+import { ExternalCard } from "../components/ExternalCard";
 import { LinkButton } from "../components/LinkButton";
 import { SectionHeading } from "../components/SectionHeading";
 import { getMessages, localePath } from "../i18n";
@@ -68,27 +69,29 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
         </section>
       )}
 
-      <section className="band-neutral" id={anchors.howItWorks}>
-        <div className="detail-container" style={{ paddingBlock: 48 }}>
-          <SectionHeading
-            anchor={anchors.howItWorks}
-            title={t.programDetail.howItWorks}
-            className="section-title"
-            style={{ fontSize: 22, marginBottom: 20 }}
-          />
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {detail.steps.map((step, index) => (
-              <div key={step.title} className="step-row">
-                <span className="step-num">{index + 1}</span>
-                <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                  <strong>{step.title}</strong>
-                  <span className="step-desc">{step.desc}</span>
+      {detail.steps.length > 0 && (
+        <section className="band-neutral" id={anchors.howItWorks}>
+          <div className="detail-container" style={{ paddingBlock: 48 }}>
+            <SectionHeading
+              anchor={anchors.howItWorks}
+              title={t.programDetail.howItWorks}
+              className="section-title"
+              style={{ fontSize: 22, marginBottom: 20 }}
+            />
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {detail.steps.map((step, index) => (
+                <div key={step.title} className="step-row">
+                  <span className="step-num">{index + 1}</span>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+                    <strong>{step.title}</strong>
+                    <span className="step-desc">{step.desc}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {detail.testimonials.length > 0 && (
         <section
@@ -133,6 +136,29 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
         </section>
       )}
 
+      {detail.media && (
+        <section className="detail-container" id={anchors.media} style={{ paddingTop: 48 }}>
+          <SectionHeading
+            anchor={anchors.media}
+            title={t.programDetail.mediaTitle}
+            className="section-title"
+            style={{ fontSize: 22, marginBottom: 20 }}
+          />
+          <div className="card-grid">
+            {detail.media.map((item) => (
+              <ExternalCard
+                key={item.url}
+                href={item.url}
+                title={item.title}
+                desc={item.desc}
+                meta={item.meta}
+                image={item.image}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="detail-container" id={anchors.join} style={{ paddingBlock: "48px 72px" }}>
         <div className="join-cta">
           <SectionHeading anchor={anchors.join} title={t.programDetail.join} />
@@ -141,9 +167,11 @@ export function ProgramDetailPage({ locale, slug }: { locale: Locale; slug: Prog
             <LinkButton href={detail.ctaUrl} size="lg">
               {detail.ctaLabel}
             </LinkButton>
-            <LinkButton href={detail.cta2Url} look="outline-neutral" size="lg">
-              {detail.cta2Label}
-            </LinkButton>
+            {detail.cta2 && (
+              <LinkButton href={detail.cta2.url} look="outline-neutral" size="lg">
+                {detail.cta2.label}
+              </LinkButton>
+            )}
           </div>
         </div>
       </section>

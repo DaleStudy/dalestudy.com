@@ -6,7 +6,7 @@ export type IconName = IconProps["name"];
 
 export type TagTone = "brand" | "neutral" | "success" | "warning" | "danger" | "info";
 
-export const programSlugs = ["leetcode", "ai", "blog", "daleui"] as const;
+export const programSlugs = ["leetcode", "ai", "blog", "book", "daleui"] as const;
 export type ProgramSlug = (typeof programSlugs)[number];
 
 export function isProgramSlug(value: string): value is ProgramSlug {
@@ -22,7 +22,7 @@ export interface ProgramCard {
   slug: ProgramSlug;
   icon: IconName;
   /** 프로그램 허브 카드 상단 썸네일 */
-  thumb: string;
+  thumb?: string;
   title: string;
   /** 홈 카드용 짧은 설명 */
   desc: string;
@@ -41,11 +41,12 @@ export interface ProgramDetail {
   captures: { src: string; alt: string; cap: string }[];
   steps: { title: string; desc: string }[];
   testimonials: { quote: string; author: string; login: string }[];
+  /** 팟캐스트·기사 등 프로그램을 다룬 외부 콘텐츠 */
+  media?: { title: string; desc: string; meta: string; url: string; image: string }[];
   joinDesc: string;
   ctaLabel: string;
   ctaUrl: string;
-  cta2Label: string;
-  cta2Url: string;
+  cta2?: { label: string; url: string };
 }
 
 export interface CommunitySection {
@@ -134,6 +135,7 @@ export interface Messages {
     howItWorks: string;
     testimonialsTitle: string;
     testimonialsMore: string;
+    mediaTitle: string;
     join: string;
     details: Record<ProgramSlug, ProgramDetail>;
   };

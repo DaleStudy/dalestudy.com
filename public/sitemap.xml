@@ -32,6 +32,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/blog"/>
   </url>
   <url>
+    <loc>https://dalestudy.com/programs/book</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/book"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/book"/>
+  </url>
+  <url>
     <loc>https://dalestudy.com/programs/daleui</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/daleui"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/daleui"/>
@@ -75,6 +80,11 @@
     <loc>https://dalestudy.com/en/programs/blog</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/blog"/>
+  </url>
+  <url>
+    <loc>https://dalestudy.com/en/programs/book</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dalestudy.com/programs/book"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dalestudy.com/en/programs/book"/>
   </url>
   <url>
     <loc>https://dalestudy.com/en/programs/daleui</loc>
