@@ -1,17 +1,16 @@
-name: Deploy to Cloudflare Workers
+name: Deploy 🚀
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
 
 jobs:
   deploy:
-    # 포크 PR에는 secret이 전달되지 않으므로 같은 저장소의 PR만 미리보기 버전을 올린다
-    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,4 +28,3 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           packageManager: bun
-          command: ${{ github.event_name == 'push' && 'deploy' || 'versions upload' }}
