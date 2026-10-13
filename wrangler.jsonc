@@ -5,6 +5,8 @@
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry",
+  // PR 미리보기(wrangler preview)가 workers.dev 주소를 받으려면 필요하다. 설정은 운영 배포 때 반영된다
+  "preview_urls": true,
   // apex는 GitHub Pages 시절 DNS 레코드를 그대로 둔 채 route로 가로챈다.
   // www는 Cloudflare 리다이렉트 규칙이 apex로 301 처리하므로 여기에 없다.
   "routes": [{ "pattern": "dalestudy.com/*", "zone_name": "dalestudy.com" }],
