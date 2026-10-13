@@ -19,14 +19,14 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.45.1",
+    "@cloudflare/vite-plugin": "^1.63.2",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^6.0.3",
     "typescript": "^5.9.0",
     "vite": "npm:@voidzero-dev/vite-plus-core@0.2.5",
     "vite-plus": "0.2.5",
-    "wrangler": "^4.112.0"
+    "wrangler": "^4.150.0"
   },
   "overrides": {
     "vite": "npm:@voidzero-dev/vite-plus-core@0.2.5"
