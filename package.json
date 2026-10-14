@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vp dev",
-    "build": "vp build",
+    "build": "tsc -b && vp build",
     "preview": "vp preview",
     "typecheck": "tsc -b",
     "deploy": "wrangler deploy"

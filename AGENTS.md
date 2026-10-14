@@ -11,7 +11,7 @@ This file provides guidance to AI coding agents when working with code in this r
 ```bash
 bun install          # 의존성 설치
 bun run dev          # 개발 서버 (vp dev, http://localhost:5173)
-bun run build        # 프로덕션 빌드 (vp build, 전체 페이지 prerender 포함)
+bun run build        # 프로덕션 빌드 (tsc -b && vp build, 전체 페이지 prerender 포함)
 bun run typecheck    # 타입 검사 (tsc -b, src와 빌드 설정 파일)
 bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 ```
