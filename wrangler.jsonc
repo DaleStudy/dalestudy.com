@@ -11,4 +11,6 @@
   // www는 Cloudflare 리다이렉트 규칙이 apex로 301 처리하므로 여기에 없다.
   "routes": [{ "pattern": "dalestudy.com/*", "zone_name": "dalestudy.com" }],
   "previews": {},
+  // canonical·sitemap·내부 링크와 같은 슬래시 없는 경로를 정규로 삼는다
+  "assets": { "html_handling": "drop-trailing-slash" },
 }

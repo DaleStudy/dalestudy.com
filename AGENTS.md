@@ -11,8 +11,8 @@ This file provides guidance to AI coding agents when working with code in this r
 ```bash
 bun install          # 의존성 설치
 bun run dev          # 개발 서버 (vp dev, http://localhost:5173)
-bun run build        # 프로덕션 빌드 (vp build, 전체 페이지 prerender 포함)
-bun run typecheck    # 타입 검사 (tsc --noEmit)
+bun run build        # 프로덕션 빌드 (tsc -b && vp build, 전체 페이지 prerender 포함)
+bun run typecheck    # 타입 검사 (tsc -b, src와 빌드 설정 파일)
 bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 ```
 
@@ -28,7 +28,8 @@ bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 - **src/seo.ts**: 페이지별 title/description/canonical/hreflang/OG 메타 생성 헬퍼
 - **src/links.ts**: 모든 외부 URL의 중앙 관리 지점
 - **src/anchors.ts**: 공개된 섹션 앵커 슬러그의 중앙 관리 지점
-- **public/**: `sitemap.xml`, `robots.txt`, `llms.txt`, `og.png`. 라우트를 추가하면 sitemap과 llms.txt도 갱신한다
+- **public/**: `robots.txt`, `og.png`
+- **seo-files.ts**: 빌드 시 `sitemap.xml`과 `llms.txt`를 생성하는 Vite 플러그인
 
 ## 컨벤션
 
