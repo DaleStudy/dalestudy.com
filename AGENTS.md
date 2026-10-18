@@ -48,4 +48,4 @@ bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 - `src/anchors.ts`의 `ANCHORS`에서 이미 공개된 값을 바꾸거나 지우면 지적한다. 외부 링크가 깨진다.
 - 내비게이션 CTA에 daleui `Button`을 쓰면 `LinkButton`으로, 동적 내부 경로를 `<a>`나 문자열로 직접 쓰면 `AppLink`로 바꾸도록 지적한다.
 - 마케팅 페이지 콘텐츠가 클라이언트에서만 렌더링되어 prerender된 HTML에 빠지면 지적한다 (SEO).
-- 색상·radius·서체는 daleui 토큰 CSS 변수만 쓴다. 예외는 `site.css`의 `--grad-*`뿐이다.
+- 색상과 radius, 서체는 daleui 토큰의 CSS 변수만 쓴다. 예외는 `site.css`의 `--grad-*`뿐이다.
