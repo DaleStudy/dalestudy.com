@@ -18,7 +18,7 @@ bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 
 툴체인은 [Vite+](https://viteplus.dev)를 사용한다. 생성 파일 `src/routeTree.gen.ts`는 포맷 대상에서 제외되어 있다(.prettierignore).
 
-배포는 main push 시 Cloudflare Workers Builds가 자동으로 수행한다. 수동 배포가 필요하면 빌드 후 `bunx wrangler deploy`.
+배포는 main push 시 GitHub Actions(`.github/workflows/deploy.yml`)가 수행하고, PR 미리보기는 `preview.yml`이 조직 공유 워크플로우로 띄운다. Cloudflare 규칙은 [`cloudflare` 스킬](https://github.com/DaleStudy/skills/tree/main/skills/cloudflare)을 따른다.
 
 ## 아키텍처
 
