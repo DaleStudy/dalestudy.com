@@ -40,3 +40,12 @@ bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 - 섹션 제목은 `<h2>` 대신 `SectionHeading`을 쓰고, 감싸는 `<section>`에 같은 값의 `id`를 준다. 슬러그는 `src/anchors.ts`의 `ANCHORS`에 로케일과 무관한 영어로 적고 양쪽 모두 이 상수를 참조한다. 외부 링크가 의존하므로 한번 공개한 값은 바꾸지 않는다. 링크로 가리킬 목적지가 아닌 제목(예: "디스코드로 오세요" 같은 행동 유도 배너)은 예외다
 - 한국어 텍스트는 전역 `word-break: keep-all`을 전제로 작성한다
 - PR 전에 `bun run typecheck`, `bunx vp check`, `bun run build`가 통과해야 한다
+
+## Code Review Rules
+
+- 페이지를 추가하거나 옮기면 한국어(`/...`)와 영어(`/en/...`) 라우트가 모두 있어야 한다.
+- 카피를 바꾸면 `src/i18n/ko.ts`와 `en.ts`가 함께 바뀌어야 한다.
+- `src/anchors.ts`의 `ANCHORS`에서 이미 공개된 값을 바꾸거나 지우면 지적한다. 외부 링크가 깨진다.
+- 내비게이션 CTA에 daleui `Button`을 쓰면 `LinkButton`으로, 동적 내부 경로를 `<a>`나 문자열로 직접 쓰면 `AppLink`로 바꾸도록 지적한다.
+- 마케팅 페이지 콘텐츠가 클라이언트에서만 렌더링되어 prerender된 HTML에 빠지면 지적한다 (SEO).
+- 색상·radius·서체는 daleui 토큰 CSS 변수만 쓴다. 예외는 `site.css`의 `--grad-*`뿐이다.
