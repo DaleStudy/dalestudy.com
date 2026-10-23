@@ -13,12 +13,13 @@ bun install          # 의존성 설치
 bun run dev          # 개발 서버 (vp dev, http://localhost:5173)
 bun run build        # 프로덕션 빌드 (tsc -b && vp build, 전체 페이지 prerender 포함)
 bun run typecheck    # 타입 검사 (tsc -b, src와 빌드 설정 파일)
+bun run test         # 테스트 (vp test, prerender 검사는 build 뒤에 실행)
 bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 ```
 
 툴체인은 [Vite+](https://viteplus.dev)를 사용한다. 생성 파일 `src/routeTree.gen.ts`는 포맷 대상에서 제외되어 있다(.prettierignore).
 
-배포는 main push 시 GitHub Actions(`.github/workflows/deploy.yml`)가 수행하고, PR 미리보기는 `preview.yml`이 조직 공유 워크플로우로 띄운다. Cloudflare 규칙은 [`cloudflare` 스킬](https://github.com/DaleStudy/skills/tree/main/skills/cloudflare)을 따른다.
+배포는 main push 시 GitHub Actions(`.github/workflows/deploy.yml`)가 수행하고, PR과 main push의 검증은 `ci.yml`이 맡는다. PR 미리보기는 `preview.yml`이 조직 공유 워크플로우로 띄운다. Cloudflare 규칙은 [`cloudflare` 스킬](https://github.com/DaleStudy/skills/tree/main/skills/cloudflare)을 따른다.
 
 ## 아키텍처
 
@@ -39,7 +40,16 @@ bunx vp check        # 포맷·린트 검사 (--fix로 자동 수정)
 - 내부 링크의 동적 경로 문자열은 `AppLink` 컴포넌트를 통해서만 쓴다
 - 섹션 제목은 `<h2>` 대신 `SectionHeading`을 쓰고, 감싸는 `<section>`에 같은 값의 `id`를 준다. 슬러그는 `src/anchors.ts`의 `ANCHORS`에 로케일과 무관한 영어로 적고 양쪽 모두 이 상수를 참조한다. 외부 링크가 의존하므로 한번 공개한 값은 바꾸지 않는다. 링크로 가리킬 목적지가 아닌 제목(예: "디스코드로 오세요" 같은 행동 유도 배너)은 예외다
 - 한국어 텍스트는 전역 `word-break: keep-all`을 전제로 작성한다
-- PR 전에 `bun run typecheck`, `bunx vp check`, `bun run build`가 통과해야 한다
+- PR 전에 `bun run typecheck`, `bunx vp check`, `bun run build`, `bun run test`가 통과해야 한다
+
+## 테스트
+
+이 저장소는 로직이 거의 없고 대부분 마크업과 스타일이다. 그래서 컴포넌트 렌더 테스트 대신, 타입 검사와 빌드는 통과하는데 이 저장소의 원칙이 깨진 경우를 잡아내는 검사만 둔다. 테스트는 `tests/`에 있고 설정은 `vite.config.ts`의 `test` 블록이다.
+
+- **`tests/prerender.test.ts`**: `dist/client` 산출물을 읽는다. 모든 라우트가 두 언어로 prerender됐는지(링크가 없어 crawl에서 빠진 페이지 포함), 페이지마다 `html lang`, title, description, canonical, hreflang이 맞는지, 앵커 링크가 실제로 있는 `id`를 가리키는지 확인한다
+- **`tests/i18n.test.ts`**: `ko`와 `en`의 배열 길이와 키가 같고 빈 문구가 없는지 확인한다. `Messages` 타입은 키 존재만 강제한다
+
+하지 않기로 한 것: `sitemap.xml`과 `llms.txt`는 `seo-files.ts`가 prerender 결과에서 자동 생성하므로 따로 검사하지 않는다. 시각적 회귀 테스트는 유지 비용이 커서 두지 않고, 커버리지 목표치도 정하지 않는다.
 
 ## Code Review Rules
 
