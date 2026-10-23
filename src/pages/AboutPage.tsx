@@ -52,10 +52,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="band-neutral" id={anchors.story}>
-        <div
-          className="container community-story"
-          style={{ paddingBlock: 56, alignItems: "start" }}
-        >
+        <div className="container community-story" style={{ paddingBlock: 56 }}>
           <div>
             <p className="story-eyebrow">{t.about.story.eyebrow}</p>
             <SectionHeading

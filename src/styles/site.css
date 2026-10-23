@@ -885,7 +885,7 @@ a.external-card:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 
 .story-eyebrow {
@@ -970,6 +970,7 @@ a.external-card:hover {
 
 .community-inline .community-gallery img {
   height: auto;
+  aspect-ratio: 9 / 10;
 }
 
 .community-gallery {
