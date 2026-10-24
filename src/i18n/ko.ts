@@ -637,7 +637,7 @@ export const ko: Messages = {
   },
   community: {
     title: "커뮤니티",
-    sub: "스터디 밖에서도 커피챗, 모각코, 밋업으로 서로 연결됩니다.",
+    sub: "스터디가 전부는 아닙니다. 커피챗, 모각코, 밋업으로 연결을 이어갑니다.",
     sections: [
       {
         icon: "messageCircleMore",

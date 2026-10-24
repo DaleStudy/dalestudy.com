@@ -14,7 +14,7 @@ export function localePath(locale: Locale, path: string): string {
 
 /** 현재 경로에서 로케일을 판별한다. */
 export function localeFromPath(pathname: string): Locale {
-  return pathname.startsWith("/en") ? "en" : "ko";
+  return pathname === "/en" || pathname.startsWith("/en/") ? "en" : "ko";
 }
 
 /** 현재 경로를 반대 로케일의 같은 페이지 경로로 변환한다. hash는 `#` 없는 값을 받아 앵커 위치를 유지한다. */
