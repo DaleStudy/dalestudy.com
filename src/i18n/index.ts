@@ -21,7 +21,7 @@ export function localeFromPath(pathname: string): Locale {
 export function switchLocalePath(pathname: string, hash = ""): string {
   const suffix = hash ? `#${hash}` : "";
   if (localeFromPath(pathname) === "en") {
-    const stripped = pathname.replace(/^\/en/, "");
+    const stripped = pathname.replace("/en", "");
     return `${stripped === "" ? "/" : stripped}${suffix}`;
   }
   return `${pathname === "/" ? "/en" : `/en${pathname}`}${suffix}`;

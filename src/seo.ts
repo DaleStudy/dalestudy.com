@@ -45,7 +45,7 @@ export function pageHead({ locale, path, title, description }: PageHeadOptions) 
       { rel: "canonical", href: url },
       { rel: "alternate", hrefLang: "ko", href: koUrl },
       { rel: "alternate", hrefLang: "en", href: enUrl },
-      { rel: "alternate", hrefLang: "x-default", href: koUrl },
+      { rel: "alternate", hrefLang: "x-default", href: enUrl },
     ],
   };
 }
