@@ -96,24 +96,30 @@ export function Header({ locale }: { locale: Locale }) {
           </button>
         </div>
       </div>
-      {menuOpen && (
-        <nav className="mobile-nav" aria-label={locale === "ko" ? "모바일 메뉴" : "Mobile menu"}>
-          {navItems.map((item) => (
-            <AppLink
-              key={item.to}
-              to={item.to}
-              onClick={closeMenu}
-              aria-current={isActive(item.to) ? "page" : undefined}
-            >
-              {item.label}
-            </AppLink>
-          ))}
-          <LinkButton href={DISCORD_URL} size="md">
-            <Icon name="Discord" size="sm" />
-            {t.cta.joinDiscord}
-          </LinkButton>
-        </nav>
-      )}
+      {/* 열고 닫는 전환이 보이도록 항상 렌더링하고, 닫힌 상태는 CSS의 visibility로 포커스에서 뺀다 */}
+      <nav
+        className={menuOpen ? "mobile-nav is-open" : "mobile-nav"}
+        aria-label={locale === "ko" ? "모바일 메뉴" : "Mobile menu"}
+      >
+        <div className="mobile-nav-clip">
+          <div className="mobile-nav-inner">
+            {navItems.map((item) => (
+              <AppLink
+                key={item.to}
+                to={item.to}
+                onClick={closeMenu}
+                aria-current={isActive(item.to) ? "page" : undefined}
+              >
+                {item.label}
+              </AppLink>
+            ))}
+            <LinkButton href={DISCORD_URL} size="md">
+              <Icon name="Discord" size="sm" />
+              {t.cta.joinDiscord}
+            </LinkButton>
+          </div>
+        </div>
+      </nav>
     </header>
   );
 }
