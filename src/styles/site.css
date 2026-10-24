@@ -239,7 +239,29 @@ a:hover {
   justify-content: center;
 }
 
+/* 높이를 0fr에서 1fr로 전환해 내용 높이를 몰라도 펼쳐지게 한다.
+   닫힌 상태의 visibility: hidden이 메뉴 링크를 Tab 순서와 접근성 트리에서 뺀다. */
 .mobile-nav {
+  display: none;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 0.2s ease,
+    visibility 0s 0.2s;
+}
+
+.mobile-nav.is-open {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition: grid-template-rows 0.2s ease;
+}
+
+.mobile-nav-clip {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.mobile-nav-inner {
   border-top: 1px solid var(--colors-border-neutral);
   padding: 8px 20px 16px;
   display: flex;
@@ -276,6 +298,10 @@ a:hover {
 
   .mobile-menu-btn {
     display: inline-flex;
+  }
+
+  .mobile-nav {
+    display: grid;
   }
 }
 
@@ -1111,6 +1137,23 @@ a.external-card:hover {
 
 .faq-list details {
   border-bottom: 1px solid var(--colors-border-neutral);
+  /* height: auto로 전환하려면 필요하다. 지원하지 않는 브라우저에서는 높이 없이 투명도만 전환된다 */
+  interpolate-size: allow-keywords;
+}
+
+.faq-list details::details-content {
+  block-size: 0;
+  opacity: 0;
+  overflow: clip;
+  transition:
+    block-size 0.2s ease,
+    opacity 0.2s ease,
+    content-visibility 0.2s allow-discrete;
+}
+
+.faq-list details[open]::details-content {
+  block-size: auto;
+  opacity: 1;
 }
 
 .faq-list summary {
@@ -1137,7 +1180,7 @@ a.external-card:hover {
 .faq-chevron {
   display: inline-flex;
   flex-shrink: 0;
-  transition: transform 0.15s;
+  transition: transform 0.2s;
 }
 
 .faq-list details[open] .faq-chevron {
@@ -1548,5 +1591,10 @@ a.card-link:hover .program-card-thumbed .program-card-lg {
   * {
     transition: none !important;
     animation: none !important;
+  }
+
+  /* 의사 요소는 * 에 걸리지 않는다. 미지원 브라우저가 위 규칙까지 버리지 않도록 따로 둔다 */
+  .faq-list details::details-content {
+    transition: none !important;
   }
 }
