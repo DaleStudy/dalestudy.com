@@ -11,7 +11,7 @@ export const ANCHORS = {
   community: {
     coffeeChat: "coffee-chat",
     coWorking: "co-working",
-    meetups: "meetups",
+    meetups: "meetup",
     norms: "norms",
   },
   programs: { howItWorks: "how-it-works", reviews: "reviews", otherProjects: "other-projects" },
