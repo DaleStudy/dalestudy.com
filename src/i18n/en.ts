@@ -2,7 +2,7 @@ import type { Messages } from "./types";
 
 export const en: Messages = {
   siteName: "DaleStudy",
-  langSwitch: "KO",
+  langSwitch: "",
   nav: { about: "About", programs: "Programs", community: "Community", sponsor: "Sponsor" },
   cta: {
     joinDiscord: "Join Discord",
