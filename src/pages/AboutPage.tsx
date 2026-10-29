@@ -15,7 +15,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
     <>
       <section className="prose-section" style={{ paddingBlock: "80px 56px" }}>
         <h1 className="page-title">{t.about.title}</h1>
-        <p className="page-intro" style={{ fontSize: 18 }}>
+        <p className="prose-intro" style={{ fontSize: 18 }}>
           {t.about.intro}
         </p>
       </section>

@@ -15,10 +15,10 @@ export function SponsorPage({ locale }: { locale: Locale }) {
     <>
       <section className="prose-section" style={{ paddingBlock: "80px 40px" }}>
         <h1 className="page-title">{t.sponsor.title}</h1>
-        <p className="page-intro" style={{ fontSize: 18 }}>
+        <p className="prose-intro" style={{ fontSize: 18 }}>
           {t.sponsor.intro}
         </p>
-        <p className="page-intro" style={{ marginTop: 12 }}>
+        <p className="prose-intro" style={{ marginTop: 12 }}>
           {t.sponsor.intro2}
         </p>
         <p className="sponsor-quote">{t.sponsor.quote}</p>
