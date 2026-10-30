@@ -327,8 +327,8 @@ a:hover {
   font-size: 16px;
   line-height: 1.6;
   opacity: 0.75;
-  max-width: 560px;
-  text-wrap: pretty;
+  max-width: 760px;
+  text-wrap: balance;
 }
 
 .page-title {
@@ -339,6 +339,15 @@ a:hover {
 }
 
 .page-intro {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  opacity: 0.8;
+  max-width: 760px;
+  text-wrap: balance;
+}
+
+.prose-intro {
   margin: 0;
   font-size: 17px;
   line-height: 1.7;
