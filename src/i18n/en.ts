@@ -30,7 +30,7 @@ export const en: Messages = {
     stats: [
       { value: "1,500+", label: "Discord members" },
       { value: "400+", label: "GitHub members" },
-      { value: "900+", label: "LinkedIn followers" },
+      { value: "1,000+", label: "LinkedIn followers" },
       { value: "300+", label: "GitHub stars" },
     ],
     activities: [
@@ -342,9 +342,9 @@ export const en: Messages = {
         title: "LeetCode Study",
         desc: "A study group solving the Blind 75 for coding interviews, with PR-driven code reviews.",
         fullDesc:
-          "Prepare for coding interviews by solving the Blind 75 together over 15 weeks. Submit solutions as GitHub PRs, review each other, and stay motivated with the leaderboard, earning a certificate on completion.",
-        tag: "Cohort 9 soon",
-        tagTone: "neutral",
+          "Prepare for coding interviews by solving the Blind 75 together over 16 weeks. Submit solutions as GitHub PRs, review each other, and stay motivated with the leaderboard, earning a certificate on completion.",
+        tag: "Cohort 9",
+        tagTone: "brand",
       },
       {
         slug: "daleui",
@@ -365,8 +365,8 @@ export const en: Messages = {
         desc: "A hands-on study on applying AI to everyday development, experimenting with LLMs and the latest tools.",
         fullDesc:
           "A practical AI study open to any developer, not just AI engineers. Experiment with LLMs and modern tools together, and apply what you learn to everyday development work.",
-        tag: "Cohort 6 soon",
-        tagTone: "neutral",
+        tag: "Cohort 6",
+        tagTone: "brand",
       },
       {
         slug: "blog",
@@ -376,8 +376,8 @@ export const en: Messages = {
         desc: "Write one blog post a week for ten weeks, together.",
         fullDesc:
           "Publish one post a week on your own blog for ten weeks. Writing alongside peers builds the consistency that is hard to sustain alone.",
-        tag: "Cohort 2 open",
-        tagTone: "success",
+        tag: "Cohort 2",
+        tagTone: "brand",
       },
       {
         slug: "book",
@@ -385,9 +385,9 @@ export const en: Messages = {
         title: "Book Study",
         desc: "Read books together and share what you learn.",
         fullDesc:
-          "A study group that reads books together and shares what they learn. Cohort 1 is in preparation; the book and format will be announced with recruitment.",
-        tag: "Cohort 1 soon",
-        tagTone: "neutral",
+          "A study group that reads books together and shares what they learn. Everyone writes a note each week, and we pick the topics we want to dig into together.",
+        tag: "Cohort 1",
+        tagTone: "brand",
       },
     ],
   },
@@ -410,7 +410,7 @@ export const en: Messages = {
           },
         ],
         overview:
-          "A study group preparing for coding interviews. Over 15 weeks we solve five Blind 75 problems a week, submit solutions as GitHub PRs like an open-source project, and review each other's code, cheering each other on via the leaderboard.",
+          "A study group preparing for coding interviews. Over 16 weeks we solve five Blind 75 problems a week, submit solutions as GitHub PRs like an open-source project, and review each other's code, cheering each other on via the leaderboard.",
         tags: [
           "Blind 75",
           "Five problems a week",
@@ -582,17 +582,34 @@ export const en: Messages = {
       book: {
         icon: "bookOpen",
         title: "Book Study",
-        subtitleLinks: [],
+        subtitleLinks: [
+          {
+            label: "Discord #독서-스터디",
+            url: "https://discord.com/channels/775115965964222492/1558333514573684836",
+          },
+        ],
         overview:
-          "A study group that reads books together and shares what they learn. Cohort 1 is in preparation, and the book, format, and schedule will be announced on Discord with recruitment.",
-        tags: [],
+          "A study group that reads one technical book cover to cover together over a set period. Each week, everyone writes a note on what they found interesting, dug into, or connected to their work, and we pick the topics we want to talk about together.",
+        tags: ["Technical books", "8 weeks", "Weekly sessions"],
         captures: [],
-        steps: [],
+        steps: [
+          { title: "Read the book", desc: "Read the assigned chapters on your own each week." },
+          {
+            title: "Write a note",
+            desc: "By Saturday midnight, post a note on GitHub Discussions about what you found interesting.",
+          },
+          { title: "Pick topics", desc: "Upvote the notes you'd like to talk about together." },
+          {
+            title: "Talk it through",
+            desc: "On Sunday night, discuss the most-upvoted topics in a Discord voice channel.",
+          },
+        ],
         testimonials: [],
         joinDesc:
-          "Once the book and schedule are set, we will post a recruitment announcement on Discord. Join now so you don't miss it.",
-        ctaLabel: "Join Discord",
-        ctaUrl: "https://dales.link/discord",
+          "Cohort 1 meets every Sunday at 9 PM KST in a Discord voice channel. The 독서-스터디 channel on Discord recruits for each cohort.",
+        ctaLabel: "Join the Discord channel",
+        ctaUrl: "https://discord.com/channels/775115965964222492/1558333514573684836",
+        cta2: { label: "GitHub repo", url: "https://github.com/DaleStudy/book-study" },
       },
       daleui: {
         icon: "palette",
