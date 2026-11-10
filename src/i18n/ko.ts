@@ -577,17 +577,17 @@ export const ko: Messages = {
           { title: "책 읽기", desc: "매주 정해진 범위를 각자 읽습니다." },
           {
             title: "메모 남기기",
-            desc: "토요일 밤 자정 전까지 GitHub Discussions에 흥미로웠던 부분을 메모로 올립니다.",
+            desc: "모임 전까지 GitHub Discussions에 흥미로웠던 부분을 메모로 올립니다.",
           },
           { title: "주제 고르기", desc: "함께 이야기하고 싶은 메모에 추천을 누릅니다." },
           {
             title: "함께 이야기하기",
-            desc: "일요일 밤 Discord 음성 채널에서 추천이 많은 주제부터 이야기를 나눕니다.",
+            desc: "모임에서 추천이 많은 주제부터 이야기를 나눕니다.",
           },
         ],
         testimonials: [],
         joinDesc:
-          "1기는 매주 일요일 밤 9시에 Discord 음성 채널에서 진행 중입니다. 다음 기수 모집은 Discord의 독서-스터디 채널에서 진행됩니다.",
+          "1기는 매주 일요일 21:00 KST(07:00 EST)에 Discord 음성 채널에서 진행 중입니다. 다음 기수 모집은 Discord의 독서-스터디 채널에서 진행됩니다.",
         ctaLabel: "Discord 채널 참여",
         ctaUrl: "https://discord.com/channels/775115965964222492/1558333514573684836",
         cta2: { label: "GitHub 저장소", url: "https://github.com/DaleStudy/book-study" },

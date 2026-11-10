@@ -596,17 +596,17 @@ export const en: Messages = {
           { title: "Read the book", desc: "Read the assigned chapters on your own each week." },
           {
             title: "Write a note",
-            desc: "By Saturday midnight, post a note on GitHub Discussions about what you found interesting.",
+            desc: "Before the session, post a note on GitHub Discussions about what you found interesting.",
           },
           { title: "Pick topics", desc: "Upvote the notes you'd like to talk about together." },
           {
             title: "Talk it through",
-            desc: "On Sunday night, discuss the most-upvoted topics in a Discord voice channel.",
+            desc: "At the session, discuss the most-upvoted topics first.",
           },
         ],
         testimonials: [],
         joinDesc:
-          "Cohort 1 meets every Sunday at 9 PM KST in a Discord voice channel. The 독서-스터디 channel on Discord recruits for each cohort.",
+          "Cohort 1 is currently meeting every Sunday at 9 PM KST (7 AM EST) in a Discord voice channel. Recruitment for the next cohort takes place in the 독서-스터디 channel on Discord.",
         ctaLabel: "Join the Discord channel",
         ctaUrl: "https://discord.com/channels/775115965964222492/1558333514573684836",
         cta2: { label: "GitHub repo", url: "https://github.com/DaleStudy/book-study" },
