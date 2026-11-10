@@ -606,7 +606,7 @@ export const en: Messages = {
         ],
         testimonials: [],
         joinDesc:
-          "Cohort 1 is currently meeting every Sunday at 9 PM KST (7 AM EST) in a Discord voice channel. Recruitment for the next cohort takes place in the 독서-스터디 channel on Discord.",
+          "Cohort 1 meets every Sunday at 9 PM KST (7 AM EST) in a Discord voice channel. Recruitment for the next cohort takes place in the 독서-스터디 channel on Discord.",
         ctaLabel: "Join the Discord channel",
         ctaUrl: "https://discord.com/channels/775115965964222492/1558333514573684836",
         cta2: { label: "GitHub repo", url: "https://github.com/DaleStudy/book-study" },

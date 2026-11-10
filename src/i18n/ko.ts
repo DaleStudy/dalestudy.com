@@ -587,7 +587,7 @@ export const ko: Messages = {
         ],
         testimonials: [],
         joinDesc:
-          "1기는 매주 일요일 21:00 KST(07:00 EST)에 Discord 음성 채널에서 진행 중입니다. 다음 기수 모집은 Discord의 독서-스터디 채널에서 진행됩니다.",
+          "1기는 매주 일요일 오후 9시 KST(오전 7시 EST)에 Discord 음성 채널에서 진행 중입니다. 다음 기수 모집은 Discord의 독서-스터디 채널에서 진행됩니다.",
         ctaLabel: "Discord 채널 참여",
         ctaUrl: "https://discord.com/channels/775115965964222492/1558333514573684836",
         cta2: { label: "GitHub 저장소", url: "https://github.com/DaleStudy/book-study" },
