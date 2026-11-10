@@ -30,7 +30,7 @@ export const ko: Messages = {
     stats: [
       { value: "1,500+", label: "Discord 멤버" },
       { value: "400+", label: "GitHub 멤버" },
-      { value: "900+", label: "LinkedIn 팔로워" },
+      { value: "1,000+", label: "LinkedIn 팔로워" },
       { value: "300+", label: "GitHub 스타" },
     ],
     activities: [
@@ -336,9 +336,9 @@ export const ko: Messages = {
         title: "리트코드 스터디",
         desc: "코딩 인터뷰 필수 문제 모음 Blind 75를 함께 푸는 스터디. PR 코드 리뷰로 풀이를 다듬습니다.",
         fullDesc:
-          "코딩 인터뷰 준비를 위해 15주 동안 Blind 75 문제를 함께 푸는 스터디입니다. 풀이를 GitHub PR로 제출해 서로 리뷰하고, 리더보드로 동기를 얻으며 완주하면 수료증을 받습니다.",
-        tag: "9기 준비 중",
-        tagTone: "neutral",
+          "코딩 인터뷰 준비를 위해 16주 동안 Blind 75 문제를 함께 푸는 스터디입니다. 풀이를 GitHub PR로 제출해 서로 리뷰하고, 리더보드로 동기를 얻으며 완주하면 수료증을 받습니다.",
+        tag: "9기 진행 중",
+        tagTone: "brand",
       },
       {
         slug: "daleui",
@@ -359,8 +359,8 @@ export const ko: Messages = {
         desc: "개발 실무에 AI를 접목하는 방법을 함께 탐구하는 스터디. LLM과 최신 도구를 실험합니다.",
         fullDesc:
           "AI 엔지니어가 아니어도 참여할 수 있는 실무 중심 AI 스터디입니다. LLM과 최신 도구를 함께 실험하고, 배운 것을 매주 발표하며 개발 업무에 적용합니다.",
-        tag: "6기 준비 중",
-        tagTone: "neutral",
+        tag: "6기 진행 중",
+        tagTone: "brand",
       },
       {
         slug: "blog",
@@ -370,8 +370,8 @@ export const ko: Messages = {
         desc: "매주 한 편씩 10주 동안 함께 쓰는 기술 블로그 스터디.",
         fullDesc:
           "매주 한 편씩 10주 동안 각자의 블로그에 글을 발행하는 스터디입니다. 함께 쓰는 동료들 덕분에 혼자서는 만들기 어려운 꾸준함이 생깁니다.",
-        tag: "2기 모집 중",
-        tagTone: "success",
+        tag: "2기 진행 중",
+        tagTone: "brand",
       },
       {
         slug: "book",
@@ -379,9 +379,9 @@ export const ko: Messages = {
         title: "독서 스터디",
         desc: "함께 책을 읽고 배운 것을 나누는 스터디.",
         fullDesc:
-          "함께 책을 읽고 배운 것을 나누는 스터디입니다. 1기를 준비하고 있으며, 읽을 책과 진행 방식은 모집 공지로 안내합니다.",
-        tag: "1기 준비 중",
-        tagTone: "neutral",
+          "함께 책을 읽고 배운 것을 나누는 스터디입니다. 매주 각자 메모를 남기고, 함께 이야기하고 싶은 주제를 골라 깊게 나눕니다.",
+        tag: "1기 진행 중",
+        tagTone: "brand",
       },
     ],
   },
@@ -404,7 +404,7 @@ export const ko: Messages = {
           },
         ],
         overview:
-          "개발자 해외 취업의 관문인 코딩 인터뷰를 준비하는 스터디입니다. 15주 동안 매주 5문제씩 Blind 75를 함께 풀고, 오픈 소스 프로젝트처럼 GitHub PR로 답안을 제출해 상호 코드 리뷰를 합니다. 리더보드로 서로의 꾸준함을 응원합니다.",
+          "개발자 해외 취업의 관문인 코딩 인터뷰를 준비하는 스터디입니다. 16주 동안 매주 5문제씩 Blind 75를 함께 풀고, 오픈 소스 프로젝트처럼 GitHub PR로 답안을 제출해 상호 코드 리뷰를 합니다. 리더보드로 서로의 꾸준함을 응원합니다.",
         tags: ["Blind 75", "매주 5문제", "GitHub PR", "코드 리뷰", "리더보드", "수료증"],
         captures: [
           {
@@ -563,17 +563,34 @@ export const ko: Messages = {
       book: {
         icon: "bookOpen",
         title: "독서 스터디",
-        subtitleLinks: [],
+        subtitleLinks: [
+          {
+            label: "Discord #독서-스터디",
+            url: "https://discord.com/channels/775115965964222492/1558333514573684836",
+          },
+        ],
         overview:
-          "함께 책을 읽고 배운 것을 나누는 스터디입니다. 지금 1기를 준비하고 있으며, 읽을 책과 진행 방식, 일정은 Discord 모집 공지로 안내할 예정입니다.",
-        tags: [],
+          "한 권의 기술서를 정해진 기간 동안 함께 끝까지 읽는 스터디입니다. 매주 각자 흥미로웠던 부분이나 깊이 파 본 부분, 실무와 연결되는 부분을 메모로 남기고 함께 이야기하고 싶은 주제를 골라 이야기를 나눕니다.",
+        tags: ["기술서", "8주 과정", "매주 세션"],
         captures: [],
-        steps: [],
+        steps: [
+          { title: "책 읽기", desc: "매주 정해진 범위를 각자 읽습니다." },
+          {
+            title: "메모 남기기",
+            desc: "모임 전까지 GitHub Discussions에 흥미로웠던 부분을 메모로 올립니다.",
+          },
+          { title: "주제 고르기", desc: "함께 이야기하고 싶은 메모에 추천을 누릅니다." },
+          {
+            title: "함께 이야기하기",
+            desc: "모임에서 추천이 많은 주제부터 이야기를 나눕니다.",
+          },
+        ],
         testimonials: [],
         joinDesc:
-          "읽을 책과 일정이 정해지면 Discord에 모집 공지를 올립니다. 미리 가입해 두시면 공지를 놓치지 않습니다.",
-        ctaLabel: "Discord 가입",
-        ctaUrl: "https://dales.link/discord",
+          "1기는 매주 일요일 21:00 KST(07:00 EST)에 Discord 음성 채널에서 진행 중입니다. 다음 기수 모집은 Discord의 독서-스터디 채널에서 진행됩니다.",
+        ctaLabel: "Discord 채널 참여",
+        ctaUrl: "https://discord.com/channels/775115965964222492/1558333514573684836",
+        cta2: { label: "GitHub 저장소", url: "https://github.com/DaleStudy/book-study" },
       },
       daleui: {
         icon: "palette",
