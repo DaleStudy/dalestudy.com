@@ -375,6 +375,7 @@ export const ko: Messages = {
       },
       {
         slug: "book",
+        thumb: "/images/programs/book-discussions.jpg",
         icon: "bookOpen",
         title: "독서 스터디",
         desc: "함께 책을 읽고 배운 것을 나누는 스터디.",
@@ -572,7 +573,18 @@ export const ko: Messages = {
         overview:
           "한 권의 기술서를 정해진 기간 동안 함께 끝까지 읽는 스터디입니다. 매주 각자 흥미로웠던 부분이나 깊이 파 본 부분, 실무와 연결되는 부분을 메모로 남기고 함께 이야기하고 싶은 주제를 골라 이야기를 나눕니다.",
         tags: ["기술서", "8주 과정", "매주 세션"],
-        captures: [],
+        captures: [
+          {
+            src: "/images/programs/book-discussions.jpg",
+            alt: "GitHub Discussions의 book-study-01 카테고리에 주차별 메모가 올라온 화면",
+            cap: "매주 읽은 내용을 GitHub Discussions에 메모로 남기고, 이야기하고 싶은 메모에 추천을 누릅니다.",
+          },
+          {
+            src: "/images/programs/book-memo.jpg",
+            alt: "1주차 메모: 맵리듀스가 왜 나왔고, 지금은 왜 서버 한 대로도 되는 일이 많아졌는지 정리한 글",
+            cap: "책 내용을 실무와 이어 깊이 파 본 메모가 그 주의 이야깃거리가 됩니다.",
+          },
+        ],
         steps: [
           { title: "책 읽기", desc: "매주 정해진 범위를 각자 읽습니다." },
           {
