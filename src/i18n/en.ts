@@ -381,6 +381,7 @@ export const en: Messages = {
       },
       {
         slug: "book",
+        thumb: "/images/programs/book-discussions.jpg",
         icon: "bookOpen",
         title: "Book Study",
         desc: "Read books together and share what you learn.",
@@ -591,7 +592,18 @@ export const en: Messages = {
         overview:
           "A study group that reads one technical book cover to cover together over a set period. Each week, everyone writes a note on what they found interesting, dug into, or connected to their work, and we pick the topics we want to talk about together.",
         tags: ["Technical books", "8 weeks", "Weekly sessions"],
-        captures: [],
+        captures: [
+          {
+            src: "/images/programs/book-discussions.jpg",
+            alt: "GitHub Discussions showing weekly notes in the book-study-01 category",
+            cap: "Each week, members post notes on GitHub Discussions and upvote the ones they want to discuss.",
+          },
+          {
+            src: "/images/programs/book-memo.jpg",
+            alt: "A week 1 note on why MapReduce emerged and why a single server is now often enough",
+            cap: "Notes that explore the book's ideas in depth and connect them to real-world work become that week's discussion topics.",
+          },
+        ],
         steps: [
           { title: "Read the book", desc: "Read the assigned chapters on your own each week." },
           {
@@ -606,7 +618,7 @@ export const en: Messages = {
         ],
         testimonials: [],
         joinDesc:
-          "Cohort 1 is currently meeting every Sunday at 9 PM KST (7 AM EST) in a Discord voice channel. Recruitment for the next cohort takes place in the 독서-스터디 channel on Discord.",
+          "Cohort 1 meets every Sunday at 9 PM KST (7 AM EST) in a Discord voice channel. Recruitment for the next cohort takes place in the 독서-스터디 channel on Discord.",
         ctaLabel: "Join the Discord channel",
         ctaUrl: "https://discord.com/channels/775115965964222492/1558333514573684836",
         cta2: { label: "GitHub repo", url: "https://github.com/DaleStudy/book-study" },
