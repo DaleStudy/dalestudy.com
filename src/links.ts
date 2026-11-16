@@ -11,3 +11,4 @@ export const DALEUI_SITE_URL = "https://www.daleui.com";
 export const LEADERBOARD_URL = "https://leaderboard.dalestudy.com";
 export const CHAT_SITE_URL = "https://chat.dalestudy.com";
 export const SCHEDULE_SITE_URL = "https://schedule.dalestudy.com";
+export const SURVEY_URL = "https://survey.dalestudy.com/2026";

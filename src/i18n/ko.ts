@@ -4,6 +4,11 @@ export const ko: Messages = {
   siteName: "달레 스터디",
   langSwitch: "EN",
   nav: { about: "소개", programs: "프로그램", community: "커뮤니티", sponsor: "후원" },
+  surveyBanner: {
+    title: "2026 달레 스터디 개발자 설문조사",
+    detail: "12월 6일까지 · 익명 · 10분 안팎",
+    cta: "참여하기",
+  },
   cta: {
     joinDiscord: "Discord 가입",
     browsePrograms: "프로그램 둘러보기",

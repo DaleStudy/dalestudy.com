@@ -6,6 +6,7 @@ import pretendardCss from "pretendard/dist/web/variable/pretendardvariable-dynam
 import type { ReactNode } from "react";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { SurveyBanner } from "../components/SurveyBanner";
 import { useLocale } from "../i18n/useLocale";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { SITE_URL } from "../seo";
@@ -67,6 +68,7 @@ function RootComponent() {
 
   return (
     <RootDocument locale={locale}>
+      <SurveyBanner locale={locale} />
       <Header locale={locale} />
       <main style={{ flex: 1 }}>
         <Outlet />
