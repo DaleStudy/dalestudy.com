@@ -123,6 +123,43 @@ a:hover {
   color: #4c3f94;
 }
 
+/* ===== 설문조사 배너 ===== */
+
+.survey-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 12px;
+  padding: 10px max(20px, env(safe-area-inset-right, 0px)) 10px
+    max(20px, env(safe-area-inset-left, 0px));
+  background: var(--grad-banner);
+  color: var(--colors-base-white);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.survey-banner:hover {
+  color: var(--colors-base-white);
+}
+
+.survey-banner-detail {
+  opacity: 0.9;
+}
+
+.survey-banner-cta {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .survey-banner-detail {
+    display: none;
+  }
+}
+
 /* ===== Header ===== */
 
 .site-header {

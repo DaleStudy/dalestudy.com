@@ -61,6 +61,7 @@ export interface Messages {
   siteName: string;
   langSwitch: string;
   nav: { about: string; programs: string; community: string; sponsor: string };
+  surveyBanner: { title: string; detail: string; cta: string };
   cta: { joinDiscord: string; browsePrograms: string; learnMore: string };
   home: {
     heroTag: string;

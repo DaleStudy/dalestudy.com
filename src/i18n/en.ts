@@ -4,6 +4,11 @@ export const en: Messages = {
   siteName: "DaleStudy",
   langSwitch: "KO",
   nav: { about: "About", programs: "Programs", community: "Community", sponsor: "Sponsor" },
+  surveyBanner: {
+    title: "2026 DaleStudy Developer Survey",
+    detail: "Until Dec 6 · Anonymous · In Korean",
+    cta: "Take the survey",
+  },
   cta: {
     joinDiscord: "Join Discord",
     browsePrograms: "Explore programs",
