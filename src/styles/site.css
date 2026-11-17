@@ -134,14 +134,14 @@ a:hover {
   padding: 10px max(20px, env(safe-area-inset-right, 0px)) 10px
     max(20px, env(safe-area-inset-left, 0px));
   background: var(--grad-banner);
-  color: #ffffff;
+  color: var(--colors-base-white);
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
 }
 
 .survey-banner:hover {
-  color: #ffffff;
+  color: var(--colors-base-white);
 }
 
 .survey-banner-detail {
